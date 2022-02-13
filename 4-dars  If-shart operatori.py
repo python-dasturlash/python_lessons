@@ -1,13 +1,6 @@
 """
 Created on Sun Feb  6 14:49:59 2022
-"""
 
-
-
-
-
-
-"""
 
 
 # 1) Butun son berilgan. Agar berilgan son musbat bo'lsa, 1 ga oshirilsin, aks
@@ -389,41 +382,6 @@ else:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#23) Koordinata o'qlariga parallel ravishda to'g'ri to'rtburchakning uchta uchi
-#    berilgan, to'rtinchi uchi koordinatasini aniqlang.
-
-x1 = int(input("x1 = "))
-y1 = int(input("y1 = "))
-x2 = int(input("x2 = "))
-y2 = int(input("y2 = "))
-x3 = int(input("x3 = "))
-y3 = int(input("y3 = "))
-
-
-print(x2,y3)
-
-
-
-
-
-
-
-
-
 from math import *
 
 # 24 x haqiqiy soni berilgan. Quydagi funksiya hisoblansin.
@@ -545,80 +503,5 @@ elif 100 <= son < 1000:
 else:
     print("1-999 oralig'idagi sonni kiriting")
 
-
-
-
-
-
-
-
-
-
-
-#  J U N I O R
-
-#   n soni berilgan (1-99 oralig'ida). Shu kiritilgan sonni yozuv ko'rinishida
-#   ekranga chiqaruvchi dastur tuzing. (masalan  n = 15,  ekranda  o'n besh)
-
-n = int(input("1-99 oralig'ida son kiriting  -  "))
-
-if 10 <= n < 20:
-    print("o'n",end=" ")
-
-elif 20 <= n < 30:
-    print("yigirma", end=" ")
-
-elif 30 <= n < 40:
-    print("o'ttiz", end=" ")
-
-elif 40 <= n < 50:
-    print("qirq", end=" ")
-    
-elif 50 <= n < 60:
-    print("ellik", end=" ")
-    
-elif 60 <= n < 70:
-    print("oltmish", end=" ")
-  
-elif 70 <= n < 80:
-    print("yetmish", end=" ")
-  
-elif 80 <= n < 90:
-    print("sakson", end=" ")
-  
-elif 90 <= n < 100:
-    print("to'qson", end=" ")
-  
-
-a = n % 10
-
-if n <= 0  or  n >= 100:
-    print("Xatolik yuz berdi. Iltimos 1-99 oralig'idagi sonni kiriting.")
-elif a == 1:
-    print("bir")
-elif a == 2:
-    print("ikki")
-elif a == 3:
-    print("uch")
-elif a == 4:
-    print("to'rt")
-elif a == 5:
-    print("besh")
-elif a == 6:
-    print("olti")
-elif a == 7:
-    print("yetti")
-elif a == 8:
-    print("sakkiz")
-elif a == 9:
-    print("to'qqiz")
-
-
 """
-
-
-
-
-
-
 
