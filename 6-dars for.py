@@ -3,7 +3,7 @@ Created on Wed Feb 16 09:34:04 2022
 """
 
 
-"""
+
 # 1) k va n butun sonlari berilgan(n>0). k sonini n marta chiqaruvchi programma tuzilsin.
 
 k = int(input("k = "))
@@ -14,8 +14,8 @@ for i in range(0,n):
     
 
 
-# 2) a va b butun sonlari berilgan (a<b). a va b sonlari orasidagi barcha butun sonlarni (a va b ni ham)
-#    chiqaruvchi va chiqarilgan sonlar sonini chiqaruvchi programma tuzilsin. (a va b ham chiqarilsin)
+# 2) a va b butun sonlari berilgan (a<b). a va b sonlari orasidagi barcha butun sonlarni (a va b ni ham)chiqaruvchi va chiqarilgan sonlar sonini 
+#    chiqaruvchi programma tuzilsin.(a va b ham chiqarilsin)
 
 print("a va b ni kiriting (a<b)")
 a = int(input("a = "))
@@ -28,8 +28,8 @@ print('\n',s," ta    a = ",a,"   b = ",b,sep="")
 
 
 
-# 3) a va b butun sonlari berilgan (a<b). a va b sonlari orasidagi barcha butun sonlarni (a va b dan 
-#    tashqari) kamayish tartibida chiqaruvchi va chiqarilgan sonlar sonini chiqaruvchi programma tuzilsin. 
+# 3) a va b butun sonlari berilgan (a<b). a va b sonlari orasidagi barcha butun sonlarni (a va b dan tashqari) kamayish tartibida chiqaruvchi va 
+#    chiqarilgan sonlar sonini chiqaruvchi programma tuzilsin. 
 
 print("a va b ni kiriting (a<b)")
 a = int(input("a = "))
@@ -103,6 +103,7 @@ print(s)
 
 
 # 10) n butun soni berilgan (n>0). Quydagi yig'indini hisoblovchi programma tuzilsin. s = 1 + 1/2 + 1/3 +...+ 1/n
+
 n = int(input("n = "))
 s=0
 for i in range(1,n+1):
@@ -111,8 +112,7 @@ print(s)
 
 
 
-# 11) n butun soni berilgan (n>0). Quydagi yig'indini hisoblovchi programma tuzilsin. 
-#     s = n**2 + (n+1)**2 + (n+2)**2 +...+ (n*2)**2
+# 11) n butun soni berilgan (n>0). Quydagi yig'indini hisoblovchi programma tuzilsin.       s = n**2 + (n+1)**2 + (n+2)**2 +...+ (n*2)**2
 
 n = int(input("n = "))
 s=0
@@ -122,8 +122,7 @@ print(s)
 
 
 
-# 12) n butun soni berilgan (n>0). Quydagi ko'paytmani hisoblovchi programma tuzilsin. 
-#     s = 1.1 * 1.2 * 1.3 *...     (n ta ko'paytuvchi)
+# 12) n butun soni berilgan (n>0). Quydagi ko'paytmani hisoblovchi programma tuzilsin.      s = 1.1 * 1.2 * 1.3 *...     (n ta ko'paytuvchi)
 
 n = int(input("(n>0) n = "))
 s=1
@@ -133,8 +132,7 @@ print(s)
 
 
 
-# 13) n butun soni berilgan (n>0). Quydagi yig'indini hisoblovchi programma tuzilsin. 
-#     s = 1.1 - 1.2 + 1.3 -...  
+# 13) n butun soni berilgan (n>0). Quydagi yig'indini hisoblovchi programma tuzilsin.      s = 1.1 - 1.2 + 1.3 -...  
 
 n = int(input("(n>0) n = "))
 s=0
@@ -147,8 +145,7 @@ print(s)
 
 
 
-# 14) n butun soni berilgan (n>0). Shu sonning kvadratini quydagi formula asosida hisoblovchi
-#     programma tuzilsin.   n**2 = 1 + 3 + 5 +...+ (2*n - 1)
+# 14) n butun soni berilgan (n>0). Shu sonning kvadratini quydagi formula asosida hisoblovchi programma tuzilsin.     n**2 = 1 + 3 + 5 +...+ (2*n - 1)
 
 n = int(input("n = "))
 a = 2*n-1
@@ -160,8 +157,7 @@ print(2*n-1,"=",n**2)
 
 
 
-# 15) n butun soni va a haqiqiy soni berilgan (n>0). a ning n-darajasini aniqlovchi programma
-#     tuzilsin.   a**n = a*a*a...a
+# 15) n butun soni va a haqiqiy soni berilgan (n>0). a ning n-darajasini aniqlovchi programma tuzilsin.      a**n = a*a*a...a
 
 n = int(input("n = "))
 a = float(input("a = "))
@@ -172,8 +168,7 @@ print(s)
 
 
 
-# 16) n butun soni va a haqiqiy soni berilgan (n>0). Bir sikldan foydalanib a ning 1 dan n gacha
-#     bo'lgan barcha darajalarini chiqaruvchi programma tuzilsin.
+# 16) n butun soni va a haqiqiy soni berilgan (n>0). Bir sikldan foydalanib a ning 1 dan n gacha bo'lgan barcha darajalarini chiqaruvchi programma tuzilsin.
 
 n = int(input("n = "))
 a = float(input("a = "))
@@ -182,8 +177,8 @@ for i in range(1,n+1):
 
 
 
-# 17) n butun soni va a haqiqiy soni berilgan (n>0). Bir sikldan foydalanib quydagi a ning 1 dan 
-#     n gacha bo'lgan barcha darajalarini chiqaruvchi va yig'indini hisoblovchi programma tuzilsin.
+# 17) n butun soni va a haqiqiy soni berilgan (n>0). Bir sikldan foydalanib quydagi a ning 1 dan n gacha bo'lgan barcha darajalarini chiqaruvchi 
+#     va yig'indini hisoblovchi programma tuzilsin.
 
 n = int(input("n = "))
 a = float(input("a = "))
@@ -195,9 +190,8 @@ print("  s =",s)
 
 
 
-# 18) n butun soni va a haqiqiy soni berilgan (n>0). Bir sikldan foydalanib quydagi a ning 1 dan 
-#     n gacha bo'lgan barcha darajalarini chiqaruvchi va yig'indini hisoblovchi programma tuzilsin.
-#     1 - a + a**2 - a**3 +....((-1)**n)*(a**n)  shart operatoridan foydalanilmasin
+# 18) n butun soni va a haqiqiy soni berilgan (n>0). Bir sikldan foydalanib quydagi a ning 1 dan n gacha bo'lgan barcha darajalarini chiqaruvchi va yig'indini
+#     hisoblovchi programma tuzilsin.   1 - a + a**2 - a**3 +....((-1)**n)*(a**n)  shart operatoridan foydalanilmasin
 
 n = int(input("n = "))
 a = float(input("a = "))
@@ -209,8 +203,8 @@ print("  s =",s+1)
 
 
 
-# 19) n butun soni va a haqiqiy soni berilgan (n>0). 1 dan n gacha bo'lgan sonlar ko'paytmasini
-#     chiqaruvchi programma tuzilsin ya'ni faktaryal hisoblansin.  n! = 1 * 2 * 3 *... * n
+# 19) n butun soni va a haqiqiy soni berilgan (n>0). 1 dan n gacha bo'lgan sonlar ko'paytmasini chiqaruvchi programma tuzilsin ya'ni faktaryal hisoblansin. 
+#     n! = 1 * 2 * 3 *... * n
 
 n = int(input("n = "))
 a = float(input("a = "))
@@ -221,8 +215,7 @@ print(s)
 
 
 
-# 20) n butun soni berilgan (n>0). Bir sikldan foydalangan holda quydagi yig'indini
-#     hisoblovchi programma tuzilsin.    1! + 2! + 3! +...+ n!
+# 20) n butun soni berilgan (n>0). Bir sikldan foydalangan holda quydagi yig'indini hisoblovchi programma tuzilsin.      1! + 2! + 3! +...+ n!
 
 n = int(input("n = "))
 summa = 0
@@ -234,8 +227,7 @@ print(summa)
         
         
 
-# 21) n butun soni berilgan (n>0). Bir sikldan foydalangan holda quydagi yig'indini
-#     hisoblovchi programma tuzilsin. (olingan natija tahminan e = exp(1) ga yaqinlashadi)
+# 21) n butun soni berilgan (n>0). Bir sikldan foydalangan holda quydagi yig'indini hisoblovchi programma tuzilsin. (olingan natija tahminan e = exp(1) ga yaqinlashadi)
 #     1 + 1/(1!) + 1/(2!) + 1/(3!) +...+ 1/(n!)
 
 n = int(input("n = "))
@@ -248,8 +240,7 @@ print(summa+1)
 
 
 
-# 22) n butun soni va x haqiqiy soni berilgan (n>0). Quydagi yig'indini hisoblovchi 
-#     programma tuzilsin. (olingan natija tahminan e**x ga yaqinlashadi)
+# 22) n butun soni va x haqiqiy soni berilgan (n>0). Quydagi yig'indini hisoblovchi programma tuzilsin. (olingan natija tahminan e**x ga yaqinlashadi)
 #     1 + x + (x**2)/(2!) + (x**3)/(3!) +...+(x**n)/(n!)
 
 n = int(input("n = "))
@@ -265,8 +256,7 @@ print(summa+1)
 
 
 
-# 23) n butun soni va x haqiqiy soni berilgan (n>0). Quydagi yig'indini hisoblovchi 
-#     programma tuzilsin. (olingan natija tahminan sin(x) ga yaqinlashadi)
+# 23) n butun soni va x haqiqiy soni berilgan (n>0). Quydagi yig'indini hisoblovchi programma tuzilsin. (olingan natija tahminan sin(x) ga yaqinlashadi)
 #     x - (x**3)/(3!) + (x**5)/(5!) -...+ (-(-1)**n)*(x**(2*n-1))/((2*n-1)!)
 
 n = int(input("n = "))
@@ -283,8 +273,7 @@ print(summa)
 
 
 
-# 24) n butun soni va x haqiqiy soni berilgan (n>0). Quydagi yig'indini hisoblovchi 
-#     programma tuzilsin. (olingan natija tahminan cos(x) ga yaqinlashadi)
+# 24) n butun soni va x haqiqiy soni berilgan (n>0). Quydagi yig'indini hisoblovchi programma tuzilsin. (olingan natija tahminan cos(x) ga yaqinlashadi)
 #     1 - (x**2)/(2!) + (x**4)/(4!) -...+ (-(-1)**n)*(x**(2*n-2))/((2*n-2)!)
 
 n = int(input("n = "))
@@ -301,8 +290,7 @@ print(summa)
 
 
 
-# 25) n butun soni va x haqiqiy soni berilgan (n>0, |x|<1). Quydagi yig'indini hisoblovchi 
-#     programma tuzilsin. x - (x**2)/2 + (x**3)/3 -...+((-1)**(n-1)) * (x**n)/n
+# 25) n butun soni va x haqiqiy soni berilgan (n>0, |x|<1). Quydagi yig'indini hisoblovchi programma tuzilsin.    x - (x**2)/2 + (x**3)/3 -...+((-1)**(n-1)) * (x**n)/n
 
 n = int(input("n = "))
 x = float(input("x = "))
@@ -314,8 +302,7 @@ print(summa)
 
 
 
-# 26) n butun soni va x haqiqiy soni berilgan (n>0, |x|<1). Quydagi yig'indini hisoblovchi 
-#     programma tuzilsin. x - (x**3)/3 + (x**5)/5 -...+(-(-1)**n) * (x**(2*n-1))/(2*n-1)
+# 26) n butun soni va x haqiqiy soni berilgan (n>0, |x|<1). Quydagi yig'indini hisoblovchi programma tuzilsin.  x - (x**3)/3 + (x**5)/5 -...+(-(-1)**n) * (x**(2*n-1))/(2*n-1)
 
 n = int(input("n = "))
 x = float(input("x = "))
@@ -327,8 +314,7 @@ print(summa)
 
 
 
-# 27) n butun soni va x haqiqiy soni berilgan (n>0, |x|<1). Quydagi yig'indini hisoblovchi 
-#     programma tuzilsin. 
+# 27) n butun soni va x haqiqiy soni berilgan (n>0, |x|<1). Quydagi yig'indini hisoblovchi programma tuzilsin. 
 #     x + 1*(x**3)/(2*3) + 1*3*(x**5)/(2*4*5) +...+1*3*...*(2*n-1)*(x**(2*n+1))/(2*4*...*(2*n)*(2*n+1))
 
 n = int(input("n = "))
@@ -345,8 +331,7 @@ print(s)
 
 
 
-# 28) n butun soni va x haqiqiy soni berilgan (n>0, |x|<1). Quydagi yig'indini hisoblovchi 
-#     programma tuzilsin. 
+# 28) n butun soni va x haqiqiy soni berilgan (n>0, |x|<1). Quydagi yig'indini hisoblovchi programma tuzilsin. 
 #     1 + x/2 - 1*(x**2)/(2*4) + 1*3(x**3)/(2*4*6) -...+(-1)**(n-1)*1*3...*(2*n-3)*(x**n)/(2*4*...*(2*n))
 
 n = int(input("n = "))
@@ -365,8 +350,8 @@ print(s)
 
 
 
-# 29) n butun soni va sonlar o'qida 2 ta A, B nuqta berilgan. (A, B haqiqiy son). [A,B] kesmani
-#     teng n ta kesmaga bo'ling. [A,B] kesmada ajratilgan barcha nuqtalarni chiqaring.
+# 29) n butun soni va sonlar o'qida 2 ta A, B nuqta berilgan. (A, B haqiqiy son). [A,B] kesmani teng n ta kesmaga bo'ling. 
+#      [A,B] kesmada ajratilgan barcha nuqtalarni chiqaring.
 
 n = int(input("n = "))
 A = float(input("A = "))
@@ -382,9 +367,8 @@ for i in range(1,n):
 
 from math import *
 
-# 30) n butun soni va sonlar o'qida 2 ta A, B nuqta berilgan. (A, B haqiqiy son). [A,B] kesmani
-#     teng n ta kesmaga bo'ling. [A,B] kesmada ajratilgan barcha nuqtalar uchun F(x) = 1 - sin(x)
-#     funksiya qiymatini hisoblang.
+# 30) n butun soni va sonlar o'qida 2 ta A, B nuqta berilgan. (A, B haqiqiy son). [A,B] kesmani teng n ta kesmaga bo'ling. [A,B] kesmada ajratilgan 
+#     barcha nuqtalar uchun F(x) = 1 - sin(x) funksiya qiymatini hisoblang.
 
 n = int(input("n = "))
 A = float(input("A = "))
@@ -398,8 +382,7 @@ for i in range(1,n):
 
 
 
-# 31 n butun soni berilgan (n>0). Quydagi ketma-ketlikning dastlabki n ta hadini chiqaruvchi
-#    programma tuzilsin.   A0 = 2;   An = 2 + 1/A(n-1); n = 1,2,...n   n-indeks
+# 31 n butun soni berilgan (n>0). Quydagi ketma-ketlikning dastlabki n ta hadini chiqaruvchi programma tuzilsin.   A0 = 2;   An = 2 + 1/A(n-1); n = 1,2,...n   n-indeks
 
 n = int(input("n = "))
 B = 2
@@ -410,8 +393,7 @@ for i in range(1,n+1):
 
 
 
-# 32) n butun soni berilgan (n>0). Quydagi ketma-ketlikning dastlabki n ta hadini chiqaruvchi
-#    programma tuzilsin.   A0 = 1;   An = (A(n-1) + 1)/n;   n = 1,2,...n   n-indeks
+# 32) n butun soni berilgan (n>0). Quydagi ketma-ketlikning dastlabki n ta hadini chiqaruvchi programma tuzilsin.   A0 = 1;   An = (A(n-1) + 1)/n;   n = 1,2,...n   n-indeks
 
 n = int(input("n = "))
 B = 1
@@ -422,10 +404,10 @@ for i in range(1,n+1):
 
 
 
-# 33) n butun soni berilgan (n>1). Fibonachchi ketma-ketlikning dastlabki n ta hadini chiqaruvchi
-#    programma tuzilsin.
+# 33) n butun soni berilgan (n>1). Fibonachchi ketma-ketlikning dastlabki n ta hadini chiqaruvchi programma tuzilsin.
 #    F1 = 1;  F2 = 1;    Fn = F(n-2) + F(n-1);  n = 3,4,...n   n-indeks
 
+# 1-usul
 F1 = 1
 F2 = 1
 
@@ -438,7 +420,7 @@ for i in range(3,n+1):
     print(F2, end=" ")
 
 
-
+# 1-usul
 F1 = 1
 F2 = 1
 
@@ -455,9 +437,8 @@ for i in range(3,n+1):
     
 
 
-# 34) n butun soni berilgan (n>1). Quydagi ketma-ketlikning dastlabki n ta hadini chiqaruvchi
-#    programma tuzilsin.
-#    A1 = 1;  A2 = 2;    An = (A(n-2) + 2*A(n-1)) / 3;   n = 3,4,...n   n-indeks
+# 34) n butun soni berilgan (n>1). Quydagi ketma-ketlikning dastlabki n ta hadini chiqaruvchi programma tuzilsin.
+#     A1 = 1;  A2 = 2;    An = (A(n-2) + 2*A(n-1)) / 3;   n = 3,4,...n   n-indeks
 
 A1 = 1
 A2 = 2
@@ -474,9 +455,8 @@ for i in range(3,n+1):
     
 
 
-# 35) n butun soni berilgan (n>2). Quydagi ketma-ketlikning dastlabki n ta hadini chiqaruvchi
-#    programma tuzilsin.
-#    A1 = 1;  A2 = 2;  A3 = 3;   An = A(n-1) + A(n-2) - 2*A(n-3);   n = 4,5,...n
+# 35) n butun soni berilgan (n>2). Quydagi ketma-ketlikning dastlabki n ta hadini chiqaruvchi programma tuzilsin.
+#     A1 = 1;  A2 = 2;  A3 = 3;   An = A(n-1) + A(n-2) - 2*A(n-3);   n = 4,5,...n
 
 A1 = 1
 A2 = 2 
@@ -497,8 +477,7 @@ for i in range(4,n+1):
 # ICHMA-ICH OCHILGAN SIKLLAR
 
 
-# 36) n va k butun sonlar berilgan. Quydagi yig'indini chiqaruvchi programma tuzilsin.
-#     1**k + 2**k + ... + n**k
+# 36) n va k butun sonlar berilgan. Quydagi yig'indini chiqaruvchi programma tuzilsin.     1**k + 2**k + ... + n**k
 
 n = int(input("n = "))
 k = int(input("k = "))
@@ -512,8 +491,7 @@ print(s)
 
 
 
-# 37) n butun soni berilgan. Quydagi yig'indini chiqaruvchi programma tuzilsin.
-#     1**1 + 2**2 + ... + n**n
+# 37) n butun soni berilgan. Quydagi yig'indini chiqaruvchi programma tuzilsin.     1**1 + 2**2 + ... + n**n
 
 n = int(input("n = "))
 
@@ -526,8 +504,7 @@ print(s)
 
 
 
-# 38) n butun soni berilgan. Quydagi yig'indini chiqaruvchi programma tuzilsin.
-#     1**(n) + 2**(n-1) + ... + n**1
+# 38) n butun soni berilgan. Quydagi yig'indini chiqaruvchi programma tuzilsin.     1**(n) + 2**(n-1) + ... + n**1
 
 n = int(input("n = "))
 
@@ -540,8 +517,8 @@ print(s)
 
 
 
-# 39) A va B butun sonlar berilgan (A<B). A va B sonlar orasidagi barcha butun sonlarni chiqaruvchi
-#     programma tuzilsin. Bunda har bir son o'zining qiymaticha chiqarilsin. Ya'ni 3 soni 3 marta chiqarilsin.
+# 39) A va B butun sonlar berilgan (A<B). A va B sonlar orasidagi barcha butun sonlarni chiqaruvchi programma tuzilsin. Bunda har bir son
+#     o'zining qiymaticha chiqarilsin. Ya'ni 3 soni 3 marta chiqarilsin.
 
 A = int(input("A = "))
 B = int(input("B = "))
@@ -553,8 +530,8 @@ for i in range(A+1,B):
 
 
 
-# 40) A va B butun sonlar berilgan (A<B). A va B sonlar orasidagi barcha butun sonlarni chiqaruvchi
-#     programma tuzilsin. Bunda A soni 1 marta, (A+1) soni 2 marta chiqariladi va xakazo.
+# 40) A va B butun sonlar berilgan (A<B). A va B sonlar orasidagi barcha butun sonlarni chiqaruvchi programma tuzilsin. 
+#     Bunda A soni 1 marta, (A+1) soni 2 marta chiqariladi va xakazo.
 
 A = int(input("A = "))
 B = int(input("B = "))
@@ -563,19 +540,4 @@ for i in range(A,B+1):
     for j in range(A-1,i):
         print(i,end=" ")
     print('\n')
-
-"""
-
-
-
-
-
-
-
-
-
-
-
-
-
 
