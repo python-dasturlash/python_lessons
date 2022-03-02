@@ -1,13 +1,8 @@
-"""
-Created on Thu Jan 27 10:37:18 2022
-
-"""
-
 
 #  1 - DARS
 
 
-"""
+
 # 1) Kvadratning tomoni a berilgan. Uning perimetri aniqlansin. P = 4 * a
 a = int(input("Kvadratning tomonini kiriting - "))
 print(f"Tomoni a = {a} ga teng bo'lgan kvadratning perimetri P = {4 * a} ga teng")
