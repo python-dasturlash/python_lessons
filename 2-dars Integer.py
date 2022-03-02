@@ -1,7 +1,3 @@
-"""
-Created on Sat Jan 29 17:43:05 2022
-
-
 
 # 1) Uzunlik L sm da berilgan. Undagi to'liq metrlar sonini aniqlovchi
 #    programma tuzilsin.  ( 1m = 100sm )
