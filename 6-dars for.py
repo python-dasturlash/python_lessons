@@ -1,8 +1,3 @@
-"""
-Created on Wed Feb 16 09:34:04 2022
-"""
-
-
 
 # 1) k va n butun sonlari berilgan(n>0). k sonini n marta chiqaruvchi programma tuzilsin.
 
