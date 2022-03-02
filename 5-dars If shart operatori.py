@@ -1,9 +1,3 @@
-"""
-Created on Wed Feb  9 10:20:41 2022
-"""
-
-
-
 
 # 1) 1-7 gacha bo'lgan butun sonlar berilgan. Kiritilgan songa mos ravishta hafta kunlari so'zda ifodalovchi programma tuzilsin.   
 
