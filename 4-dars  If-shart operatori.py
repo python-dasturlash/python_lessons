@@ -1,7 +1,3 @@
-"""
-Created on Sun Feb  6 14:49:59 2022
-
-
 
 # 1) Butun son berilgan. Agar berilgan son musbat bo'lsa, 1 ga oshirilsin, aks
 #    holda o'zgartirilmasin. Hosil bo'lgan sonni ekranga chiqaring.
@@ -503,5 +499,4 @@ elif 100 <= son < 1000:
 else:
     print("1-999 oralig'idagi sonni kiriting")
 
-"""
 
