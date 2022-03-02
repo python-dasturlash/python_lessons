@@ -1,7 +1,3 @@
-"""
-Created on Wed Feb  2 09:33:25 2022
-
-
 
 # 1) A butun sonlar berilgan. Jumlani rostlikka tekshiring: "A soni musbat".
 
@@ -434,7 +430,4 @@ c =  x1 - 2 == x2  and  y1 + 1 == y2   or   x1 - 2 == x2  and  y1 - 1 == y2
 d =  x1 + 1 == x2  and  y1 - 2 == y2   or   x1 - 1 == x2  and  y1 - 2 == y2
 
 print(a or b or c or d)
-
-
-"""
 
