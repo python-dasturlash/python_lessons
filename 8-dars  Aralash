@@ -146,4 +146,3 @@ for i in range(1,n+1):
     sinus += sin(i)
     s += cosinus/sinus
 print(s)
-
