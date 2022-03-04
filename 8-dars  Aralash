@@ -1,0 +1,150 @@
+
+# 1.  n natural soni berilgan. Shu son bo'luvchilarini chiqaruvchi programma tuzilsin. Masalan: 30 ning bo'luvchilari 1, 2, 3, 5, 6, 10, 15, 30
+
+n = int(input("n = "))
+for i in range(1,n+1):
+    if n % i == 0:
+        print(i,end=' ')
+
+
+
+# 2.  n natural soni berilgan. Shu son bo'luvchilarini yig'indisini chiqaruvchi programma tuzilsin. M: n = 15; javob: 24 (chunki 1+3+5+15)
+
+n = int(input("n = "))
+s = 0
+for i in range(1,n+1):
+    if n % i == 0:
+        s += i
+print(s)
+
+
+
+# 3.  n natural soni berilgan. Shu son mukammal yoki mukammal emasligini aniqlovchi programma tuzilsin. O'zidan boshqa bo'luvchilari yig'indisi o'ziga teng bo'lgan son 
+#     mukammal son deyiladi.  M: 6=1+2+3 mukammal son.  
+
+n = int(input('n = '))
+s = 0
+for i in range(1,int(n/2)+1):
+    if n % i == 0:
+        s += i
+if s == n:
+    print("Bu son mukammal")
+else:
+    print("Bu son mukammal emas")
+
+
+
+# 4.  n natural soni berilgan. n gacha bo'lgan 3 ga bo'linadigan lekin 5 ga bo'linmaydigan sonlarni chiqaruvchi programma tuzilsin.
+
+n = int(input('n = '))
+for i in range(1,n+1):
+    if i % 5 != 0 and i % 3 == 0:
+        print(i,end=' ')
+
+
+
+# 5.  n natural soni berilgan. n gacha bo'lgan Pifagor sonlarini chiqaruvchi programma tuzilsin. a**2 = b**2 + c**2 shartni qanotlantiruvchi sonlar Pifagor sonlari deyiladi.
+
+n = int(input('n = '))
+for i in range(1,n+1):
+    for j in range(i,n+1):
+        c = i**2 + j**2
+        if c**0.5 == int(c**0.5) and c**0.5 <= n:
+            print(i,j,int(c**0.5),sep='\t')
+
+
+
+# 6.  Quydagini hisoblovchi programma tuzilsin.  i = (1,n)  summa(1/(i**2))
+
+n = int(input('n = '))
+s = 0
+for i in range(1,n+1):
+    s += 1/(i**2)
+print(s)
+
+
+
+# 7.  Quydagini hisoblovchi programma tuzilsin. i = (1,n)  summa(1/(i**3))
+
+n = int(input('n = '))
+s = 0
+for i in range(1,n+1):
+    s += 1/(i**3)
+print(s)
+
+
+
+# 8.  Quydagini hisoblovchi programma tuzilsin. i = (1,n)  summa(1/(i!))
+
+n = int(input('n = '))
+s = 0
+a = 1
+for i in range(1,n+1):
+    a *= i
+    s += 1/a
+print(s)
+
+
+
+# 9.  Quydagini hisoblovchi programma tuzilsin. i = (1,n)  summa(1/(2*i)**2)
+
+n = int(input('n = '))
+s = 0
+a = 1
+for i in range(1,n+1):
+    a = (2*i)**2
+    s += 1/a
+print(s)
+
+
+
+# 10.  Quydagini hisoblovchi programma tuzilsin. i = (2,n)  ko'paytma( (i+1)/(i+2) )
+
+n = int(input('n = '))
+s = 1
+for i in range(2,n+1):
+    s *= (i+1)/(i+2)
+print(s)
+
+
+
+# 11.  Quydagini hisoblovchi programma tuzilsin. i = (2,n)  ko'paytma( (1+1/i!)**2 )
+
+n = int(input('n = '))
+s = 1
+f = 1
+for i in range(2,n+1):
+    f *= i
+    s *= (1+(1/f))**2
+print(s)
+
+
+
+# 12.  Quydagini hisoblovchi programma tuzilsin. 1/sin1 + 1/(sin1+sin2) +...+ 1/(sin1+...+sin(n))
+
+from math import *
+
+n = int(input('n = '))
+sinus = 0
+s = 0
+for i in range(1,n+1):
+    sinus += sin(i)
+    s += 1/sinus
+print(s)
+
+
+
+# 13.  Quydagini hisoblovchi programma tuzilsin.   cos1/sin1 + (cos1+cos2)/(sin1+sin2) +...+ (cos1+...+cos(n))/(sin1+...+sin(n))  
+
+from math import *
+
+n = int(input('n = '))
+sinus = 0
+cosinus = 0
+s = 0
+for i in range(1,n+1):
+    cosinus += cos(i)
+    sinus += sin(i)
+    s += cosinus/sinus
+print(s)
+
