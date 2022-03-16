@@ -1,0 +1,22 @@
+# 1) A va B butun musbat sonlar berilgan (A > B). A uzunlikdagi kesmada maksimal darajada B kesma joylashtirilgan. A kesmaning bo'sh qismini aniqlovchi programma tuzilsin.
+#    Ko'paytirish va bo'lish amallarini ishlatmang.
+
+A = int(input('A = '))
+B = int(input('B = '))
+s = 0
+while A >= s:
+    s += B
+print(A - (s - B))
+
+
+
+# 2) A va B butun musbat sonlar berilgan (A > B). A uzunlikdagi kesmada B kesmadan nechta joylashtirish mumkinligini aniqlovchi programma tuzilsin.
+#    Ko'paytirish va bo'lish amallarini ishlatmang.
+
+A = int(input('A = '))
+B = int(input('B = '))
+s = 0;  a = 0
+while A >= s:
+    s += B
+    a += 1
+print(a-1)
