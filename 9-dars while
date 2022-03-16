@@ -336,3 +336,49 @@ F1, F2  = 1, 1
 while n >= F2:
     F1, F2 = F2, F1 + F2
 print(F2)
+
+
+
+# 26) Fibonachchi soni bo'lgan n butun soni berilgan (n>1). n sonidan bir oldingi va bir
+#     keyingi Fibonachchi sonlarini chiqaruvchi programma tuzilsin.
+
+n = int(input('n = '))
+F1, F2  = 1, 1 
+while n >= F2:
+    F1, F2 = F2, F1 + F2
+if n == F1:
+    print(F2-F1,F2)
+else:
+    print(F1,F2)
+
+
+
+# 27) Fibonachchi soni bo'lgan n butun soni berilgan (n>1). n soni Fibonachchi ketma-ketligining
+#     nechanchi xadi ekanini chiqaruvchi programma tuzilsin.
+
+n = int(input('n = '))
+F1 = F2 = 1;  a = 0
+while n >= F2:
+    F1, F2, = F2, F1 + F2
+    a += 1
+if n == F1:
+    print(a+1,"- xadi")
+else:
+    print(n,"Fibonachchi soni emas")
+
+
+
+# 28) e haqiqiy musbat soni berilgan. Ketma-ketlik hadlari quydagicha aniqlanadi.
+#     a1 = 2;  ak = 2 + 1/(a(k-1));  k = 2,3,...
+#     |ak - a(k-1)| < e shartni qanoatlantiruvchi eng kichik k sonini aniqlovchi programma tuzilsin.
+#     ak va a(k-1) ham ekranga chiqarilsin.
+
+e = float(input('e = '))
+a1 = 2
+a2 = 2 + 1 / a1
+k = 2
+while abs(a2 - a1) > e:
+    k += 1
+    a1 = a2
+    a2 = 2 + 1 / a1
+print("k =",k,"  ",a2,"  ",a1)
