@@ -33,3 +33,214 @@ while N >= 0:
     a += 1
 print("Butun qism: ",a-1)
 print("Qoldiq qism: ",N+K)
+
+
+
+# 4) n butun soni berilgan (n>0). Agar n soni 3 ning darajasi bo'lsa "3-ning darajasi", aks holda
+#    "3-ning darajasi emas" degan natija chiqaruvchi programma tuzilsin. Qoldiqli bo'lish va
+#    bo'lish amallarini ishlatmang.
+
+n = int(input('n = '))
+s = 0
+i = 1
+while n > s:
+    s = 3**i
+    i += 1
+if n == 3**(i-1):
+    print("3-ning darajasi")
+else:
+    print("3-ning darajasi emas")
+
+
+
+# 5) 2 sonining qandaydir darajasini bildiruvchi n butun soni berilgan (n>0). n = 2**k
+#    k ni aniqlovchi programma tuzilsin.
+
+n = int(input('n = '))
+s = 0
+k = 1
+while n > s:
+    s = 2**k
+    k += 1
+if n == 2**(k-1):
+    print("k =",k-1)
+else:
+    print("2-ning darajasi emas")
+
+
+
+# 6) n natural soni berilgan (n>0). Quydagi ifodani hisoblovchi programma tuzilsin:
+#    n!! = n * (n-2) * (n-4) ...
+#    Agar n juft bo'lsa oxirgi ko'paytuvchi 2, toq bo'lsa 1 bo'ladi
+
+n = int(input('n = '))
+s = 1
+while n > 0:
+    s *= n
+    n -= 2
+print(s)
+
+
+
+# 7) n natural soni berilgan (n>0). Kvadrati n dan katta bo'ladigan eng kichchik butun k sonini
+#    (k**2 > n) aniqlovchi programma tuzilsin. Ildizdan chiqaruvchi funksiyadan foydalanmang.
+
+n = int(input('n = '))
+s = 0
+k = 1
+while n >= s:
+    s = k**2
+    k += 1
+print(k-1)
+
+
+
+# 8) n natural soni berilgan (n>0). Kvadrati n dan katta bo'lmagan eng katta butun k sonini
+#    (k**2 <= n) aniqlovchi programma tuzilsin. Ildizdan chiqaruvchi funksiyadan foydalanmang.
+
+n = int(input('n = '))
+s = 0
+k = 1
+while n > s:
+    s = k**2
+    k += 1
+print(k-1)
+
+
+
+# 9) n natural soni berilgan (n>1). 3**k > n shartni qanoatlantiruvchi eng kichik butun
+#    k sonini aniqlovchi programma tuzilsin.
+
+n = int(input('n = '))
+k = 1
+while n >= 3**k:
+    k += 1
+print(k)
+
+
+
+# 10) n natural soni berilgan (n>0). Kvadrati n dan katta bo'lmagan eng katta butun k sonini
+#    (3**k <= n) aniqlovchi programma tuzilsin. 
+
+n = int(input('n = '))
+k = 1
+while n > 3**k:
+    k += 1
+print(k-1)
+
+
+
+# 11) n natural soni berilgan (n>1). (1+2+3+..+k) >= n shart bajaradigan eng kichik k sonini
+#     aniqlovchi programma tuzilsin. 1 dan k gacha bo'lgan yig'indi ham ekranga chiqarilsin.
+
+n = int(input('n = '))
+k = 1;  s = 0
+while n > s:
+    s += k
+    k += 1
+print("k =",k-1,"S =",s)
+
+
+
+# 12) n natural soni berilgan (n>1). (1+2+3+..+k) <= n shart bajaradigan eng katta k sonini
+#     aniqlovchi programma tuzilsin. 1 dan k gacha bo'lgan yig'indi ham ekranga chiqarilsin.
+
+n = int(input('n = '))
+k = 1;  s = k
+while n >= s:
+    k += 1
+    s += k
+    
+print("k =",k-1,"S =",s-k)
+
+
+
+# 13) a soni berilgan (a>1). (1 + 1/2 + 1/3 +...+ 1/k) >= a shart bajaradigan eng kichik k sonini 
+#     aniqlovchi programma tuzilsin. Yig'indi ham ekranga chiqarilsin.
+
+a = int(input('a = '))
+k = 0; s = k
+while a >= s:
+    k += 1
+    s += 1/k
+print("k =",k,"s =",s)
+
+
+
+# 14) a soni berilgan (a>1). (1 + 1/2 + 1/3 +...+ 1/k) <= a shart bajaradigan eng katta k sonini 
+#     aniqlovchi programma tuzilsin. Yig'indi ham ekranga chiqarilsin.
+
+a = int(input('a = '))
+k = 0; s = k
+while a > s:
+    k += 1
+    s += 1/k
+print("k =",k-1,"s =",s-1/k)
+
+
+
+# 15) Bankka boshlang'ich S so'm qo'yildi. Har oyda bor bo'lgan summa p foizga oshadi (0<p<25)
+#     Necha oydan keyin boshlang'ich qiymat 2 martadan ko'p bo'lishini hisoblovchi programma tuzilsin.
+#     Necha oy k - butun son. Bankda hosil bo'lgan summa haqiqiy son ekranga chiqarilsin.
+
+s = float(input('s = '))
+p = int(input('p = '))
+a = s
+k = 0
+while s <= 2*a:
+    k += 1
+    s *= (1 + p/100)
+print("s =",s,"k =",k)
+
+
+
+# 16) Sportsmen birinchi kuni 10 km yugurib boshladi. Keyingi kunlari bir oldingi kunga nisbatan
+#     p foiz ko'p yugurdi (0<p<50). Sportsmenning necha kundan keyin jami yugurgan masofasi
+#     200 km dan oshadi? Jami kunlar soni va masofani (butun son) chiqaruvchi programma tuzilsin.
+
+p = int(input('p = '))
+s = 10
+k = 0
+while s < 200:
+    s *= (1 + p/100)
+    k += 1
+print("s =",s,"kun =",k)
+
+
+
+# 17) n va m butun sonlari berilgan (n>m). n sonini m soniga bo'lib butun va qoldiq
+#     qismlarini bo'lish va qoldiqni olish amallarini ishlatmasdan topuvchi programma tuzilsin.
+
+n = int(input('n = '))
+m = int(input('m = '))
+N = n;  a = 0;  b = 0
+while N >= 0:
+    N -= m
+    a += 1
+print("Butun qism: ",a-1,"\nQoldiq qism: ",N+m)
+
+
+
+# 18) n butun soni berilgan (n>0). Bo'lib butun va qoldiq qismlarini aniqlash orqali,
+#     berilgan son raqamlarini teskari tartibda chiqaruvchi programma tuzilsin.
+
+n = int(input('n = '))
+s = 0
+while n != 0:
+    s = s * 10 + n % 10
+    n = n // 10
+print(s)
+
+
+
+# 19) n butun soni berilgan (n>0). Bo'lib butun va qoldiq qismlarini aniqlash orqali,
+#     berilgan son raqamlari yig'indisini va raqamlari sonini chiqaruvchi programma tuzilsin.
+
+n = int(input('n = '))
+s = 0;  a = 0
+while n != 0:
+    s += n % 10
+    a += 1
+    n //= 10
+print("Raqmlari yig'indisi: ",s,)
+print("Raqmlari soni: ",a)
