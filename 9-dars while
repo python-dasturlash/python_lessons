@@ -382,3 +382,49 @@ while abs(a2 - a1) > e:
     a1 = a2
     a2 = 2 + 1 / a1
 print("k =",k,"  ",a2,"  ",a1)
+
+
+
+# 29) e haqiqiy musbat soni berilgan. Ketma-ketlik hadlari quydagicha aniqlanadi.
+#     a1 = 1;  a2 = 2;  ak = (a(k-2) + 2*a(k-1))/3;  k = 3,4,...
+#     |ak - a(k-1)| < e shartni qanoatlantiruvchi eng kichik k sonini aniqlovchi programma tuzilsin.
+#     ak va a(k-1) ham ekranga chiqarilsin.
+
+e = float(input('e = '))
+a1 = 1
+a2 = 2
+ak = (a1 + 2*a2)/3
+k = 3
+while abs(a2 - ak) > e:
+    k += 1
+    a1 = a2
+    a2 = ak
+    ak = (a1 + 2*a2)/3
+print("k =",k,"  ",ak,"  ",a2)
+
+
+
+# 30) A, B, C musbat butun sonlari berilgan. A x B to'rtburchak ichida tomoni C bo'lgan
+#     kvadratdan nechtasi sig'ishini aniqlovchi programma tuzilsin. Ko'paytirish va bo'lish
+#     amallarini ishlatmang.
+
+A = int(input('A = '))
+B = int(input('B = '))
+C = int(input('C = '))
+
+a = 0;  b = 0
+
+if A >= C and B >= C:
+    while A >= C:
+        A -= C
+        a += 1
+    while B >= C:
+        B -= C
+        b += 1
+    s = 0
+    while a != 0:
+        s += b
+        a -= 1
+    print(s)
+else:
+    print("Tomoni",C,"ga teng bo'lgan kvadrat joylashtirib bo'lmaydi")
