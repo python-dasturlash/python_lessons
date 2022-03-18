@@ -79,8 +79,8 @@ print(s)
 
 
 
-# 7) n natural soni berilgan (n>0). Kvadrati n dan katta bo'ladigan eng kichchik butun k sonini
-#    (k**2 > n) aniqlovchi programma tuzilsin. Ildizdan chiqaruvchi funksiyadan foydalanmang.
+# 7) n natural soni berilgan (n>0). Kvadrati n dan katta bo'ladigan eng kichchik butun k sonini  (k**2 > n) aniqlovchi programma tuzilsin. 
+#   Ildizdan chiqaruvchi funksiyadan foydalanmang.
 
 n = int(input('n = '))
 s = 0
