@@ -92,8 +92,8 @@ print(k-1)
 
 
 
-# 8) n natural soni berilgan (n>0). Kvadrati n dan katta bo'lmagan eng katta butun k sonini
-#    (k**2 <= n) aniqlovchi programma tuzilsin. Ildizdan chiqaruvchi funksiyadan foydalanmang.
+# 8) n natural soni berilgan (n>0). Kvadrati n dan katta bo'lmagan eng katta butun k sonini  (k**2 <= n) aniqlovchi programma tuzilsin.
+#    Ildizdan chiqaruvchi funksiyadan foydalanmang.
 
 n = int(input('n = '))
 s = 0
