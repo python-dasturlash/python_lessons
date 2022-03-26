@@ -252,8 +252,8 @@ print(a,"ta")
 
 
 
-# 21) n butun soni berilgan (n>0). Bo'lib butun va qoldiq qismlarini aniqlash orqali,
-#     berilgan son raqamlarining orasida toq raqamlar bor-yo'qligini aniqlovchi programma tuzilsin.
+# 21) n butun soni berilgan (n>0). Bo'lib butun va qoldiq qismlarini aniqlash orqali, berilgan son raqamlarining orasida toq raqamlar bor-yo'qligini 
+#     aniqlovchi programma tuzilsin.
 
 n = int(input('n = '))
 a = 0
@@ -280,8 +280,7 @@ else:
 
 
 
-# 23) a va b butun musbat sonlari berilgan. Berilgan sonlarning eng katta umumiy
-#     bo'luvchisini aniqlovchi programma tuzilsin.   EKUB 
+# 23) a va b butun musbat sonlari berilgan. Berilgan sonlarning eng katta umumiy bo'luvchisini aniqlovchi programma tuzilsin.   EKUB 
 
 a = int(input('a = '))
 b = int(input('b = '))
