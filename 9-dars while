@@ -188,9 +188,8 @@ print("s =",s,"k =",k)
 
 
 
-# 16) Sportsmen birinchi kuni 10 km yugurib boshladi. Keyingi kunlari bir oldingi kunga nisbatan
-#     p foiz ko'p yugurdi (0<p<50). Sportsmenning necha kundan keyin jami yugurgan masofasi
-#     200 km dan oshadi? Jami kunlar soni va masofani (butun son) chiqaruvchi programma tuzilsin.
+# 16) Sportsmen birinchi kuni 10 km yugurib boshladi. Keyingi kunlari bir oldingi kunga nisbatan p foiz ko'p yugurdi (0<p<50). Sportsmenning necha kundan 
+#     keyin jami yugurgan masofasi 200 km dan oshadi? Jami kunlar soni va masofani (butun son) chiqaruvchi programma tuzilsin.
 
 p = int(input('p = '))
 s = 10
