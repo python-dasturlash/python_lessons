@@ -150,8 +150,8 @@ print("k =",k-1,"S =",s-k)
 
 
 
-# 13) a soni berilgan (a>1). (1 + 1/2 + 1/3 +...+ 1/k) >= a shart bajaradigan eng kichik k sonini 
-#     aniqlovchi programma tuzilsin. Yig'indi ham ekranga chiqarilsin.
+# 13) a soni berilgan (a>1). (1 + 1/2 + 1/3 +...+ 1/k) >= a shart bajaradigan eng kichik k sonini aniqlovchi programma tuzilsin. 
+#     Yig'indi ham ekranga chiqarilsin.
 
 a = int(input('a = '))
 k = 0; s = k
@@ -162,8 +162,8 @@ print("k =",k,"s =",s)
 
 
 
-# 14) a soni berilgan (a>1). (1 + 1/2 + 1/3 +...+ 1/k) <= a shart bajaradigan eng katta k sonini 
-#     aniqlovchi programma tuzilsin. Yig'indi ham ekranga chiqarilsin.
+# 14) a soni berilgan (a>1). (1 + 1/2 + 1/3 +...+ 1/k) <= a shart bajaradigan eng katta k sonini aniqlovchi programma tuzilsin. 
+#     Yig'indi ham ekranga chiqarilsin.
 
 a = int(input('a = '))
 k = 0; s = k
