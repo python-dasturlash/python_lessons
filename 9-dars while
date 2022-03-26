@@ -329,8 +329,7 @@ print(F2)
 
 
 
-# 26) Fibonachchi soni bo'lgan n butun soni berilgan (n>1). n sonidan bir oldingi va bir
-#     keyingi Fibonachchi sonlarini chiqaruvchi programma tuzilsin.
+# 26) Fibonachchi soni bo'lgan n butun soni berilgan (n>1). n sonidan bir oldingi va bir  keyingi Fibonachchi sonlarini chiqaruvchi  programma tuzilsin.
 
 n = int(input('n = '))
 F1, F2  = 1, 1 
@@ -343,8 +342,7 @@ else:
 
 
 
-# 27) Fibonachchi soni bo'lgan n butun soni berilgan (n>1). n soni Fibonachchi ketma-ketligining
-#     nechanchi xadi ekanini chiqaruvchi programma tuzilsin.
+# 27) Fibonachchi soni bo'lgan n butun soni berilgan (n>1). n soni Fibonachchi ketma-ketligining nechanchi xadi ekanini chiqaruvchi programma tuzilsin.
 
 n = int(input('n = '))
 F1 = F2 = 1;  a = 0
