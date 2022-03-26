@@ -214,8 +214,7 @@ print("Butun qism: ",a-1,"\nQoldiq qism: ",N+m)
 
 
 
-# 18) n butun soni berilgan (n>0). Bo'lib butun va qoldiq qismlarini aniqlash orqali,
-#     berilgan son raqamlarini teskari tartibda chiqaruvchi programma tuzilsin.
+# 18) n butun soni berilgan (n>0). Bo'lib butun va qoldiq qismlarini aniqlash orqali, berilgan son raqamlarini teskari tartibda chiqaruvchi programma tuzilsin.
 
 n = int(input('n = '))
 s = 0
