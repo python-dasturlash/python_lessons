@@ -392,9 +392,8 @@ print("k =",k,"  ",ak,"  ",a2)
 
 
 
-# 30) A, B, C musbat butun sonlari berilgan. A x B to'rtburchak ichida tomoni C bo'lgan
-#     kvadratdan nechtasi sig'ishini aniqlovchi programma tuzilsin. Ko'paytirish va bo'lish
-#     amallarini ishlatmang.
+# 30) A, B, C musbat butun sonlari berilgan. A x B to'rtburchak ichida tomoni C bo'lgan kvadratdan nechtasi sig'ishini aniqlovchi programma tuzilsin. 
+#     Ko'paytirish va bo'lish amallarini ishlatmang.
 
 A = int(input('A = '))
 B = int(input('B = '))
