@@ -239,8 +239,8 @@ print("Raqmlari soni: ",a)
 
 
 
-# 20) n butun soni berilgan (n>0). Bo'lib butun va qoldiq qismlarini aniqlash orqali,
-#     berilgan son raqamlarining orasida 2 raqami bor-yo'qligini aniqlovchi programma tuzilsin.
+# 20) n butun soni berilgan (n>0). Bo'lib butun va qoldiq qismlarini aniqlash orqali, berilgan son raqamlarining orasida 2 raqami bor-yo'qligini 
+#     aniqlovchi programma tuzilsin.
 
 n = int(input('n = '))
 a = 0
