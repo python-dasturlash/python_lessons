@@ -303,8 +303,8 @@ else:
 
 
 
-# 24) n butun soni berilgan (n>1). n sonini Fibonachchi sonlari orasida bor-yo'qligini
-#     aniqlovchi programma tuzilsin. Fibonachchi sonlari quydagi qonuniyat asosida topiladi.
+# 24) n butun soni berilgan (n>1). n sonini Fibonachchi sonlari orasida bor-yo'qligini aniqlovchi programma tuzilsin. Fibonachchi sonlari 
+#     quydagi qonuniyat asosida topiladi.
 #     F1 = 1;  F2 = 1;  Fk = F(k-1) + F(k-2);  k = 3,4,...
 
 n = int(input('n = '))
@@ -319,8 +319,7 @@ if n < F2:
 
 
 
-# 25) n butun soni berilgan (n>1). n sonidan katta bo'lgan birinchi Fibonachchi sonini
-#     aniqlovchi programma tuzilsin. 
+# 25) n butun soni berilgan (n>1). n sonidan katta bo'lgan birinchi Fibonachchi sonini aniqlovchi programma tuzilsin. 
 
 n = int(input('n = '))
 F1, F2  = 1, 1 
