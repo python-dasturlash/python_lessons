@@ -201,8 +201,8 @@ print("s =",s,"kun =",k)
 
 
 
-# 17) n va m butun sonlari berilgan (n>m). n sonini m soniga bo'lib butun va qoldiq
-#     qismlarini bo'lish va qoldiqni olish amallarini ishlatmasdan topuvchi programma tuzilsin.
+# 17) n va m butun sonlari berilgan (n>m). n sonini m soniga bo'lib butun va qoldiq qismlarini bo'lish va qoldiqni olish amallarini ishlatmasdan 
+#     topuvchi programma tuzilsin.
 
 n = int(input('n = '))
 m = int(input('m = '))
