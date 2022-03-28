@@ -390,3 +390,49 @@ elif e_soni_1 and e_soni_2:
 
        
 
+# 19) N natural soni va N ta butun sondan iborat to'plam berilgan. To'plamdagi eng
+#     kichik elementlar sonini aniqlovchi programma tuzilsin.
+
+N = int(input('N = '))
+i = 1
+mini = int(input(str(i)+') '))
+e_soni = 1
+while N != 1:
+    N -= 1
+    i += 1
+    a = int(input(str(i)+') '))
+    if mini > a:
+        mini = a
+        e_soni = 0
+    if mini == a:
+        e_soni += 1
+print(e_soni)
+    
+
+
+# 20) N natural soni va N ta butun sondan iborat to'plam berilgan. To'plamdagi ekstremal elementlar
+#     sonini aniqlovchi programma tuzilsin. Ekstremal element deb eng katta yoki eng kichik elementga aytiladi.
+
+N = int(input('N = '))
+i = 1
+mini = maxi = int(input(str(i)+') '))
+mini_soni = maxi_soni = 1
+while N != 1:
+    N -= 1
+    i += 1
+    a = int(input(str(i)+') '))
+    if mini > a:
+        mini = a
+        mini_soni = 0
+    if mini == a:
+        mini_soni += 1
+    if maxi < a:
+        maxi = a
+        maxi_soni = 0
+    if maxi == a:
+        maxi_soni += 1
+print("Eng kichik elementlar soni:",mini_soni)
+print("Eng katta elementlar soni:",maxi_soni)
+
+
+
