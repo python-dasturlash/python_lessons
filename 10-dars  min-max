@@ -33,3 +33,41 @@ while N != 1:
         yuz = a*b
         A = a;  B = b
 print("Eng kichik yuza   a =",A,"  b =",B,"  yuzi =",yuz)
+
+
+
+# 3) N natural soni va n ta to'g'ri burchakli to'rtburchak tomonlarining (a,b) to'plami berilgan.
+#    Kiritilgan to'plamdagi eng katta perimetrli to'rtburchakni topuvchi programma tuzilsin.
+
+N = int(input("Nechta to'g'ri to'rtburchakning tomonlarini kiritmoqchisiz: "))
+i = 1
+a = int(input(str(i)+')  a = '))
+b = int(input("    b = "))
+P = 2*(a + b)
+while N != 1:
+    N -= 1
+    i += 1
+    a = int(input(str(i)+')  a = '))
+    b = int(input("    b = "))
+    if P < 2*(a+b):
+        P = 2*(a+b)
+        A = a;  B = b
+print("Eng katta perimetr   a =",A,"  b =",B,"  Perimetr =",P)
+
+
+
+# 4) N natural soni va n ta sonlar to'plami berilgan. Kiritilgan to'plamdagi eng kichik
+#    element o'rnini aniqlovchi programma tuzilsin.
+
+N = int(input("Nechta son kiritmoqchisiz:  "))
+i = 1
+orni = i
+min = int(input(str(i)+') '))
+while N != 1:
+    N -= 1
+    i += 1
+    a = int(input(str(i)+') '))
+    if min > a:
+        min = a
+        orni = i
+print("Eng kichik son:",min," O'rni:",orni)
