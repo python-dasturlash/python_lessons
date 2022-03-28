@@ -160,3 +160,48 @@ print("Oxirgi uchragan eng kichik elementning tartib raqami:",min_t_raqam_2)
 
 
 
+# 9) N natural soni va N ta butun sondan iborat to'plam berilgan. Birinchi va oxirgi 
+#    uchragan eng katta element tartib raqamini aniqlovchi programma tuzilsin.
+
+N = int(input("N = "))
+max = int(input(str(1)+') '))
+max_t_raqam_1 = max_t_raqam_2 = 1
+i = 1
+while N != 1:
+    N -= 1
+    i += 1
+    a = int(input(str(i)+') '))
+    if max < a:
+        max = a
+        max_t_raqam_1 = i
+    if max <= a:
+        max = a
+        max_t_raqam_2 = i
+print("Birinchi uchragan eng katta elementning tartib raqami:",max_t_raqam_1)
+print("Oxirgi uchragan eng katta elementning tartib raqami:",max_t_raqam_2)
+
+
+
+# 10) N natural soni va N ta butun sondan iborat to'plam berilgan. Birinchi uchragan ekstremal
+#     element tartib raqamini aniqlovchi programma tuzilsin. Ekstremal element deb
+#     eng katta va eng kichik elementga aytiladi.
+
+N = int(input('N = '))
+mini = maxi = int(input(str(1)+') '))
+mini_t_raqam = maxi_t_raqam = 1
+i = 1
+while N != 1:
+    i += 1
+    N -= 1
+    a = int(input(str(i)+') '))
+    if maxi < a:
+        maxi = a
+        maxi_t_raqam = i
+    if mini > a:
+        mini = a
+        mini_t_raqam = i
+print("Birinchi uchragan eng katta elementning tartib raqami:",maxi_t_raqam)
+print("Birinchi uchragan eng kichik elementning tartib raqami:",mini_t_raqam)
+
+
+
