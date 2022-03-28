@@ -205,3 +205,126 @@ print("Birinchi uchragan eng kichik elementning tartib raqami:",mini_t_raqam)
 
 
 
+# 11) N natural soni va N ta butun sondan iborat to'plam berilgan. Oxirgi uchragan ekstremal
+#     element tartib raqamini aniqlovchi programma tuzilsin. Ekstremal element deb
+#     eng katta va eng kichik elementga aytiladi.
+
+N = int(input('N = '))
+mini = maxi = int(input(str(1)+') '))
+mini_t_raqam = maxi_t_raqam = 1
+i = 1
+while N != 1:
+    i += 1
+    N -= 1
+    a = int(input(str(i)+') '))
+    if maxi <= a:
+        maxi = a
+        maxi_t_raqam = i
+    if mini >= a:
+        mini = a
+        mini_t_raqam = i
+print("Oxirgi uchragan eng katta elementning tartib raqami:",maxi_t_raqam)
+print("Oxirgi uchragan eng kichik elementning tartib raqami:",mini_t_raqam)
+
+
+
+# 12) N natural soni berilgan va N ta butun sondan iborat to'plam berilgan. Eng kichik musbat
+#     sonni aniqlovchi programma tuzilsin. Agar musbat son bo'lmasa nol chiqarilsin.
+
+N = int(input("Nechta son kiritmoqchisiz: "))
+x = True;  i = 0
+while N != 0:
+    N -= 1;  i += 1
+    a = int(input(str(i)+') '))
+    if a > 0  and  x == True:
+        min = a
+        x = False
+    if a > 0  and  x == False:
+        if a < min:
+            min = a
+if x == False:
+    print("Eng kichik musbat son: ",min)
+else:
+    print(0)
+        
+
+
+# 13) N natural soni berilgan va N ta butun sondan iborat to'plam berilgan. Birinchi uchragan eng katta 
+#     toq element tartib raqamini aniqlovchi programma tuzilsin. Agar toq son bo'lmasa nol chiqarilsin.
+
+N = int(input("N = "))
+x = True
+i = 0
+while N != 0:
+    N -= 1
+    i += 1
+    a = int(input(str(i)+') '))
+    if x == True  and  a % 2 == 1:
+        maxi = a
+        maxi_t_raqam = i
+        x = False
+    if x == False and a % 2 == 1 and maxi < a:
+        maxi = a
+        maxi_t_raqam = i
+if x == False:
+    print("Birinchi uchragan eng katta toq element:",maxi)
+    print(maxi,"ning tartib raqami",maxi_t_raqam)
+else:
+    print(0)
+    
+
+
+# 14) B soni va 10 ta butun sondan tashkil topgan musbat sonlar to'plami berilgan. Shu to'plamda
+#     B sonidan katta bo'lgan, eng kichik elementni tartib raqamini chiqaruvchi programma
+#     tuzilsin. Agar berilgan to'plamda B sonidan katta son topilmasa, ikkita 0 chiqarilsin.
+
+B = int(input('B = '))
+print("10 ta musbat son kiriting")
+x = True;   i = 0;  N = 10
+while N != 0:
+    N -= 1;  i += 1
+    a = int(input(str(i)+') '))
+    if a > 0 and x == True and a > B:
+        min = a
+        t_raqam = i
+        x = False
+    if a > 0 and x == False and a > B:
+        if a < min:
+            min = a
+            t_raqam = i
+if x == False:
+    print(B,"dan katta eng kichik son: ",min)
+    print(min,"sonining tartib raqami: ",t_raqam)
+else:
+    print('00')
+
+
+
+# 15) B, C sonlari va 10 ta butun sondan tashkil topgan to'plam berilgan (0<B<C). Shu to'plamda
+#     (B,C) oraliqdagi eng katta elementni tartib raqamini chiqaruvchi programma tuzilsin. Agar 
+#     berilgan to'plamda (B,C) oraliqdagi son topilmasa, ikkita 0 chiqarilsin.
+
+print("B va C ni kiriting (0<B<C)")
+B = int(input('B = '))
+C = int(input('C = '))
+print("10 ta son kiriting")
+x = True;  i = 0;  N = 10
+while N != 0:
+    N -= 1;  i += 1
+    a = int(input(str(i)+') '))
+    if x == True and B < a < C:
+        max = a
+        x = False
+        t_raqam = i
+    if x == False and B < a < C:
+        if a > max:
+            max = a
+            t_raqam = i
+if x == False:
+    print(f"{B} va {C} orasidagi eng katta son: {max}")
+    print(f"{max} ning tartib ratami: {t_raqam}")
+else:
+    print('00')
+
+
+
