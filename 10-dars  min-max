@@ -71,3 +71,48 @@ while N != 1:
         min = a
         orni = i
 print("Eng kichik son:",min," O'rni:",orni)
+
+
+
+# 5) N natural soni va n ta (m,v) sonlar juftligi to'plami berilgan (m-og'irlik, v-hajm). Kiritilgan
+#    to'plamdagi eng katta zichlikni aniqlovchi programma tuzilsin. Zichlik-o'g'irilikni hajmga nisbatiga teng.
+
+N = int(input("Nechta (m,v) sonlar juftligini kiritmoqchisiz: "))
+i = 1
+m = int(input(str(i)+')  m = '))
+v = int(input("    v = "))
+P = m / v
+while N != 1:
+    N -= 1
+    i += 1
+    m = int(input(str(i)+')  m = '))
+    v = int(input("    v = "))
+    if P < m / v:
+        P = m / v
+        M = m;  V = v
+print("Eng katta zichlik  ("+str(m)+","+str(v)+')'," m =",m,"  v =",v, "  Zichlik =",m/v)
+
+
+
+# 6) N natural soni va N ta butun sondan iborat to'plam berilgan. Birinchi uchragan eng kichik
+#    va oxirgi uchragan eng katta element tartib raqamini aniqlovchi programma tuzilsin.
+
+N = int(input("N = "))
+min = max = int(input(str(1)+') '))
+max_t_raqam = min_t_raqam = 1
+i = 1
+while N != 1:
+    N -= 1
+    i += 1
+    a = int(input(str(i)+') '))
+    if max <= a:
+        max = a
+        max_t_raqam = i
+    if min > a:
+        min = a
+        min_t_raqam = i
+print("Birinchi uchragan eng kichik elementning tartib raqami:",min_t_raqam)
+print("Oxirgi uchragan eng katta elementning tartib raqami:",max_t_raqam)
+
+
+
