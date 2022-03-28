@@ -328,3 +328,65 @@ else:
 
 
 
+# 16) N natural soni va N ta butun sondan iborat to'plam berilgan. Birinchi uchragan eng
+#     kichik elementgacha bo'lgan elementlar sonini aniqlovchi programma tuzilsin.
+
+N = int(input('N = '))
+i = 1
+min = int(input(str(i)+') '))
+e_soni = 0
+while N != 1:
+    N -= 1;  i += 1
+    a = int(input(str(i)+') '))
+    if min > a:
+        min = a
+        e_soni = i-1
+print("Birinchi uchragan eng kichik element:",min)
+print(min,"gacha bo'lgan elementlar soni:",e_soni)
+    
+
+
+# 17) N natural soni va N ta butun sondan iborat to'plam berilgan. Oxirgi uchragan eng katta 
+#     elementdan keyin turgan elementlar sonini aniqlovchi programma tuzilsin.
+
+N = int(input("Nechta son kiritmoqchisiz: "))
+i = 1
+e_soni = 0
+max = int(input(str(i)+') '))
+while N != 1:
+    N -= 1;  i += 1
+    a = int(input(str(i)+') '))
+    if a >= max:    
+        max = a
+        e_soni = 0
+    elif a < max:    
+        e_soni += 1
+print(f"Oxirgi uchragan eng katta element: {max} \n{max} dan keyin turgan elementlar soni: {e_soni}")
+
+
+
+# 18) N natural soni va N ta butun sondan iborat to'plam berilgan. Birinchi va oxirgi uchragan eng
+#     katta element orasida turgan elementlar sonini aniqlovchi programma tuzilsin. Agar to'plamda
+#     faqat bitta eng katta element bo'lsa, nol chiqarilsin.
+
+N = int(input("Nechta son kiritmoqchisiz: "))
+i = 1
+max1 = int(input(str(i)+') '))
+e_soni_1 = i
+e_soni_2 = i
+while N != 1:
+    N -= 1;  i += 1
+    a = int(input(str(i)+') '))
+    if max1 < a:
+        max1 = a
+        e_soni_1 = i
+    if max1 <= a:
+        max1 = a
+        e_soni_2 = i
+if e_soni_1 == e_soni_2:
+    print(0)
+elif e_soni_1 and e_soni_2:
+    print(e_soni_2 - e_soni_1-1)
+
+       
+
