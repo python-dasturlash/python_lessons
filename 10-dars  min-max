@@ -626,3 +626,137 @@ print("Indeks:",indeks,"  Elementlar soni:",e_soni)
 
 
 
+# 27) 2-usul
+
+N = int(input("N = "))
+i = 0
+k = 0
+d = 0
+e_soni = 0
+indeks = 0
+while N != 0:
+    N -= 1
+    i += 1
+    a = int(input(str(i)+') '))
+    if a == 0:
+        d = 0
+        k += 1
+        if k > e_soni:
+            indeks = i - e_soni
+            e_soni = k
+    elif a == 1:
+        k = 0
+        d += 1
+        if d > e_soni:
+            indeks = i - e_soni
+            e_soni = d
+print("Indeks:",indeks,"  Elementlar soni:",e_soni)
+
+
+
+# 28) N natural soni va N ta nol va birdan iborat to'plam berilgan. Bir soni ketma-ketligi eng uzun
+#     bo'ladigan oraliq boshlangan element indeksini va ketma-ketlikdagi elementlar sonini
+#     aniqlovchi programma tuzilsin.
+
+N = int(input("N = "))
+i = 0
+k = 0
+e_soni = 0
+indeks = 0
+while N != 0:
+    N -= 1
+    i += 1
+    a = int(input(str(i)+') '))
+    if a == 1:
+        k += 1
+        if k > e_soni:
+            indeks = i - e_soni
+            e_soni = k
+    else:
+        k = 0
+        
+print("Indeks:",indeks,"  Elementlar soni:",e_soni)
+
+
+
+# 29) N natural soni va N ta butun sondan iborat to'plam berilgan. To'plamdagi ketma-ket keladigan
+#     eng kichik elementlarning maksimal sonini aniqlovchi programma tuzilsin.
+
+N = int(input("N = "))
+x = True
+k = 0
+i = 0
+soni = 0
+while N != 0:
+    N -= 1
+    i += 1
+    a = int(input(str(i)+') '))
+    
+    if x == True:
+        mini = a
+        x = False
+        
+        
+    if mini == a:
+        k += 1
+        if k > soni:
+            soni = k
+        
+    elif mini > a:
+        k = 1
+        soni = 1
+        mini = a
+    
+    else:
+        k = 0
+
+print(soni)
+        
+
+
+# 30) N natural soni va N ta butun sondan iborat to'plam berilgan. To'plamdagi ketma-ket
+#     keladigan eng katta elementlarning minimal sonini aniqlovchi programma tuzilsin.
+
+N = int(input("N = "))
+x = True
+y = True
+i = 0
+k = 0
+soni = 0
+while N > i:
+    i += 1
+    a = int(input(str(i)+') '))
+    
+    if x == True:
+        maxi = a
+        x = False
+        
+    if maxi == a:
+        k += 1
+        
+    elif maxi < a:
+        k = 1
+        soni = 1
+        maxi = a
+        y = True
+        
+    else:
+        if y == True:
+            soni = k
+            k = 0
+            y = False
+        elif k != 0 and k < soni:
+            soni = k
+            
+            
+    if N == i:
+        if y == True:
+            soni = k
+            k = 0
+            y = False
+        elif k != 0 and k < soni:
+            soni = k
+
+print(soni)
+
+
