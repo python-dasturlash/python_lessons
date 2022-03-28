@@ -436,3 +436,141 @@ print("Eng katta elementlar soni:",maxi_soni)
 
 
 
+# 21) N natural soni va N ta butun sondan iborat to'plam berilgan (N>2). To'plamning o'rtacha
+#     qiymatini aniqlovchi programma tuzilsin. O'rtacha qiymatni hisoblashda eng katta va eng 
+#     kichik qiymatlar hisobga olinmasin. 
+
+N = int(input("(N>2) N = "))
+i = 1
+n = N
+if N > 2:
+    s = min = max = int(input(str(i)+') '))
+    min_soni = max_soni = 1
+    while N != 1:
+        N -= 1  
+        i += 1
+        a = int(input(str(i)+') '))
+        s += a
+        if max < a:
+            max = a
+            max_soni = 0
+        if max == a:
+            max_soni += 1
+            
+        if min > a:
+            min = a
+            min_soni = 0
+        if min == a:
+            min_soni += 1
+            
+    orta_qiymat = (s - (min * min_soni) - (max * max_soni)) / (n - min_soni - max_soni)
+    print(orta_qiymat)
+
+else:
+    print("2 tadan ko'p son kiriting")
+
+
+
+# 22) N natural soni va N ta butun sondan iborat to'plam berilgan (N>2). To'plamdagi eng kichik
+#     2 ta qiymatni aniqlovchi programma tuzilsin.
+#     Masalan: N=5; 1 2 3 4 5
+#     Natija: 1 2
+
+N = int(input("(N>2) N = "))
+
+if N > 2:
+    min1 = int(input(str(1)+') '))
+    min2 = int(input(str(2)+') '))
+    i = 2
+    while N != 2:
+        N -= 1
+        i += 1
+        a = int(input(str(i)+') '))
+        if min1 >= min2 and min1 > a:
+            min1 = a
+        elif min1 < min2 and min2 > a:
+            min2 = a
+    print(min1,min2)
+else:
+    print("2 tadan ko'p son kiriting")
+
+
+
+# 23) N natural soni va N ta butun sondan iborat to'plam berilgan (N>3). To'plamdagi eng katta
+#     3 ta qiymatni aniqlovchi programma tuzilsin.
+#     Masalan: N=5; 1 2 3 4 5
+#     Natija: 5 4 3
+
+N = int(input("N>3 N = "))
+
+if N > 3:
+    max1 = int(input(str(1)+') '))
+    max2 = int(input(str(2)+') '))
+    max3 = int(input(str(3)+') '))
+    i = 3
+    while N != 3:
+        N -= 1
+        i += 1
+        a = int(input(str(i)+') '))
+        if max1 <= max2 and max1 <= max3 and max1 < a:
+            max1 = a
+        elif max2 <= max1 and max2 <= max3 and max2 < a:
+            max2 = a
+        elif max3 <= max1 and max3 <= max2 and max3 < a:
+            max3 = a
+    print(max1,max2,max3)
+else:
+    print("3 tadan ko'p son kiriting")
+
+
+
+# 24) N natural soni va N ta butun sondan iborat to'plam berilgan (N>1). Ikkita qo'shni son
+#     yig'indisining eng katta qiymatni aniqlovchi programma tuzilsin.
+
+N = int(input("(N>1) N = "))
+if N > 1:
+    bir = int(input(str(1)+') '))
+    ikki = int(input(str(2)+') '))
+    yigindi = bir + ikki
+    i = 2
+    while N != 2:
+        N -= 1
+        i += 1
+        a = int(input(str(i)+') '))
+        if a + ikki > yigindi:
+            yigindi = a + ikki
+            ikki = a
+        else:
+            ikki = a
+    print(yigindi)
+else:
+    print("1 tadan ko'p son kiriting")
+            
+
+
+# 25) N natural soni va N ta butun sondan iborat to'plam berilgan (N>1). Ko'paytmasi eng
+#     kichik bo'ladigan ikkita qo'shni element indekslarini aniqlovchi programma tuzilsin.
+
+N = int(input("(N>1) N = "))
+if N > 1:
+    bir = int(input(str(1)+') '))
+    ikki = int(input(str(2)+') '))
+    kopaytma = bir * ikki
+    i = 2
+    indeks = 2
+    while N != 2:
+        N -= 1
+        i += 1
+        a = int(input(str(i)+') '))
+        if a * ikki < kopaytma:
+            kopaytma = a * ikki
+            ikki = a
+            indeks = i
+        else:
+            ikki = a
+    print(indeks-1,'va',indeks)
+else:
+    print("1 tadan ko'p son kiriting")
+
+
+
