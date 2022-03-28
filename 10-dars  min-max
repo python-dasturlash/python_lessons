@@ -574,3 +574,55 @@ else:
 
 
 
+# 26) N natural soni va N ta butun sondan iborat to'plam berilgan. To'plamda ketma-ket keladigan
+#     juft elementlar maksimal sonini aniqlovchi programma tuzilsin. Agar to'plamda juft sonlar
+#     bo'lmasa, 0 chiqarilsin.
+
+N = int(input("N = "))
+i = 0
+k = 0
+b = 0
+while N != 0:
+    N -= 1
+    i += 1
+    a = int(input(str(i)+') '))
+    if a % 2 == 0:
+        k += 1
+        if k > b:
+            b = k
+    else:
+        k = 0
+print("Ketma-ket kelgan juft elementlar maksimal soni:",b)
+
+
+
+# 27) N natural soni va n ta nol va birdan iborat to'plam berilgan. Bir xil sonlar ketma-ketligi
+#     eng uzun bo'ladigan oraliq boshlangan element indeksini va ketma-ketlikdagi elementlar
+#     sonini aniqlovchi programma tuzilsin.
+
+N = int(input("N = "))
+i = 0
+k = 0
+d = 0
+e_soni = 0
+indeks = 0
+while N != 0:
+    N -= 1
+    i += 1
+    a = int(input(str(i)+') '))
+    if a % 2 == 0:
+        d = 0
+        k += 1
+        if k > e_soni:
+            indeks = i - e_soni
+            e_soni = k
+    else:
+        k = 0
+        d += 1
+        if d > e_soni:
+            indeks = i - e_soni
+            e_soni = d
+print("Indeks:",indeks,"  Elementlar soni:",e_soni)
+
+
+
