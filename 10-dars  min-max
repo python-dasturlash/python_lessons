@@ -1,0 +1,35 @@
+# 1) N natural soni va n ta sonlar to'plami berilgan. Kiritilgan to'plamdagi eng katta va
+#    eng kichik sonni topuvchi programma tuzilsin.
+
+N = int(input("Nechta son kiritmoqchisiz:  "))
+i = 1
+min = max = int(input(str(1)+') '))
+while N != 1:
+    N -= 1
+    i += 1
+    a = int(input(str(i)+') '))
+    if a > max:
+        max = a
+    if a < min:
+        min = a
+print('min =',min,'  max =',max)
+
+
+
+# 2) N natural soni va n ta to'g'ri burchakli to'rtburchak tomonlarining (a,b) to'plami berilgan.
+#    Kiritilgan to'plamdagi eng kichik yuzali to'rtburchakni topuvchi programma tuzilsin.
+
+N = int(input("Nechta to'g'ri to'rtburchakning tomonlarini kiritmoqchisiz: "))
+i = 1
+a = int(input(str(i)+')  a = '))
+b = int(input("    b = "))
+yuz = a * b
+while N != 1:
+    N -= 1
+    i += 1
+    a = int(input(str(i)+')  a = '))
+    b = int(input("    b = "))
+    if yuz > a*b:
+        yuz = a*b
+        A = a;  B = b
+print("Eng kichik yuza   a =",A,"  b =",B,"  yuzi =",yuz)
