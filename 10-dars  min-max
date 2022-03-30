@@ -1,5 +1,4 @@
-# 1) N natural soni va n ta sonlar to'plami berilgan. Kiritilgan to'plamdagi eng katta va
-#    eng kichik sonni topuvchi programma tuzilsin.
+# 1) N natural soni va n ta sonlar to'plami berilgan. Kiritilgan to'plamdagi eng katta va eng kichik sonni topuvchi programma tuzilsin.
 
 N = int(input("Nechta son kiritmoqchisiz:  "))
 i = 1
