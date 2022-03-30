@@ -15,8 +15,8 @@ print('min =',min,'  max =',max)
 
 
 
-# 2) N natural soni va n ta to'g'ri burchakli to'rtburchak tomonlarining (a,b) to'plami berilgan.
-#    Kiritilgan to'plamdagi eng kichik yuzali to'rtburchakni topuvchi programma tuzilsin.
+# 2) N natural soni va n ta to'g'ri burchakli to'rtburchak tomonlarining (a,b) to'plami berilgan. Kiritilgan to'plamdagi eng kichik yuzali to'rtburchakni 
+#    topuvchi programma tuzilsin.
 
 N = int(input("Nechta to'g'ri to'rtburchakning tomonlarini kiritmoqchisiz: "))
 i = 1
