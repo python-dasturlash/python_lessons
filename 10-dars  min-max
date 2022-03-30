@@ -35,8 +35,8 @@ print("Eng kichik yuza   a =",A,"  b =",B,"  yuzi =",yuz)
 
 
 
-# 3) N natural soni va n ta to'g'ri burchakli to'rtburchak tomonlarining (a,b) to'plami berilgan.
-#    Kiritilgan to'plamdagi eng katta perimetrli to'rtburchakni topuvchi programma tuzilsin.
+# 3) N natural soni va n ta to'g'ri burchakli to'rtburchak tomonlarining (a,b) to'plami berilgan. Kiritilgan to'plamdagi eng katta perimetrli 
+#    to'rtburchakni topuvchi programma tuzilsin.
 
 N = int(input("Nechta to'g'ri to'rtburchakning tomonlarini kiritmoqchisiz: "))
 i = 1
