@@ -55,8 +55,7 @@ print("Eng katta perimetr   a =",A,"  b =",B,"  Perimetr =",P)
 
 
 
-# 4) N natural soni va n ta sonlar to'plami berilgan. Kiritilgan to'plamdagi eng kichik
-#    element o'rnini aniqlovchi programma tuzilsin.
+# 4) N natural soni va n ta sonlar to'plami berilgan. Kiritilgan to'plamdagi eng kichik element o'rnini aniqlovchi programma tuzilsin.
 
 N = int(input("Nechta son kiritmoqchisiz:  "))
 i = 1
