@@ -72,8 +72,8 @@ print("Eng kichik son:",min," O'rni:",orni)
 
 
 
-# 5) N natural soni va n ta (m,v) sonlar juftligi to'plami berilgan (m-og'irlik, v-hajm). Kiritilgan
-#    to'plamdagi eng katta zichlikni aniqlovchi programma tuzilsin. Zichlik-o'g'irilikni hajmga nisbatiga teng.
+# 5) N natural soni va n ta (m,v) sonlar juftligi to'plami berilgan (m-og'irlik, v-hajm). Kiritilgan to'plamdagi eng katta zichlikni aniqlovchi programma 
+#    tuzilsin. Zichlik-o'g'irilikni hajmga nisbatiga teng.
 
 N = int(input("Nechta (m,v) sonlar juftligini kiritmoqchisiz: "))
 i = 1
