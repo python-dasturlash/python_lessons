@@ -222,8 +222,8 @@ print("Oxirgi uchragan eng kichik elementning tartib raqami:",mini_t_raqam)
 
 
 
-# 12) N natural soni berilgan va N ta butun sondan iborat to'plam berilgan. Eng kichik musbat
-#     sonni aniqlovchi programma tuzilsin. Agar musbat son bo'lmasa nol chiqarilsin.
+# 12) N natural soni berilgan va N ta butun sondan iborat to'plam berilgan. Eng kichik musbat sonni aniqlovchi programma tuzilsin. Agar musbat son 
+#     bo'lmasa nol chiqarilsin.
 
 N = int(input("Nechta son kiritmoqchisiz: "))
 x = True;  i = 0
