@@ -243,8 +243,8 @@ else:
         
 
 
-# 13) N natural soni berilgan va N ta butun sondan iborat to'plam berilgan. Birinchi uchragan eng katta 
-#     toq element tartib raqamini aniqlovchi programma tuzilsin. Agar toq son bo'lmasa nol chiqarilsin.
+# 13) N natural soni berilgan va N ta butun sondan iborat to'plam berilgan. Birinchi uchragan eng katta toq element tartib raqamini aniqlovchi programma tuzilsin. 
+#     Agar toq son bo'lmasa nol chiqarilsin.
 
 N = int(input("N = "))
 x = True
