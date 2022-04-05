@@ -200,9 +200,8 @@ print("Birinchi uchragan eng kichik elementning tartib raqami:",mini_t_raqam)
 
 
 
-# 11) N natural soni va N ta butun sondan iborat to'plam berilgan. Oxirgi uchragan ekstremal
-#     element tartib raqamini aniqlovchi programma tuzilsin. Ekstremal element deb
-#     eng katta va eng kichik elementga aytiladi.
+# 11) N natural soni va N ta butun sondan iborat to'plam berilgan. Oxirgi uchragan ekstremal element tartib raqamini aniqlovchi programma tuzilsin.
+#     Ekstremal element deb eng katta va eng kichik elementga aytiladi.
 
 N = int(input('N = '))
 mini = maxi = int(input(str(1)+') '))
