@@ -157,8 +157,7 @@ print("Oxirgi uchragan eng kichik elementning tartib raqami:",min_t_raqam_2)
 
 
 
-# 9) N natural soni va N ta butun sondan iborat to'plam berilgan. Birinchi va oxirgi 
-#    uchragan eng katta element tartib raqamini aniqlovchi programma tuzilsin.
+# 9) N natural soni va N ta butun sondan iborat to'plam berilgan. Birinchi va oxirgi uchragan eng katta element tartib raqamini aniqlovchi programma tuzilsin.
 
 N = int(input("N = "))
 max = int(input(str(1)+') '))
