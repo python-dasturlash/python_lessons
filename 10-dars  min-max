@@ -268,9 +268,8 @@ else:
     
 
 
-# 14) B soni va 10 ta butun sondan tashkil topgan musbat sonlar to'plami berilgan. Shu to'plamda
-#     B sonidan katta bo'lgan, eng kichik elementni tartib raqamini chiqaruvchi programma
-#     tuzilsin. Agar berilgan to'plamda B sonidan katta son topilmasa, ikkita 0 chiqarilsin.
+# 14) B soni va 10 ta butun sondan tashkil topgan musbat sonlar to'plami berilgan. Shu to'plamda B sonidan katta bo'lgan, eng kichik elementni tartib raqamini 
+#     chiqaruvchi programma tuzilsin. Agar berilgan to'plamda B sonidan katta son topilmasa, ikkita 0 chiqarilsin.
 
 B = int(input('B = '))
 print("10 ta musbat son kiriting")
@@ -294,9 +293,8 @@ else:
 
 
 
-# 15) B, C sonlari va 10 ta butun sondan tashkil topgan to'plam berilgan (0<B<C). Shu to'plamda
-#     (B,C) oraliqdagi eng katta elementni tartib raqamini chiqaruvchi programma tuzilsin. Agar 
-#     berilgan to'plamda (B,C) oraliqdagi son topilmasa, ikkita 0 chiqarilsin.
+# 15) B, C sonlari va 10 ta butun sondan tashkil topgan to'plam berilgan (0<B<C). Shu to'plamda (B,C) oraliqdagi eng katta elementni tartib raqamini chiqaruvchi 
+#     programma tuzilsin. Agar berilgan to'plamda (B,C) oraliqdagi son topilmasa, ikkita 0 chiqarilsin.
 
 print("B va C ni kiriting (0<B<C)")
 B = int(input('B = '))
@@ -322,8 +320,7 @@ else:
 
 
 
-# 16) N natural soni va N ta butun sondan iborat to'plam berilgan. Birinchi uchragan eng
-#     kichik elementgacha bo'lgan elementlar sonini aniqlovchi programma tuzilsin.
+# 16) N natural soni va N ta butun sondan iborat to'plam berilgan. Birinchi uchragan eng kichik elementgacha bo'lgan elementlar sonini aniqlovchi programma tuzilsin.
 
 N = int(input('N = '))
 i = 1
