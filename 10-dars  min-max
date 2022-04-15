@@ -337,8 +337,7 @@ print(min,"gacha bo'lgan elementlar soni:",e_soni)
     
 
 
-# 17) N natural soni va N ta butun sondan iborat to'plam berilgan. Oxirgi uchragan eng katta 
-#     elementdan keyin turgan elementlar sonini aniqlovchi programma tuzilsin.
+# 17) N natural soni va N ta butun sondan iborat to'plam berilgan. Oxirgi uchragan eng katta elementdan keyin turgan elementlar sonini aniqlovchi programma tuzilsin.
 
 N = int(input("Nechta son kiritmoqchisiz: "))
 i = 1
@@ -356,9 +355,8 @@ print(f"Oxirgi uchragan eng katta element: {max} \n{max} dan keyin turgan elemen
 
 
 
-# 18) N natural soni va N ta butun sondan iborat to'plam berilgan. Birinchi va oxirgi uchragan eng
-#     katta element orasida turgan elementlar sonini aniqlovchi programma tuzilsin. Agar to'plamda
-#     faqat bitta eng katta element bo'lsa, nol chiqarilsin.
+# 18) N natural soni va N ta butun sondan iborat to'plam berilgan. Birinchi va oxirgi uchragan eng katta element orasida turgan elementlar sonini aniqlovchi 
+#     programma tuzilsin. Agar to'plamda faqat bitta eng katta element bo'lsa, nol chiqarilsin.
 
 N = int(input("Nechta son kiritmoqchisiz: "))
 i = 1
@@ -381,8 +379,7 @@ elif e_soni_1 and e_soni_2:
 
        
 
-# 19) N natural soni va N ta butun sondan iborat to'plam berilgan. To'plamdagi eng
-#     kichik elementlar sonini aniqlovchi programma tuzilsin.
+# 19) N natural soni va N ta butun sondan iborat to'plam berilgan. To'plamdagi eng kichik elementlar sonini aniqlovchi programma tuzilsin.
 
 N = int(input('N = '))
 i = 1
@@ -401,8 +398,8 @@ print(e_soni)
     
 
 
-# 20) N natural soni va N ta butun sondan iborat to'plam berilgan. To'plamdagi ekstremal elementlar
-#     sonini aniqlovchi programma tuzilsin. Ekstremal element deb eng katta yoki eng kichik elementga aytiladi.
+# 20) N natural soni va N ta butun sondan iborat to'plam berilgan. To'plamdagi ekstremal elementlar sonini aniqlovchi programma tuzilsin. 
+#     Ekstremal element deb eng katta yoki eng kichik elementga aytiladi.
 
 N = int(input('N = '))
 i = 1
