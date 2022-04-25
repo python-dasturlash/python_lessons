@@ -482,8 +482,7 @@ else:
 
 
 
-# 23) N natural soni va N ta butun sondan iborat to'plam berilgan (N>3). To'plamdagi eng katta
-#     3 ta qiymatni aniqlovchi programma tuzilsin.
+# 23) N natural soni va N ta butun sondan iborat to'plam berilgan (N>3). To'plamdagi eng katta 3 ta qiymatni aniqlovchi programma tuzilsin.
 #     Masalan: N=5; 1 2 3 4 5
 #     Natija: 5 4 3
 
