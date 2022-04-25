@@ -458,8 +458,7 @@ else:
 
 
 
-# 22) N natural soni va N ta butun sondan iborat to'plam berilgan (N>2). To'plamdagi eng kichik
-#     2 ta qiymatni aniqlovchi programma tuzilsin.
+# 22) N natural soni va N ta butun sondan iborat to'plam berilgan (N>2). To'plamdagi eng kichik 2 ta qiymatni aniqlovchi programma tuzilsin.
 #     Masalan: N=5; 1 2 3 4 5
 #     Natija: 1 2
 
