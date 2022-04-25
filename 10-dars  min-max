@@ -424,9 +424,8 @@ print("Eng katta elementlar soni:",maxi_soni)
 
 
 
-# 21) N natural soni va N ta butun sondan iborat to'plam berilgan (N>2). To'plamning o'rtacha
-#     qiymatini aniqlovchi programma tuzilsin. O'rtacha qiymatni hisoblashda eng katta va eng 
-#     kichik qiymatlar hisobga olinmasin. 
+# 21) N natural soni va N ta butun sondan iborat to'plam berilgan (N>2). To'plamning o'rtacha qiymatini aniqlovchi programma tuzilsin. O'rtacha qiymatni 
+#     hisoblashda eng katta va eng kichik qiymatlar hisobga olinmasin. 
 
 N = int(input("(N>2) N = "))
 i = 1
