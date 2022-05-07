@@ -509,8 +509,7 @@ else:
 
 
 
-# 24) N natural soni va N ta butun sondan iborat to'plam berilgan (N>1). Ikkita qo'shni son
-#     yig'indisining eng katta qiymatni aniqlovchi programma tuzilsin.
+# 24) N natural soni va N ta butun sondan iborat to'plam berilgan (N>1). Ikkita qo'shni son yig'indisining eng katta qiymatni aniqlovchi programma tuzilsin.
 
 N = int(input("(N>1) N = "))
 if N > 1:
