@@ -579,9 +579,8 @@ print("Ketma-ket kelgan juft elementlar maksimal soni:",b)
 
 
 
-# 27) N natural soni va n ta nol va birdan iborat to'plam berilgan. Bir xil sonlar ketma-ketligi
-#     eng uzun bo'ladigan oraliq boshlangan element indeksini va ketma-ketlikdagi elementlar
-#     sonini aniqlovchi programma tuzilsin.
+# 27) N natural soni va n ta nol va birdan iborat to'plam berilgan. Bir xil sonlar ketma-ketligi eng uzun bo'ladigan oraliq boshlangan element indeksini va 
+#     ketma-ketlikdagi elementlar sonini aniqlovchi programma tuzilsin.
 
 N = int(input("N = "))
 i = 0
