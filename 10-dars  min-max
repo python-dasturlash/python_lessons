@@ -660,8 +660,8 @@ print("Indeks:",indeks,"  Elementlar soni:",e_soni)
 
 
 
-# 29) N natural soni va N ta butun sondan iborat to'plam berilgan. To'plamdagi ketma-ket keladigan
-#     eng kichik elementlarning maksimal sonini aniqlovchi programma tuzilsin.
+# 29) N natural soni va N ta butun sondan iborat to'plam berilgan. To'plamdagi ketma-ket keladigan eng kichik elementlarning maksimal sonini 
+#     aniqlovchi programma tuzilsin.
 
 N = int(input("N = "))
 x = True
