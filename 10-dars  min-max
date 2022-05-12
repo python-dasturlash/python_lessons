@@ -532,8 +532,8 @@ else:
             
 
 
-# 25) N natural soni va N ta butun sondan iborat to'plam berilgan (N>1). Ko'paytmasi eng
-#     kichik bo'ladigan ikkita qo'shni element indekslarini aniqlovchi programma tuzilsin.
+# 25) N natural soni va N ta butun sondan iborat to'plam berilgan (N>1). Ko'paytmasi eng kichik bo'ladigan ikkita qo'shni element indekslarini 
+#     aniqlovchi programma tuzilsin.
 
 N = int(input("(N>1) N = "))
 if N > 1:
