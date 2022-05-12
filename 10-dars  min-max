@@ -695,8 +695,8 @@ print(soni)
         
 
 
-# 30) N natural soni va N ta butun sondan iborat to'plam berilgan. To'plamdagi ketma-ket
-#     keladigan eng katta elementlarning minimal sonini aniqlovchi programma tuzilsin.
+# 30) N natural soni va N ta butun sondan iborat to'plam berilgan. To'plamdagi ketma-ket keladigan eng katta elementlarning minimal sonini 
+#     aniqlovchi programma tuzilsin.
 
 N = int(input("N = "))
 x = True
