@@ -558,9 +558,8 @@ else:
 
 
 
-# 26) N natural soni va N ta butun sondan iborat to'plam berilgan. To'plamda ketma-ket keladigan
-#     juft elementlar maksimal sonini aniqlovchi programma tuzilsin. Agar to'plamda juft sonlar
-#     bo'lmasa, 0 chiqarilsin.
+# 26) N natural soni va N ta butun sondan iborat to'plam berilgan. To'plamda ketma-ket keladigan juft elementlar maksimal sonini aniqlovchi programma tuzilsin. 
+#     Agar to'plamda juft sonlar bo'lmasa, 0 chiqarilsin.
 
 N = int(input("N = "))
 i = 0
