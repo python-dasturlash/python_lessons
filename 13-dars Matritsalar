@@ -1,0 +1,2974 @@
+
+# 1) m va n butun musbat sonlari berilgan. m x n o'lchamli matritsani shunday hosil
+#    qilingki uning har biri i-satr elementlari 10*i ga teng bo'lsin.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+
+matrix = [[randint(1,9) for i in range(m)] for j in range(n)]
+
+for i in matrix:
+    print(*i)
+print()
+    
+for i in range(n):
+    for j in range(m):
+        print(10*matrix[i][j],end='\t')
+    print()
+
+
+
+# 2) m va n butun musbat sonlari berilgan. m x n o'lchamli matritsani shunday hosil
+#    qilingki uning har biri j-ustuni elementlari 5*j ga teng bo'lsin.
+
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+
+matrix = [[randint(1,9) for i in range(m)] for j in range(n)]
+
+for i in matrix:
+    print(*i)
+print()
+    
+for i in range(n):
+    for j in range(m):
+        print(5*matrix[i][j],end='\t')
+    print()
+    
+
+
+# 3) m va n butun musbat sonlari va m ta butun sonlar to'plami berilgan. m x n o'lchamli 
+#    matritsani shunday hosil qilingki, uning har bir ustuni kiritilgan m ta sondan iborat bo'lsin.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+
+matrix = [randint(1,9) for i in range(m)]
+print(matrix)
+for i in matrix:
+    for j in range(n):
+        print(i,end='  ')
+    print()
+    
+
+
+# 4) m va n butun musbat sonlari va n ta butun sonlar to'plami berilgan. m x n o'lchamli 
+#    matritsani shunday hosil qilingki, uning har bir satri kiritilgan n ta sondan iborat bo'lsin.
+
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+
+matrix = [randint(1,9) for i in range(n)]
+print(matrix)
+for _ in range(m):
+    for j in matrix:
+        print(j,end='  ')
+    print()
+
+
+
+# 5) m, n va d butun sonlari va m ta butun sonlar to'plami berilgan. m x n o'lchamli matritsani 
+#    shunday hosil qilingki, uning birinchi ustuni kiritilgan m ta sondan iborat bo'lsin. Qolgan
+#    ustunlari, o'zidan bir oldingi ustunning o'zi turgan satri elementi qiymatiga d sonini
+#    qo'shishdan hosil bo'lsin. (natijada har bir satrda arifmetik progressiya hosil bo'ladi)
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+d = int(input('d = '))
+
+matrix = [randint(1,9) for i in range(m)]
+print(matrix,'\n')
+
+for i in matrix:
+    s = i
+    for _ in range(n):
+        print(s,end='\t')
+        s += d
+    print()
+
+
+
+# 6) m, n va q butun sonlari va m ta butun sonlar to'plami berilgan. m x n o'lchamli matritsani 
+#    shunday hosil qilingki, uning birinchi ustuni kiritilgan m ta sondan iborat bo'lsin. Qolgan
+#    ustunlari, o'zidan bir oldingi ustunning o'zi turgan satri elementi qiymatiga q sonini
+#    ko'paytirishdan hosil bo'lsin. (natijada har bir satrda geometrik progressiya hosil bo'ladi)
+
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+q = int(input('q = '))
+
+matrix = [randint(1,9) for i in range(m)]
+print(matrix,'\n')
+
+for i in matrix:
+    s = i
+    for _ in range(n):
+        print(s,end='\t')
+        s *= q
+    print()
+
+
+
+# 7) m x n o'lchamli matritsa va k soni berilgan (0 <= k < m). Matritsaning k-satrini
+#    chiqaruvchi programma tuzilsin.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+k = int(input('k = '))
+
+matrix = [[randint(1,9) for i in range(n)] for j in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+for i in range(m):
+    if i == k:
+        print(*matrix[i])
+        break
+    
+
+
+# 8) m x n o'lchamli matritsa va k soni berilgan (0 <= k < m). Matritsaning k-ustunini
+#    chiqaruvchi programma tuzilsin.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+k = int(input('k = '))
+
+matrix = [[randint(1,9) for i in range(n)] for j in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+for i in range(m):
+    for j in range(n):
+        if j == k:
+            print(matrix[i][j])
+
+
+
+# 9) m x n o'lchamli matritsa berilgan. Matritsaning 2 ga karrali (0, 2, 4,...) satrini
+#    chiqaruvchi programma tuzilsin. Shart operatori ishlatilmasin.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+
+matrix = [[randint(1,9) for i in range(n)] for j in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+for i in range(0,m,2):
+    print(*matrix[i])
+
+
+
+# 10) m x n o'lchamli matritsa berilgan. Matritsaning toq indeksli ustunlarini (1, 3, 5,...) 
+#     chiqaruvchi programma tuzilsin. Shart operatori ishlatilmasin.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+
+matrix = [[randint(1,9) for i in range(n)] for j in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+for i in range(1,m,2):
+    print(*matrix[i])
+
+
+
+# 11) m x n o'lchamli matritsa berilgan. Matritsaning elementlarini quydagicha chiqaruvchi 
+#     programma tuzilsin. 0-satr chapdan o'nga, 1-satr o'ngdan chapga, 2-satr chapdan o'nga,...
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+
+matrix = [[randint(1,9) for i in range(n)] for j in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+for i in range(m):
+    if i % 2 == 1:
+        print(*reversed(matrix[i]))
+    else:
+        print(*matrix[i])
+
+
+
+# 12) m x n o'lchamli matritsa berilgan. Matritsaning elementlarini quydagicha chiqaruvchi 
+#     programma tuzilsin. 0-ustun tepadan pastga, 1-ustun pastdan tepaga, 2-ustun tepadan pastga,...
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+
+matrix = [[randint(1,9) for i in range(n)] for j in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+for i in range(m):
+    m = m-1
+    for j in range(n):
+        if j % 2 == 1:
+            print(matrix[m][j],end=' ')
+        else:
+            print(matrix[i][j],end=' ')
+    print()
+
+
+
+# 13) 
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+
+matrix = [[randint(1,9) for i in range(n)] for j in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+s = m - n
+
+for i in range(m):
+    for j in range(n):
+        print(matrix[i][j],end=' ')
+    i += 1
+    n = n - 1
+    for _ in range(n+s):
+        print(matrix[i][j],end=' ')
+        i += 1
+    print()
+
+
+
+# 14-misol
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+
+matrix = [[randint(1,9) for i in range(n)] for j in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+s = n - m
+
+for i in range(n):
+    for j in range(m):
+        print(matrix[j][i],end=' ')
+    i += 1
+    m = m - 1
+    for _ in range(m+s):
+        print(matrix[j][i],end=' ')
+        i += 1
+    print()
+        
+
+
+# 15) n x n o'lchamli kvadrat matritsa A hosil qilinsin. A[0][0] elementdan boshlab, soat 
+#     strelkasi bo'yicha matritsa elementlariga 1, 2, 3, ... n**2 gacha bo'lgan
+#     sonlar o'zlashtirilsin.
+
+n = int(input('n = '))
+
+A = [[0 for i in range(n)] for j in range(n)]
+
+on = 0;  past = n;  chap = n;  yuqori = 0
+son = 0
+for i in range(n//2):
+    for j in range(on, past-1):
+        son += 1
+        A[i][j] = son
+
+    for j in range(past-1, chap):
+        for k in range(i,chap-1):
+            son += 1
+            A[k][j] = son
+        
+    for j in range(chap-1, yuqori, -1):
+        son += 1
+        A[n-i-1][j] = son
+    
+    for j in range(yuqori, on+1):
+        for k in range(past-1, i, -1):
+            son += 1
+            A[k][j] = son            
+    
+    on += 1;  past -= 1;  chap -= 1;  yuqori += 1
+if n % 2 == 1:
+    A[n//2][n//2] = son+1
+
+for i in A:
+    print(*i)
+        
+
+
+# 16) n x n o'lchamli kvadrat matritsa A hosil qilinsin. A[0][0] elementdan boshlab, soat 
+#     strelkasiga qarama-qarshi ravishda matritsa elementlariga 1, 2, 3, ... n**2 gacha 
+#     bo'lgan sonlar o'zlashtirilsin.
+
+n = int(input('n = '))
+
+A = [[0 for i in range(n)] for j in range(n)]
+
+on = n;  past = 0;  chap = 0;  yuqori = n
+son = 0
+for i in range(n//2):
+    for j in range(past, past+1):
+        for k in range(i,on-1):
+            son += 1
+            A[k][j] = son
+    
+    for j in range(past, yuqori-1):
+        son += 1
+        A[n-1-i][j] = son
+
+    for j in range(yuqori-1, on):
+        for k in range(yuqori-1, i, -1):
+            son += 1
+            A[k][j] = son 
+        
+    for j in range(yuqori-1, chap, -1):
+        son += 1
+        A[i][j] = son
+    
+    on -= 1;  past += 1;  chap += 1;  yuqori -= 1
+    
+if n % 2 == 1:
+    A[n//2][n//2] = son+1
+
+for i in A:
+    print(*i)
+
+
+
+# 17-misol   
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+k = int(input('k = '))
+
+matrix = [[randint(1,9) for i in range(n)] for j in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+s = 0;  p = 1
+
+for i in range(m):
+    if i == k:
+        for j in matrix[i]:
+            s += j
+            p *= j
+print("Yig'indisi: ",s)
+print("Ko'paytmasi: ",p)
+
+
+
+# 18-misol
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+k = int(input('k = '))
+
+matrix = [[randint(1,9) for i in range(n)] for j in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+s = 0;  p = 1
+
+for i in range(m):
+    s += matrix[i][k]
+    p *= matrix[i][k]
+            
+print("Yig'indisi: ",s)
+print("Ko'paytmasi: ",p)
+
+
+
+# 19-misol
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+
+matrix = [[randint(1,9) for i in range(n)] for j in range(m)]
+
+for i in matrix:
+    print(*i,end='  ---  ')
+    print(sum(i))
+    
+
+
+# 20-misol
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+
+matrix = [[randint(1,9) for i in range(n)] for j in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+a = []
+for i in range(n):
+    p = 1
+    for j in range(m):
+        p *= matrix[j][i]
+    a.append(p)
+
+print(*a)
+
+
+
+# 21-misol
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+
+matrix = [[randint(1,9) for i in range(n)] for j in range(m)]
+
+for i in range(m):
+    s = 0
+    for j in range(1,n,2):
+        s += matrix[i][j]
+    print(*matrix[i],"  O'rta arifmetigi: ",s/int(n/2))
+print()
+
+
+
+# 22-misol
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+
+matrix = [[randint(1,9) for i in range(n)] for j in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+a = []
+for i in range(0,n,2):
+    s = 0
+    for j in range(0,m,2):
+        s += matrix[j][i]
+    a.append(s)
+print(a)
+
+
+
+# 23-misol
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+
+matrix = [[randint(1,9) for i in range(n)] for j in range(m)]
+
+for i in matrix:
+    print(*i," ===  min =",min(i))
+print()
+
+
+
+# 24-misol
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+
+matrix = [[randint(1,9) for i in range(n)] for j in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+for i in range(n):
+    a = []
+    for j in range(m):
+        a.append(matrix[j][i])
+    print(max(a),end=' ')
+
+
+
+# 25-misol
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+
+matrix = [[randint(1,9) for i in range(n)] for j in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+s = sum(matrix[0])
+indeks = 0
+
+for i in range(m):
+    if s < sum(matrix[i]):
+        indeks = i
+        s = sum(matrix[i])
+        
+print("Indeks =",indeks,"  Summa =",s)
+
+
+
+# 26-misol
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+
+matrix = [[randint(1,9) for i in range(n)] for j in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+p = 1
+indeks = 0
+for i in range(m):
+    p *= matrix[i][0]
+
+for i in range(n):
+    a = 1
+    for j in range(m):
+        a *= matrix[j][i]
+    if p > a:
+        p = a
+        indeks = i
+        
+print("Indeks =",indeks," Ko'paytma =",p)
+        
+
+
+# 27-misol
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+
+matrix = [[randint(1,9) for i in range(n)] for j in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+s = sum(matrix[0])
+maxi = max(matrix[0])
+indeks = 0
+
+for i in range(m):
+    if s > sum(matrix[i]):
+        s = sum(matrix[i])
+        maxi = max(matrix[i])
+        indeks = i
+        
+print("Indeks =",indeks," maxi =",maxi)
+
+
+
+# 28) m x n o'lchamli matritsa berilgan. Elementlari yig'indisi eng katta bo'lgan ustunning,
+#     eng kichik elementini chiqaruvchi programma tuzilsin.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+
+matrix = [[randint(1,9) for i in range(n)] for j in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+s = []
+indeks = 0
+for i in range(m):
+    s.append(matrix[i][0])
+mini = min(s)
+
+for i in range(n):
+    a = []
+    for j in range(m):
+        a.append(matrix[j][i])
+    if sum(s) < sum(a):
+        s = a
+        indeks = i
+        mini = min(s)
+        
+print("Indeks =",indeks," Summa =",sum(s)," Mini =",mini)
+
+
+
+# 29) m x n o'lchamli matritsa berilgan. Har bir satrda, shu satr o'rta arifmetigidan
+#     kichik bo'lgan elementlar sonini chiqaruvchi programma tuzilsin.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+
+matrix = [[randint(1,9) for i in range(n)] for j in range(m)]
+
+for i in range(m):
+    s = 0
+    for j in range(n):
+        if sum(matrix[i])/n > matrix[i][j]:
+            s += 1
+    print(*matrix[i]," O'rta arifmetik =",round((sum(matrix[i])/n),2)," Kichik elementlar soni:",s)
+
+
+
+# 30) m x n o'lchamli matritsa berilgan. Har bir ustunda, shu ustun o'rta arifmetigidan
+#     katta bo'lgan elementlar sonini chiqaruvchi programma tuzilsin.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+
+matrix = [[randint(1,9) for i in range(n)] for j in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+for i in range(n):
+    a = [];  s = 0
+    for j in range(m):
+        a.append(matrix[j][i])
+    for k in a:
+        if sum(a)/m < k:
+            s += 1
+    print(s,end=' ')
+
+
+
+# 31) m x n o'lchamli matritsa berilgan. Matritsa barcha elementlari o'rta arifmetigiga,
+#     o'rta arifmetigi eng yaqin bo'lgan satr va ustun nomerini chiqaruvchi programma tuzilsin.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+
+matrix = [[randint(1,9) for i in range(n)] for j in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+s = 0
+for i in matrix:                           # Barcha elementlarning o'rta arifmetigi
+    s += sum(i)
+o_arif = s / (m*n)
+
+s_arif = abs(o_arif - sum(matrix[0])/n)    # 1-satr o'rta arifmetigi
+s_arifmetik = sum(matrix[0])/n
+s_indeks = 0
+
+for i in range(m):                         # Eng yaqin satr o'rta arifmetigi
+    if s_arif > abs(o_arif - sum(matrix[i])/n):
+        s_arif = abs(o_arif - sum(matrix[i])/n)
+        s_arifmetik = sum(matrix[i])/n
+        s_indeks = i
+
+a = []                                     # 1-ustun o'rta arifmetigi
+for j in range(m):
+    a.append(matrix[j][0])
+u_arif = abs(o_arif - sum(a)/m)
+u_arifmetik = sum(a)/m
+u_indeks = 0
+    
+for i in range(n):                         # Eng yaqin ustun o'rta arifmetigi
+    a = []
+    for j in range(m):
+        a.append(matrix[j][i])
+    if u_arif > abs(o_arif - sum(a)/m):
+        u_arif = abs(o_arif - sum(a)/m)
+        u_arifmetik = sum(a)/m
+        u_indeks = i
+    
+print("Matritsa o'rta arifmetigi: ",round(o_arif,2))
+print("Eng yaqin satr o'rta arifmetigi: ",round(s_arifmetik,2),"  Indeks =",s_indeks)
+print("Eng yaqin ustun o'rta arifmetigi: ",round(u_arifmetik,2),"  Indeks =",u_indeks)
+    
+
+
+# 32) m x n o'lchamli matritsa berilgan. Musbat va manfiy elementlari soni teng bo'lgan
+#     (nol inobatga olinmaydi) birinchi uchragan satr nomerini aniqlovchi programma tuzilsin.
+#     Agar bunday satr bo'lmasa, "Bunday satr yo'q" deb chiqarilsin.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+
+matrix = [[randint(-9,9) for i in range(n)] for j in range(m)]
+
+for i in matrix:
+    for j in i:
+        print(j,end='\t')
+    print()
+
+for i in range(m):
+    musbat = 0
+    manfiy = 0
+    
+    for j in range(n):
+        if matrix[i][j] > 0:
+            musbat += 1
+        elif matrix[i][j] < 0:
+            manfiy += 1
+            
+    if musbat == manfiy:
+        print("Indeks =",i)
+        break
+    
+else:
+    print("Bunday satr yo'q")
+
+
+
+# 33) m x n o'lchamli matritsa berilgan. Musbat va manfiy elementlari soni teng bo'lgan
+#     (nol inobatga olinmaydi) oxirgi uchragan ustun nomerini aniqlovchi programma tuzilsin.
+#     Agar bunday ustun bo'lmasa, "Bunday ustun yo'q" deb chiqarilsin.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+
+matrix = [[randint(-9,9) for i in range(n)] for j in range(m)]
+
+for i in matrix:
+    for j in i:
+        print(j,end='\t')
+    print()
+    
+x = True
+for i in range(n):
+    musbat = 0
+    manfiy = 0
+    a = []
+    
+    for j in range(m):
+        a.append(matrix[j][i])
+    
+    for k in a:
+        if k > 0:
+            musbat += 1
+        elif k < 0:
+            manfiy += 1
+        
+    if musbat == manfiy and musbat + manfiy != 0:
+        indeks = i
+        x = False
+        
+if x == True:
+    print("Bunday ustun yo'q")
+else:
+    print("Indeks =",indeks)
+    
+
+
+# 34) m x n o'lchamli matritsa berilgan. Faqat juft sonlardan iborat bo'lgan oxirgi satr
+#     nomerini aniqlovchi programma tuzilsin. Agar bunday satr bo'lmasa, "Bunday satr
+#     yo'q" deb chiqarilsin.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+
+matrix = [[randint(1,9) for i in range(n)] for j in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+x = True
+for i in range(m):
+    s = 0
+    for j in matrix[i]:
+        if j % 2 == 0:
+            s += 1
+    
+    if s == n:
+        indeks = i
+        x = False
+
+if x == False:
+    print("Indeks =",indeks)
+else:
+    print("Bunday satr yo'q")
+    
+
+
+# 35) m x n o'lchamli matritsa berilgan. Faqat toq sonlardan iborat bo'lgan birinchi ustun nomerini
+#     aniqlovchi programma tuzilsin. Agar bunday ustun bo'lmasa "Bunday ustun yo'q" deb chiqarilsin.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+
+matrix = [[randint(1,9) for i in range(n)] for j in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+for i in range(n):
+    a = []
+    for j in range(m):
+        a.append(matrix[j][i])
+    
+    s = 0
+    for k in a:
+        if k % 2 == 1:
+            s += 1
+    
+    if s == m:
+        print("Indeks =",i)
+        break
+    
+else:
+    print("Bunday ustun yo'q")
+    
+  
+
+# 36) m x n o'lchamli matritsa berilgan. Matritsaning har bir satrlari o'xshash deyiladi, agar
+#     satrlardagi sonlar bir hil bo'lsa. Dastlabki satrga o'xshash bo'lgan satrlar sonini
+#     aniqlovchi programma tuzilsin.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+
+matrix = [[randint(1,5) for i in range(n)] for j in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+a = 0
+for i in range(1,m):
+    s = 0
+    for j in range(n):
+        for k in range(n):
+            if matrix[i].count(matrix[i][j]) == matrix[0].count(matrix[0][k]) and matrix[i][j] == matrix[0][k]:
+                s += 1
+                break        
+            
+    if s == n:
+        a += 1
+        
+print("Dastlabki satrga o'xshash satrlar soni",a,"ta")
+
+
+
+# 37) m x n o'lchamli matritsa berilgan. Matritsaning har bir ustunlari o'xshash deyiladi, agar
+#     ustunlardagi sonlar bir hil bo'lsa. Oxirgi ustunga o'xshash bo'lgan ustunlar sonini
+#     aniqlovchi programma tuzilsin.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+
+matrix = [[randint(1,5) for i in range(n)] for j in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+d = []                       # Oxirgi ustunni yig'ib olish
+for j in range(m):
+    d.append(matrix[j][n-1])
+
+a = 0
+for i in range(n-1):
+    
+    s = 0;   b = []          # Dastlabki ustunlarni yig'ib olish
+    for j in range(m):
+        b.append(matrix[j][i])
+        
+    for k in range(m):       # Dastlabki ustundan olingan elementni oxirgi 
+        for t in d:          # ustun elementlari bilan solishtirish
+            if b.count(b[k]) == d.count(t) and b[k] == t:
+                s += 1
+                break   
+             
+    if s == m:
+        a += 1
+        
+print("Oxirgi ustunga o'xshash ustunlar soni",a,"ta")
+
+
+
+# 38) m x n o'lchamli matritsa berilgan. Elementlari har hil bo'lgan satrlar
+#     sonini aniqlovchi programma tuzilsin.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+
+matrix = [[randint(1,5) for i in range(n)] for j in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+a = 0
+for i in matrix:
+    s = 0
+    for j in matrix:
+        if sorted(i) == sorted(j):
+            s += 1
+    if s == 1:
+        a += 1
+        
+print(a)
+
+
+
+# 39) m x n o'lchamli matritsa berilgan. Elementlari har hil bo'lgan ustunlar
+#     sonini aniqlovchi programma tuzilsin.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+
+matrix = [[randint(1,5) for i in range(n)] for j in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+sana = 0
+for i in range(n):
+    a = [];  s = 0
+    for j in range(m):
+        a.append(matrix[j][i])
+        
+    for j in range(n):
+        b = []
+        for k in range(m):
+            b.append(matrix[k][j])
+        if sorted(a) == sorted(b):
+            s += 1
+    
+    if s == 1:
+        sana += 1
+        
+print(sana)
+        
+
+
+# 40) m x n o'lchamli matritsa berilgan. Bir hil elementlar soni eng ko'p bo'lgan
+#     oxirgi satrni aniqlovchi programma tuzilsin.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+
+matrix = [[randint(1,5) for i in range(n)] for j in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+a = 0
+for i in range(m):
+    s = 0
+    for j in range(m):
+        if sorted(matrix[i]) == sorted(matrix[j]):
+            s += 1
+            index = j
+    if i == 0:
+        indeks = index
+        a = s
+    elif s >= a:
+        a = s
+        indeks = index
+print(indeks)
+
+
+
+# 41) m x n o'lchamli matritsa berilgan. Bir hil elementlar soni eng ko'p bo'lgan
+#     birinchi ustunni aniqlovchi programma tuzilsin.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+
+matrix = [[randint(1,5) for i in range(n)] for j in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+for i in range(n):
+    a = []
+    for j in range(m):
+        a.append(matrix[j][i])
+    
+    if i == 0:
+        son = a.count(a[0])
+        index = i
+        
+    for j in range(m):
+        if son < a.count(a[j]):
+            son = a.count(a[j])
+            index = i
+        
+print("Index =",index)
+            
+
+
+# 42) m x n o'lchamli matritsa berilgan. Elementlari o'sish tartibida kiritilgan
+#     satrlar sonini aniqlovchi programma tuzilsin.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+
+matrix = [[randint(1,5) for i in range(n)] for j in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+s = 0
+for i in matrix:
+    if sorted(i) == i:
+        s += 1
+    
+print(s)
+
+    
+
+
+# 43) m x n o'lchamli matritsa berilgan. Elementlari kamayish tartibida kiritilgan
+#     ustunlar sonini aniqlovchi programma tuzilsin.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+
+matrix = [[randint(1,5) for i in range(n)] for j in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+s = 0
+for i in range(n):
+    a = []
+    for j in range(m):
+        a.append(matrix[j][i])
+        
+    if sorted(a) == list(reversed(a)):
+        s += 1
+        
+print(s)
+    
+    
+
+# 44) m x n o'lchamli matritsa berilgan. Elementlari kamayish yoki o'sish tartibida 
+#     kiritilgan satrlar orasidan, eng kichik qiymatni aniqlovchi programma tuzilsin.
+#     Agar tartiblangan satr bo'lmasa, nol chiqarilsin.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+
+matrix = [[randint(1,5) for i in range(n)] for j in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+x = True
+for i in matrix:
+    if (sorted(i) == i  or  sorted(i) == list(reversed(i)))  and  x == True:
+        mini = min(i)
+        x = False
+    
+    if (sorted(i) == i  or  sorted(i) == list(reversed(i)))  and  mini > min(i):
+        mini = min(i)
+    
+if x == False:
+    print(mini)
+else:
+    print("nol")
+    
+   
+   
+# 45) m x n o'lchamli matritsa berilgan. Elementlari kamayish yoki o'sish tartibida 
+#     kiritilgan ustunlar orasidan, eng katta qiymatni aniqlovchi programma tuzilsin.
+#     Agar tartiblangan ustun bo'lmasa, nol chiqarilsin.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+
+matrix = [[randint(1,5) for i in range(n)] for j in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+x = True
+for i in range(n):
+    a = []
+    for j in range(m):
+        a.append(matrix[j][i])
+        
+    if (sorted(a) == a  or  sorted(a) == list(reversed(a)))  and  x == True:
+        maxi = max(a)
+        x = False
+    
+    if (sorted(a) == a  or  sorted(a) == list(reversed(a)))  and  maxi < max(a):
+        maxi = max(a)
+    
+if x == False:
+    print(maxi)
+else:
+    print("nol")
+
+
+
+# 46) m x n o'lchamli matritsa berilgan. O'zi turgan satrda eng kattasi va o'zi turgan
+#     ustunda eng kichigi bo'lgan elementni aniqlovchi programma tuzilsin.
+#     Agar bunday element bo'lmasa, nol chiqarilsin.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+
+matrix = [[randint(1,5) for i in range(n)] for j in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+
+x = True
+for i in range(m):
+    
+    a = []
+    for j in range(n):
+        a.append(matrix[i][j])
+    
+    for j in range(len(a)):
+        b = []
+        if a[j] == max(a):
+            for k in range(m):
+                b.append(matrix[k][j])
+                
+            if max(a) == min(b):
+                print(i,"- satr",j,"- ustun. Element:",max(a))
+                x = False
+    
+if x == True:
+    print("nol")
+       
+    
+    
+# 47) m x n o'lchamli matritsa  va k1, k2 butun sonlari berilgan. (0 <= k1 < k2 < m). 
+#     k1 va k2 satr elementlarini almashtiruvchi programma tuzilsin.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+k1 = int(input('k1 = '))
+k2 = int(input('k2 = '))
+
+matrix = [[randint(1,9) for j in range(n)] for i in range(m)]
+    
+for i in matrix:
+    print(*i)
+print()
+
+matrix[k1], matrix[k2] = matrix[k2], matrix[k1]
+
+for i in matrix:
+    print(*i)
+print()  
+    
+
+
+# 48) m x n o'lchamli matritsa  va k1, k2 butun sonlari berilgan. (0 <= k1 < k2 < m). 
+#     k1 va k2 ustun elementlarini almashtiruvchi programma tuzilsin.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+k1 = int(input('k1 = '))
+k2 = int(input('k2 = '))
+
+matrix = [[randint(1,9) for j in range(n)] for i in range(m)]
+    
+for i in matrix:
+    print(*i)
+print()
+
+for i in range(m):
+    matrix[i][k1], matrix[i][k2] = matrix[i][k2], matrix[i][k1]
+
+
+
+# 49) m x n o'lchamli matritsa berilgan. Har bir satrdagi eng kichik va eng katta
+#     element o'rinlarini almashtiruvchi programma tuzilsin.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+ 
+matrix = [[randint(1,9) for j in range(n)] for i in range(m)]
+    
+for i in matrix:
+    print(*i)
+print()
+ 
+j = 0
+for i in matrix:
+    a = i.index(max(i))
+    b = i.index(min(i)) 
+    
+    matrix[j][a], matrix[j][b] = matrix[j][b], matrix[j][a]
+    print(*i)
+    j += 1
+
+
+
+# 50) m x n o'lchamli matritsa berilgan. Har bir ustundagi eng kichik va eng katta 
+#     element o'rinlarini almashtiruvchi programma tuzilsin.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+ 
+matrix = [[randint(1,9) for j in range(n)] for i in range(m)]
+    
+for i in matrix:
+    print(*i)
+print()
+
+for i in range(n):
+    mini = matrix[0][i]
+    maxi = matrix[0][i]
+    mini_ind_satr = 0; mini_ind_ustun = i
+    maxi_ind_satr = 0; maxi_ind_ustun = i
+    
+    for j in range(m):
+        if mini > matrix[j][i]:
+            mini = matrix[j][i]
+            mini_ind_satr = j; mini_ind_ustun = i
+        
+        if maxi < matrix[j][i]:
+            maxi = matrix[j][i]
+            maxi_ind_satr = j; maxi_ind_ustun = i
+        
+    a = mini_ind_satr 
+    b = mini_ind_ustun
+    c = maxi_ind_satr
+    d = maxi_ind_ustun
+    
+    matrix[a][b], matrix[c][d] = matrix[c][d], matrix[a][b]
+        
+for i in matrix:
+    print(*i)
+print()
+
+
+
+# 51) m x n o'lchamli matritsa berilgan. Matritsadagi eng kichik va eng katta
+#     element joylashgan satrlar o'rinlarini almashtiruvchi programma tuzilsin.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+ 
+matrix = [[randint(1,9) for j in range(n)] for i in range(m)]
+    
+for i in matrix:
+    print(*i)
+print()
+
+mini = min(matrix[0])
+maxi = max(matrix[0])
+mini_ind = 0
+maxi_ind = 0
+for i in range(m):
+    if mini > min(matrix[i]):
+        mini = min(matrix[i])
+        mini_ind = i
+    
+    if maxi < max(matrix[i]):
+        maxi = max(matrix[i])
+        maxi_ind = i
+    
+matrix[mini_ind], matrix[maxi_ind] = matrix[maxi_ind], matrix[mini_ind]
+
+for i in matrix:
+    print(*i)
+print()
+
+
+
+# 52) m x n o'lchamli matritsa berilgan. Matritsadagi eng kichik va eng katta
+#     element joylashgan ustunlar o'rinlarini almashtiruvchi programma tuzilsin.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+ 
+matrix = [[randint(1,9) for j in range(n)] for i in range(m)]
+    
+for i in matrix:
+    print(*i)
+print()
+
+mini = matrix[0][0]
+maxi = matrix[0][0]
+mini_ind_ustun = 0
+maxi_ind_ustun = 0
+
+
+for i in range(n):
+    for j in range(m):
+        if mini > matrix[j][i]:
+            mini = matrix[j][i]
+            mini_ind_ustun = i
+        
+        if maxi < matrix[j][i]:
+            maxi = matrix[j][i]
+            maxi_ind_ustun = i
+        
+a = mini_ind_ustun
+b = maxi_ind_ustun
+         
+for i in range(m):
+    matrix[i][a], matrix[i][b] = matrix[i][b], matrix[i][a]
+
+for i in matrix:
+    print(*i)
+print()
+
+
+
+# 53) m x n o'lchamli matritsa. Matritsaning dastlabki ustuni bilan faqat musbat 
+#     elementlardan tashkil topgan eng oxirgi ustunni almashtiruvchi programma 
+#     tuzilsin. Agar bunday ustun bo'lmasa, matritsa o'zgarishsiz qoldirilsin.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+ 
+matrix = [[randint(-9,9) for j in range(n)] for i in range(m)]
+    
+for i in matrix:
+    print(*i)
+print()
+
+ustun = 0
+for i in range(n):
+    s = 0
+    for j in range(m):
+        if matrix[j][i] > 0:
+            s += 1
+    
+    if s == m:
+        ustun = i
+
+for i in range(m):
+    matrix[i][0], matrix[i][ustun] = matrix[i][ustun], matrix[i][0]
+    
+for i in matrix:
+    print(*i)
+print()   
+
+
+
+# 54) m x n o'lchamli matritsa. Matritsaning oxirgi ustuni bilan faqat manfiy
+#     elementlardan tashkil topgan eng birinchi ustunni almashtiruvchi programma 
+#     tuzilsin. Agar bunday ustun bo'lmasa, matritsa o'zgarishsiz qoldirilsin.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+ 
+matrix = [[randint(-9,9) for j in range(n)] for i in range(m)]
+    
+for i in matrix:
+    print(*i)
+print()
+
+ustun = 0
+for i in range(n):
+    s = 0
+    for j in range(m):
+        if matrix[j][i] < 0:
+            s += 1
+        
+    if s == m:
+        ustun = i
+        break
+
+for i in range(m):
+    matrix[i][ustun], matrix[i][n-1] =matrix[i][n-1], matrix[i][ustun]
+    
+for i in matrix:
+    print(*i)
+print()
+
+
+
+# 55) m x n o'lchamli matritsa berilgan (m juft son). Matritsaning teng yarmidan
+#     yuqorisi va pastini almashtiruvchi programma tuzilsin.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+ 
+matrix = [[randint(0,9) for j in range(n)] for i in range(m)]
+    
+for i in matrix:
+    print(*i)
+print()
+
+for i in range(m//2):
+    for j in range(n):
+        matrix[i][j], matrix[i+m//2][j] = matrix[i+m//2][j], matrix[i][j]
+    
+for i in matrix:
+    print(*i)
+print()
+
+
+
+# 56) m x n o'lchamli matritsa berilgan (n juft son). Matritsaning teng yarmidan
+#     chap va o'ng qismini almashtiruvchi programma tuzilsin.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+ 
+matrix = [[randint(0,9) for j in range(n)] for i in range(m)]
+    
+for i in matrix:
+    print(*i)
+print()
+
+for i in range(n//2):
+    for j in range(m):
+        matrix[j][i], matrix[j][i+n//2] = matrix[j][i+n//2], matrix[j][i]
+
+for i in matrix:
+    print(*i)
+print()
+
+
+
+# 57) m x n o'lchamli matritsa berilgan (m va n juft son). Matritsaning teng 4 qismga
+#     bo'lingan. 1-chap yuqori, 2-o'ng yuqori, 3-chap past, 4-o'ng past. 1 va 4 qismlarni
+#     almashtiruvchi programma tuzilsin.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+ 
+matrix = [[randint(0,9) for j in range(n)] for i in range(m)]
+    
+for i in matrix:
+    print(*i)
+print()
+
+for i in range(n//2):
+    for j in range(m//2):
+        matrix[j][i], matrix[j+m//2][i+n//2] = matrix[j+m//2][i+n//2], matrix[j][i]
+    
+for i in matrix:
+    print(*i)
+print()
+
+
+
+# 58) m x n o'lchamli matritsa berilgan (m va n juft son). Matritsaning teng 4 qismga
+#     bo'lingan. 1-chap yuqori, 2-o'ng yuqori, 3-chap past, 4-o'ng past. 2 va 3 qismlarni
+#     almashtiruvchi programma tuzilsin.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+ 
+matrix = [[randint(0,9) for j in range(n)] for i in range(m)]
+    
+for i in matrix:
+    print(*i)
+print()
+
+for i in range(n//2):
+    for j in range(m//2):
+        matrix[j][i+n//2], matrix[j+m//2][i] = matrix[j+m//2][i], matrix[j][i+n//2]
+        
+for i in matrix:
+    print(*i)
+print()
+
+
+
+# 59) m x n o'lchamli matritsa berilgan. Matritsa elementlarini quydagicha almashtiring.
+#     0 va m-1 satr elementlari almashsin, 1 va m-2 satr elementlari almashsin va hakazo.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+ 
+matrix = [[randint(0,9) for j in range(n)] for i in range(m)]
+    
+for i in matrix:
+    print(*i)
+print()
+
+for i in range(m):
+    if i > m-1-i:
+        break
+    
+    matrix[i], matrix[m-1-i] = matrix[m-1-i], matrix[i]
+    
+for i in matrix:
+    print(*i)
+print()
+
+
+
+# 60) m x n o'lchamli matritsa berilgan. Matritsa elementlarini quydagicha almashtiring.
+#     0 va n-1 ustun elementlari almashsin, 1 va n-2 ustun elementlari almashsin va hakazo.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+ 
+matrix = [[randint(0,9) for j in range(n)] for i in range(m)]
+    
+for i in matrix:
+    print(*i)
+print()
+
+for i in range(m):
+    for j in range(n//2):
+        matrix[i][j], matrix[i][n-1-j] = matrix[i][n-1-j], matrix[i][j]
+
+for i in matrix:
+    print(*i)
+print()
+
+
+
+# 61) m x n o'lchamli matritsa va k butun soni berilgan (0 <= k < m). Matritsaning
+#     k - satrini o'chiruvchi programma tuzilsin.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+k = int(input('k = '))
+
+matrix = [[randint(0,9) for j in range(n)] for i in range(m)]
+    
+for i in matrix:
+    print(*i)
+print()
+
+# del matrix[k]
+matrix.pop(k)
+
+for i in matrix:
+    print(*i)
+print()
+
+
+
+# 62) m x n o'lchamli matritsa va k butun soni berilgan (0 <= k < m). Matritsaning
+#     k - ustunini o'chiruvchi programma tuzilsin.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+k = int(input('k = '))
+
+matrix = [[randint(0,9) for j in range(n)] for i in range(m)]
+    
+for i in matrix:
+    print(*i)
+print()
+
+for i in range(m):
+    matrix[i].pop(k)
+
+for i in matrix:
+    print(*i)
+print()
+
+
+
+# 63) m x n o'lchamli matritsa berilgan. Matritsaning eng kichik elementi
+#     joylashgan satrni o'chiruvchi programma tuzilsin.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+
+matrix = [[randint(0,9) for j in range(n)] for i in range(m)]
+    
+for i in matrix:
+    print(*i)
+print()
+
+mini = min(matrix[0])
+indeks = 0
+
+for i in range(m):
+    if mini > min(matrix[i]):
+        mini = min(matrix[i])
+        indeks = i
+
+matrix.pop(indeks)
+
+for i in matrix:
+    print(*i)
+print()
+
+
+
+# 64) m x n o'lchamli matritsa berilgan. Matritsaning eng katta elementi
+#     joylashgan ustunni o'chiruvchi programma tuzilsin.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+
+matrix = [[randint(0,9) for j in range(n)] for i in range(m)]
+    
+for i in matrix:
+    print(*i)
+print()
+
+maxi = max(matrix[0])
+indeks = matrix[0].index(max(matrix[0]))
+
+for i in range(m):
+    if maxi < max(matrix[i]):
+        maxi = max(matrix[i])
+        indeks = matrix[i].index(max(matrix[i]))
+
+for i in range(m):
+    matrix[i].pop(indeks)
+    
+for i in matrix:
+    print(*i)
+print()
+
+
+
+# 65) m x n o'lchamli matritsa berilgan. Matritsaning faqat musbat elementlardan
+#     tashkil topgan birinchi uchragan ustunini o'chiruvchi programma tuzilsin.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+
+matrix = [[randint(-9,9) for j in range(n)] for i in range(m)]
+    
+for i in matrix:
+    print(*i)
+print()
+
+for i in range(n):
+    s = 0
+    for j in range(m):
+        if matrix[j][i] > 0:
+            s += 1
+    
+    if s == m:
+        for k in range(m):
+            matrix[k].pop(i)
+
+        for i in matrix:
+            print(*i)
+        print()
+        
+        break
+
+
+
+# 66) m x n o'lchamli matritsa berilgan. Matritsaning faqat manfiy elementlardan
+#     tashkil topgan oxirgi uchragan ustunini o'chiruvchi programma tuzilsin.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+
+matrix = [[randint(-9,9) for j in range(n)] for i in range(m)]
+    
+for i in matrix:
+    print(*i)
+print()
+
+for i in range(n-1,-1,-1):
+    s = 0
+    for j in range(m):
+        if matrix[j][i] < 0:
+            s += 1
+    
+    if s == m:
+        for k in range(m):
+            matrix[k].pop(i)
+
+        for i in matrix:
+            print(*i)
+        print()
+        
+        break
+
+
+
+# 67) m x n o'lchamli matritsa berilgan. Matritsaning faqat musbat elementlardan
+#     tashkil topgan barcha ustunlarini o'chiruvchi programma tuzilsin.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+
+matrix = [[randint(-9,9) for j in range(n)] for i in range(m)]
+    
+for i in matrix:
+    print(*i)
+print()
+
+i = 0
+while i < len(matrix[0]):
+    s = 0
+    for j in range(m):
+        if matrix[j][i] > 0:
+            s += 1
+    
+    if s == m:
+        for k in range(m):
+            matrix[k].pop(i)
+        i -= 1
+    i += 1
+
+for i in matrix:
+    print(*i)
+print()
+
+
+
+# 68) m x n o'lchamli matritsa va k butun soni berilgan. (0 <= k < m) Matritsaning k-satr 
+#     oldidan elementlari qiymati nolga teng bo'lgan satr qo'shuvchi programma tuzilsin.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+k = int(input('k = '))
+
+matrix = [[randint(0,9) for j in range(n)] for i in range(m)]
+    
+for i in matrix:
+    print(*i)
+print()
+
+matrix.insert(k,[0 for _ in range(n)])
+
+for i in matrix:
+    print(*i)
+print()
+
+
+
+# 69) m x n o'lchamli matritsa va k butun soni berilgan. (0 <= k < n) Matritsaning k-ustunidan 
+#     keyin elementlari qiymati birga teng bo'lgan ustun qo'shuvchi programma tuzilsin.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+k = int(input('k = '))
+
+matrix = [[randint(0,9) for j in range(n)] for i in range(m)]
+    
+for i in matrix:
+    print(*i)
+print()
+
+for i in range(m):
+    matrix[i].insert(k+1,1)
+    
+for i in matrix:
+    print(*i)
+print()   
+
+
+
+# 70) m x n o'lchamli matritsa berilgan. Matritsaning eng katta elementi joylashgan
+#     satrtdan keyin, yana shunday satr qo'shuvchi programma tuzilsin.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+
+matrix = [[randint(0,9) for j in range(n)] for i in range(m)]
+    
+for i in matrix:
+    print(*i)
+print()
+
+maxi = max(matrix[0])
+indeks = 0
+for i in range(m):
+    if maxi < max(matrix[i]):
+        maxi = max(matrix[i])
+        indeks = i
+
+matrix.insert(indeks+1,matrix[indeks])
+
+for i in matrix:
+    print(*i)
+
+
+
+# 71) m x n o'lchamli matritsa berilgan. Matritsaning eng kichik elementi joylashgan
+#     ustundan keyin, yana shunday ustun qo'shuvchi programma tuzilsin.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+
+matrix = [[randint(0,9) for j in range(n)] for i in range(m)]
+    
+for i in matrix:
+    print(*i)
+print()
+
+mini = matrix[0][0]
+indeks = 0
+for i in range(n):
+    for j in range(m):
+        if mini > matrix[j][i]:
+            mini = matrix[j][i]
+            indeks = i
+
+for i in range(m):
+    matrix[i].insert(indeks+1,matrix[i][indeks])
+
+for i in matrix:
+    print(*i)
+
+
+
+# 72) m x n o'lchamli matritsa berilgan. Matritsaning faqat musbat elementlaridan tashkil topgan
+#     birinchi uchragan ustunidan oldin, elementlari qiymati birga teng bo'lgan ustun qo'shuvchi
+#     programma tuzilsin. Agar bunday ustun bo'lmasa matritsa o'zgarishsiz chiqarilsin.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+
+matrix = [[randint(-9,9) for j in range(n)] for i in range(m)]
+    
+for i in matrix:
+    print(*i)
+print()
+
+for i in range(n):
+    s = 0
+    for j in range(m):
+        if matrix[j][i] > 0:
+            s += 1
+    
+    if s == m:
+        for k in range(m):
+            matrix[k].insert(i,1)
+        break
+
+for i in matrix:
+    print(*i)
+print()
+
+
+
+# 73) m x n o'lchamli matritsa berilgan. Matritsaning faqat manfiy elementlaridan tashkil topgan
+#     oxirgi uchragan ustunidan keyin, elementlari qiymati nolga teng bo'lgan ustun qo'shuvchi
+#     programma tuzilsin. Agar bunday ustun bo'lmasa matritsa o'zgarishsiz chiqarilsin.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+
+matrix = [[randint(-9,9) for j in range(n)] for i in range(m)]
+    
+for i in matrix:
+    print(*i)
+print()
+
+for i in range(n-1,-1,-1):
+    s = 0
+    for j in range(m):
+        if matrix[j][i] < 0:
+            s += 1
+    
+    if s == m:
+        for k in range(m):
+            matrix[k].insert(i+1,0)
+        break
+
+for i in matrix:
+    print(*i)
+print()
+
+
+
+# 74) m x n o'lchamli matritsa berilgan. Matritsaning barcha lokal minimum qiymatlarini nolga 
+#     aylantiruvchi programma tuzilsin. Element lokal minimum deyiladi, agar u barcha
+#     qo'shnilaridan kichik bo'lsa. Yordamchi matritsadan foydalanishga ruxsat etiladi.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+
+matrix = [[randint(1,9) for i in range(n)] for j in range(m)]
+matrix2 = []
+matrix3 = []
+
+for i in matrix:
+    print(*i)
+print()
+
+for i in range(m):
+    matrix2 = []
+    for j in range(n):
+        x = True
+        if i == 0 and j == 0:
+            if matrix[0][0] < matrix[0][1] and matrix[0][0] < matrix[1][0]:
+                matrix2.append(0)
+                x = False
+        
+        elif i == 0 and j == n-1:
+            if matrix[0][j] < matrix[0][j-1] and matrix[0][j] < matrix[1][j]:
+                matrix2.append(0)
+                x = False
+        
+        elif i == m-1 and j == 0:
+            if matrix[i][j] < matrix[i-1][j] and matrix[i][j] < matrix[i][j+1]:
+                matrix2.append(0)
+                x = False
+        
+        elif i == m-1 and j == n-1:
+            if matrix[i][j] < matrix[i-1][j] and matrix[i][j] < matrix[i][j-1]:
+                matrix2.append(0)
+                x = False
+        
+        elif i == 0:
+            if matrix[i][j] < matrix[i][j-1] and matrix[i][j] < matrix[i][j+1] and matrix[i][j] < matrix[i+1][j]:
+                matrix2.append(0)
+                x = False
+        
+        elif i == m-1:
+            if matrix[i][j] < matrix[i][j-1] and matrix[i][j] < matrix[i][j+1] and matrix[i][j] < matrix[i-1][j]:
+                matrix2.append(0)
+                x = False
+        
+        elif j == 0:
+            if matrix[i][j] < matrix[i-1][j] and matrix[i][j] < matrix[i+1][j] and matrix[i][j] < matrix[i][j+1]:
+                matrix2.append(0)
+                x = False
+        
+        elif j == n-1:
+            if matrix[i][j] < matrix[i-1][j] and matrix[i][j] < matrix[i+1][j] and matrix[i][j] < matrix[i][j-1]:
+                matrix2.append(0)
+                x = False
+        
+        else:
+            if matrix[i][j] < matrix[i][j+1] and matrix[i][j] < matrix[i][j-1] and matrix[i][j] < matrix[i+1][j] and matrix[i][j] < matrix[i-1][j]:
+                matrix2.append(0)
+                x = False
+        
+        if x == True:
+            matrix2.append(matrix[i][j])
+        
+    matrix3.append(matrix2)
+        
+for i in matrix3:
+    print(*i)
+print()
+
+
+
+# 75) m x n o'lchamli matritsa berilgan. Matritsaning barcha lokal maksimum qiymatlarini nolga 
+#     aylantiruvchi programma tuzilsin. Element lokal maksimum deyiladi, agar u barcha
+#     qo'shnilaridan katta bo'lsa. Yordamchi matritsadan foydalanishga ruxsat etiladi.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+
+matrix = [[randint(1,9) for i in range(n)] for j in range(m)]
+matrix2 = []
+matrix3 = []
+
+for i in matrix:
+    print(*i)
+print()
+
+for i in range(m):
+    matrix2 = []
+    for j in range(n):
+        x = True
+        if i == 0 and j == 0:
+            if matrix[0][0] > matrix[0][1] and matrix[0][0] > matrix[1][0]:
+                matrix2.append(0)
+                x = False
+        
+        elif i == 0 and j == n-1:
+            if matrix[0][j] > matrix[0][j-1] and matrix[0][j] > matrix[1][j]:
+                matrix2.append(0)
+                x = False
+        
+        elif i == m-1 and j == 0:
+            if matrix[i][j] > matrix[i-1][j] and matrix[i][j] > matrix[i][j+1]:
+                matrix2.append(0)
+                x = False
+        
+        elif i == m-1 and j == n-1:
+            if matrix[i][j] > matrix[i-1][j] and matrix[i][j] > matrix[i][j-1]:
+                matrix2.append(0)
+                x = False
+        
+        elif i == 0:
+            if matrix[i][j] > matrix[i][j-1] and matrix[i][j] > matrix[i][j+1] and matrix[i][j] > matrix[i+1][j]:
+                matrix2.append(0)
+                x = False
+        
+        elif i == m-1:
+            if matrix[i][j] > matrix[i][j-1] and matrix[i][j] > matrix[i][j+1] and matrix[i][j] > matrix[i-1][j]:
+                matrix2.append(0)
+                x = False
+        
+        elif j == 0:
+            if matrix[i][j] > matrix[i-1][j] and matrix[i][j] > matrix[i+1][j] and matrix[i][j] > matrix[i][j+1]:
+                matrix2.append(0)
+                x = False
+        
+        elif j == n-1:
+            if matrix[i][j] > matrix[i-1][j] and matrix[i][j] > matrix[i+1][j] and matrix[i][j] > matrix[i][j-1]:
+                matrix2.append(0)
+                x = False
+        
+        else:
+            if matrix[i][j] > matrix[i][j+1] and matrix[i][j] > matrix[i][j-1] and matrix[i][j] > matrix[i+1][j] and matrix[i][j] > matrix[i-1][j]:
+                matrix2.append(0)
+                x = False
+        
+        if x == True:
+            matrix2.append(matrix[i][j])
+        
+    matrix3.append(matrix2)
+        
+for i in matrix3:
+    print(*i)
+print()
+
+
+
+# 76) m x n o'lchamli matritsa berilgan. Matritsaning satrlarini shunday o'zgartiringki
+#     natijada nolinchi ustun elementlari o'sish taribida joylashtirilsin.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+
+matrix = [[randint(0,9) for j in range(n)] for i in range(m)]
+    
+for i in matrix:
+    print(*i)
+print()
+
+i = 0
+while i < m:
+    mini = matrix[0][0]
+    indeks = 0
+    
+    for j in range(m):
+        if mini > matrix[j][0]:
+            mini = matrix[j][0]
+            indeks = j
+            
+    print(*matrix[indeks])
+    matrix.pop(indeks)
+    m -= 1
+
+
+
+# 77) n x n o'lchamli matritsa berilgan. Matritsaning ustunlarini shunday o'zgartiringki
+#     natijada oxirgi satr elementlari kamayish taribida joylashtirilsin.
+ 
+from random import randint
+
+n = int(input('n = '))
+
+matrix = [[randint(0,9) for j in range(n)] for i in range(n)]
+    
+for i in matrix:
+    print(*i)
+print()
+
+matrix = [[matrix[i][j] for i in range(n-1,-1,-1)] for j in range(n)]
+        
+a = []
+m = n
+while len(matrix) != 0:
+    maxi = matrix[0][0]
+    indeks = 0
+    for i in range(m):
+        if maxi < matrix[i][0]:
+            maxi = matrix[i][0]
+            indeks = i
+    a.append(matrix[indeks])
+    matrix.pop(indeks)
+    m -= 1
+
+a = [[a[i][j] for i in range(n)] for j in range(n-1,-1,-1)]
+
+for i in a:
+    print(*i)
+
+
+
+# 78) m x n o'lchamli matritsa berilgan. Matritsa satrlarini shunday tartiblangki,
+#     satrlarning minimal elementlari kamayish tartibida bo'lsin.
+
+from random import randint
+
+m = int(input('m = '))
+n = int(input('n = '))
+
+matrix = [[randint(0,9) for j in range(n)] for i in range(m)]
+    
+for i in matrix:
+    print(*i)
+print()
+
+i = 0
+while i < m:
+    mini = min(matrix[i])
+    indeks = 0
+    
+    for j in range(m):
+        if mini < min(matrix[j]):
+            mini = min(matrix[j])
+            indeks = j
+    
+    print(*matrix[indeks])
+    matrix.pop(indeks)
+    m -= 1
+
+
+
+# 79) m x m o'lchamli matritsa berilgan. Matritsa ustunlarini shunday tartiblangki,
+#     ustunlarning maksimal elementlari o'sish tartibida bo'lsin.
+ 
+from random import randint
+
+m = int(input('m = '))
+
+matrix = [[randint(1,9) for i in range(m)] for j in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+matrix = [[matrix[i][j] for i in range(m-1,-1,-1)] for j in range(m)]
+
+i = 0
+a = []
+n = m
+while i < m:
+    maxi = max(matrix[i])
+    indeks = 0
+    max(matrix[0])
+    for j in range(m):
+        if maxi > max(matrix[j]):
+            maxi = max(matrix[j])
+            indeks = j
+    a.append(matrix[indeks])
+    matrix.pop(indeks)
+    m -= 1
+
+a = [[a[i][j] for i in range(n)] for j in range(n-1,-1,-1)]
+
+for i in a:
+    print(*i)
+print()
+
+
+
+# 80) m x m o'lchamli kvadrat matritsa berilgan. Kvadrat matritsaning asosiy
+#     dioganali elementlari yig'indisini chiqaruvchi programma tuzilsin.
+
+from random import randint
+
+m = int(input('m = '))
+
+matrix = [[randint(1,9) for j in range(m)] for i in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+s = 0
+for i in range(m):
+    s += matrix[i][i]
+print("S =",s)
+
+
+
+# 81) m x m o'lchamli kvadrat matritsa berilgan. Kvadrat matritsaning yordamchi
+#     dioganali elementlari o'rta arifmetigini hisoblovchi programma tuzilsin.
+
+from random import randint
+
+m = int(input('m = '))
+
+matrix = [[randint(1,9) for j in range(m)] for i in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+a = m-1
+s = 0
+for i in range(m):
+    s += matrix[a][i]
+    a -= 1
+print("O'rta arifmetigi:",s/m)
+
+
+
+# 82) m x m o'lchamli kvadrat matritsa berilgan. Matritsaning asosiy dioganaliga parallel
+#     bo'lgan har bir doiganal elementlari yig'indisini aniqlovchi programma tuzilsin.
+#     Bir elementli dioganal A[0][m-1] dan boshlansin.
+
+from random import randint
+
+m = int(input('m = '))
+
+matrix = [[randint(1,9) for i in range(m)] for j in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+for i in range(2*m-1):
+    s = 0
+    a = 0
+    j = abs(m-1-i)
+    if i < m:
+        while j < m:
+            s += matrix[a][j]
+            a += 1
+            j += 1
+    else:
+        while j < m:
+            s += matrix[j][a]
+            a += 1
+            j += 1
+
+    print(s,end=' ')
+        
+
+
+# 83) m x m o'lchamli kvadrat matritsa berilgan. Matritsaning yordamchi dioganaliga parallel
+#     bo'lgan har bir doiganal elementlari yig'indisini aniqlovchi programma tuzilsin.
+#     Bir elementli dioganal A[0][0] dan boshlansin.
+
+from random import randint
+
+m = int(input('m = '))
+
+matrix = [[randint(1,9) for i in range(m)] for j in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+for i in range(2*m-1):
+    s = 0
+    if i < m:
+        a = 0
+        while i >= 0:
+            s += matrix[a][i]
+            a += 1
+            i -= 1
+    else:
+        a = m - 1
+        j = i - m + 1
+        while j < m:
+            s += matrix[j][a]
+            j += 1
+            a -= 1
+    
+    print(s,end=' ')
+
+
+
+# 84) m x m o'lchamli kvadrat matritsa berilgan. Matritsaning asosiy dioganaliga parallel
+#     bo'lgan har bir doiganal elementlari o'rta arifmetigini hisoblovchi programma tuzilsin.
+#     Bir elementli dioganal A[0][m-1] dan boshlansin.
+
+from random import randint
+
+m = int(input('m = '))
+
+matrix = [[randint(1,9) for i in range(m)] for j in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+for i in range(2*m-1):
+    sana = 0
+    s = 0
+    a = 0
+    j = abs(m-1-i)
+    if i < m:
+        while j < m:
+            s += matrix[a][j]
+            a += 1
+            j += 1
+            sana += 1
+    else:
+        while j < m:
+            s += matrix[j][a]
+            a += 1
+            j += 1
+            sana += 1
+
+    print(s/sana,end=' ')
+
+
+
+# 85) m x m o'lchamli kvadrat matritsa berilgan. Matritsaning yordamchi dioganaliga parallel
+#     bo'lgan har bir doiganal elementlari o'rta arifmetigini hisoblovchi programma tuzilsin.
+#     Bir elementli dioganal A[0][0] dan boshlansin.
+
+from random import randint
+
+m = int(input('m = '))
+
+matrix = [[randint(1,9) for i in range(m)] for j in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+for i in range(2*m-1):
+    sana = 0
+    s = 0
+    if i < m:
+        a = 0
+        while i >= 0:
+            s += matrix[a][i]
+            a += 1
+            i -= 1
+            sana += 1
+    else:
+        a = m - 1
+        j = i - m + 1
+        while j < m:
+            s += matrix[j][a]
+            j += 1
+            a -= 1
+            sana += 1
+    
+    print(s/sana,end=' ')
+
+
+
+# 86) m x m o'lchamli kvadrat matritsa berilgan. Matritsaning asosiy dioganaliga parallel
+#     bo'lgan har bir doiganal elementlarining eng kichigini aniqlovchi programma tuzilsin.
+#     Bir elementli dioganal A[0][m-1] dan boshlansin.
+
+from random import randint
+
+m = int(input('m = '))
+
+matrix = [[randint(1,9) for i in range(m)] for j in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+for i in range(2*m-1):
+    s = []
+    a = 0
+    j = abs(m-1-i)
+    if i < m:
+        while j < m:
+            s.append(matrix[a][j])
+            a += 1
+            j += 1
+    else:
+        while j < m:
+            s.append(matrix[j][a])
+            a += 1
+            j += 1
+
+    print(min(s),end=' ')
+
+
+
+# 87) m x m o'lchamli kvadrat matritsa berilgan. Matritsaning yordamchi dioganaliga parallel
+#     bo'lgan har bir doiganal elementlarining eng kattasini aniqlovchi programma tuzilsin.
+#     Bir elementli dioganal A[0][0] dan boshlansin.
+
+from random import randint
+
+m = int(input('m = '))
+
+matrix = [[randint(1,9) for i in range(m)] for j in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+for i in range(2*m-1):
+    s = []
+    if i < m:
+        a = 0
+        while i >= 0:
+            s.append(matrix[a][i])
+            a += 1
+            i -= 1
+    else:
+        a = m - 1
+        j = i - m + 1
+        while j < m:
+            s.append(matrix[j][a])
+            j += 1
+            a -= 1
+    
+    print(max(s),end=' ')
+
+
+
+# 88) m x m o'lchamli kvadrat matritsa berilgan. Matritsaning asosiy dioganalida va
+#     undan pastda joylashgan barcha elementlarini nolga aylantiruvchi programma tuzilsin.
+#     Shart operatoridan foydalanmang.
+
+from random import randint
+
+m = int(input('m = '))
+
+matrix = [[randint(1,9) for i in range(m)] for j in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+for i in range(1,m+1):
+    for _ in range(i):
+        print(0,end=' ')
+    for j in range(i,m):
+        print(matrix[i-1][j],end=' ')
+    print()
+
+
+
+# 89) m x m o'lchamli kvadrat matritsa berilgan. Matritsaning yordamchi dioganalida va
+#     undan yuqorida joylashgan barcha elementlarini nolga aylantiruvchi programma tuzilsin.
+#     Shart operatoridan foydalanmang.
+
+from random import randint
+
+m = int(input('m = '))
+
+matrix = [[randint(1,9) for i in range(m)] for j in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+for i in range(m):
+    for _ in range(m-i):
+        print(0,end=' ')
+    for j in range(m-i,m):
+        print(matrix[i][j],end=' ')
+    print()
+
+
+
+# 90) m x m o'lchamli kvadrat matritsa berilgan. Matritsaning yordamchi dioganalida va
+#     undan pastda joylashgan barcha elementlarini nolga aylantiruvchi programma tuzilsin.
+#     Shart operatoridan foydalanmang.
+
+from random import randint
+
+m = int(input('m = '))
+
+matrix = [[randint(1,9) for i in range(m)] for j in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+for i in range(1,m+1):
+    for j in range(m-i):
+        print(matrix[i-1][j],end=' ')
+    for j in range(m-i,m):
+        print(0,end=' ')
+    print()
+
+
+
+# 91) m x m o'lchamli kvadrat matritsa berilgan. Matritsaning asosiy dioganalida va
+#     undan yuqorida joylashgan barcha elementlarini nolga aylantiruvchi programma tuzilsin.
+#     Shart operatoridan foydalanmang.
+
+from random import randint
+
+m = int(input('m = '))
+
+matrix = [[randint(1,9) for i in range(m)] for j in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+for i in range(m):
+    for j in range(i):
+        print(matrix[i][j],end=' ')
+    for j in range(i,m):
+        print(0,end=' ')
+    print()
+
+
+
+# 92) m x m o'lchamli kvadrat matritsa berilgan. Matritsaning asosiy va yordamchi 
+#     dioganallarida va ulardan yuqorida joylashgan barcha elementlarini nolga aylantiruvchi 
+#     programma  tuzilsin. Shart operatoridan foydalanmang.
+
+from random import randint
+
+m = int(input('m = '))
+
+matrix = [[randint(1,9) for i in range(m)] for j in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+for i in range(m//2+1):
+    for j in range(i):
+        print(matrix[i][j],end=' ')
+        
+    for _ in range(i,m//2):
+        print(0,end=' ')
+    
+    for _ in range(m//2,m-i):
+        print(0,end=' ')
+    
+    for j in range(m-i,m):
+        print(matrix[i][j],end=' ')
+    
+    print()
+
+for i in range(m//2+1,m):
+    for j in range(m):
+        print(matrix[i][j],end=' ')
+    print()
+
+
+
+# 93) m x m o'lchamli kvadrat matritsa berilgan. Asosiy dioganaldan yuqorida yordamchi
+#     dioganaldan pastda joylashgan matritsa elementlarini nolga aylantiruvchi programma
+#     tuzilsin. Shart operatoridan foydalanilmasin.
+
+from random import randint
+
+m = int(input('m = '))
+
+matrix = [[randint(1,9) for i in range(m)] for j in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+for i in range(m//2):
+    for j in range(m-1-i):
+        print(matrix[i][j],end=' ')
+    
+    for j in range(m-1-i,m):
+        print(0,end=' ')
+    
+    print()
+
+for i in range(m//2,m):
+    for j in range(i):
+        print(matrix[i][j],end=' ')
+    
+    for j in range(i,m):
+        print(0,end=' ')
+    
+    print()
+
+
+
+# 94) m x m o'lchamli kvadrat matritsa berilgan. Asosiy dioganaldan pastda yordamchi
+#     dioganaldan yuqorida joylashgan matritsa elementlarini nolga aylantiruvchi programma
+#     tuzilsin. Shart operatoridan foydalanilmasin.
+
+from random import randint
+
+m = int(input('m = '))
+
+matrix = [[randint(1,9) for i in range(m)] for j in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+for i in range(m//2):
+    for j in range(i+1):
+        print(0,end=' ')
+    
+    for j in range(i+1,m):
+        print(matrix[i][j],end=' ')
+    
+    print()
+
+for i in range(m//2,m):
+    for j in range(m-i):
+        print(0,end=' ')
+    
+    for j in range(m-i,m):
+        print(matrix[i][j],end=' ')
+    
+    print()
+
+
+
+# 95) m x m o'lchamli kvadrat matritsa berilgan. Asosiy va yordamchi dioganaldan pastda 
+#     joylashgan matritsa elementlarini nolga aylantiruvchi programma tuzilsin. 
+#     Shart operatoridan foydalanilmasin.
+
+from random import randint
+
+m = int(input('m = '))
+
+matrix = [[randint(1,9) for i in range(m)] for j in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+for i in range(m//2):
+    for j in range(m):
+        print(matrix[i][j],end=' ')
+    
+    print()
+
+for i in range(m//2,m):
+    for j in range(m-1-i):
+        print(matrix[i][j],end=' ')
+    
+    for _ in range(m-1-i,m//2+1):
+        print(0,end=' ')
+    
+    for _ in range(m//2+1,m-(m-1-i)):
+        print(0,end=' ')
+    
+    for j in range(m-(m-1-i),m):
+        print(matrix[i][j],end=' ')
+    
+    print()
+
+
+
+# 96) m x m o'lchamli kvadrat matritsa berilgan. Matritsa elementlarini asosiy dioganalga nisbatan
+#     almashtiruvchi programma tuzilsin. Asosiy dioganal o'zgarishsiz qoldiriladi, a[0][1] - element
+#     a[1][0] bilan almashadi, a[i][j] - element a[j][i] bilan almashadi. Yordamchi matritsadan
+#     foydalanmang.
+
+from random import randint
+
+m = int(input('m = '))
+
+matrix = [[randint(1,9) for i in range(m)] for j in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+for i in range(m):
+    for j in range(i,m):
+        if i != j:
+            matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
+
+for i in matrix:
+    print(*i)
+print()
+
+
+
+# 97) m x m o'lchamli kvadrat matritsa berilgan. Matritsa elementlarini yordamchi dioganalga nisbatan
+#     almashtiruvchi programma tuzilsin. Yordamchi dioganal o'zgarishsiz qoldiriladi, a[0][0] - element
+#     a[m-1][m-1] bilan almashadi, a[0][1] - element a[m-1][m-2] bilan almashadi va hakazo. Yordamchi 
+#     matritsadan foydalanmang.
+
+from random import randint
+
+m = int(input('m = '))
+
+matrix = [[randint(1,9) for i in range(m)] for j in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+for i in range(m//2):
+    for j in range(m):
+        if i+j != m-1:
+            matrix[i][j], matrix[m-1-i][m-1-j] = matrix[m-1-i][m-1-j], matrix[i][j]
+
+if m % 2 == 1:
+    for i in range(1):
+        for j in range(m//2):
+            matrix[m//2][j], matrix[m//2][m-1-j] = matrix[m//2][m-1-j], matrix[m//2][j]
+
+for i in matrix:
+    print(*i)
+print()
+
+
+
+# 98) m x m o'lchamli kvadrat matritsa berilgan. Matritsani 180 gradusga buruvchi programma tuzilsin. 
+#     Bunda a[0][0] - element a[m-1][m-1] bilan almashadi, a[0][1] - element a[m-1][m-2] bilan 
+#     almashadi va hakazo. Yordamchi matritsadan foydalanmang.
+  
+from random import randint
+
+m = int(input('m = '))
+
+matrix = [[randint(1,9) for i in range(m)] for j in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+for i in range(m//2):
+    for j in range(m):
+        matrix[i][j], matrix[m-1-i][m-1-j] = matrix[m-1-i][m-1-j], matrix[i][j]
+
+if m % 2 == 1:
+    for i in range(1):
+        for j in range(m//2):
+            matrix[m//2][j], matrix[m//2][m-1-j] = matrix[m//2][m-1-j], matrix[m//2][j]
+
+for i in matrix:
+    print(*i)
+print()
+
+
+
+# 99) m x m o'lchamli kvadrat matritsa berilgan. Matritsani 90 gradusga soat strelkasiga qarama-qarshi  
+#     buruvchi programma tuzilsin. Bunda a[0][0] - element a[m-1][0] bilan almashadi, a[m-1][0] - element
+#     a[m-1][m-1] bilan  almashadi va hakazo. Yordamchi matritsadan foydalanmang.
+
+# 1-usul
+
+from random import randint
+
+m = int(input('m = '))
+
+matrix = [[randint(1,9) for i in range(m)] for j in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+for j in range(m-1,-1,-1):
+    for i in range(m):
+        print(matrix[i][j],end=' ')
+    print()
+
+# 2-usul
+
+from random import randint
+
+m = int(input('m = '))
+
+matrix = [[randint(1,9) for i in range(m)] for j in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+matrix = [[matrix[i][j] for i in range(m)] for j in range(m-1,-1,-1)]
+
+for i in matrix:
+    print(*i)
+print()
+
+
+
+# 100) m x m o'lchamli kvadrat matritsa berilgan. Matritsani 90 gradusga soat strelkasi bo'yicha 
+#      buruvchi programma tuzilsin. Bunda a[0][0] - element a[0][m-1] bilan almashadi, a[0][m-1] - element
+#      a[m-1][m-1] bilan  almashadi va hakazo. Yordamchi matritsadan foydalanmang.
+
+# 1-usul
+
+from random import randint
+
+m = int(input('m = '))
+
+matrix = [[randint(1,9) for i in range(m)] for j in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+for j in range(m):
+    for i in range(m-1,-1,-1):
+        print(matrix[i][j],end=' ')
+    print()
+
+# 2-usul
+
+from random import randint
+
+m = int(input('m = '))
+
+matrix = [[randint(1,9) for i in range(m)] for j in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+matrix = [[matrix[i][j] for i in range(m-1,-1,-1)] for j in range(m)]
+
+for i in matrix:
+    print(*i)
+print()
+
+
+
+
