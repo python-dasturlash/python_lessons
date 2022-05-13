@@ -1,0 +1,3162 @@
+
+# 1) n natural soni berilgan. Dastlabki n ta toq sondan tashkil topgan massivni hosil qiling
+#    va elementlarni chiqaring.
+
+n = int(input('n = '))
+a = []
+for i in range(2*n):
+    if i % 2 == 1:
+        a.append(i)
+print(a)
+
+
+
+# 2) n natural soni berilgan. 2 sonining dastlabki n ta darajasidan tashkil topgan massivni
+#    hosil qiling va elementlarini chiqaring.
+
+n = int(input('n = '))
+a = []
+for i in range(1,n+1):
+    a.append(2**i)
+print(a)
+
+
+
+# 3) n natural soni va arifmetik progressiyaning dastlabki hadi A va ayirmasi D berilgan.
+#    Arifmetik progressiyaning dastlabki n ta hadidan tashkil topgan massivni hosil qiling va
+#    elementlarini chiqaring.   A(i) = A(i-1) + D
+
+n = int(input('n = '))
+A = int(input('A = '))
+D = int(input('D = '))
+massiv = []
+for i in range(n):
+    massiv.append(A)
+    A = A + D
+print(massiv)
+
+
+
+# 4) n natural soni va geometrik progressiyaning dastlabki hadi A va maxraji D berilgan.
+#    Geometrik progressiyaning dastlabki n ta hadidan tashkil topgan massivni hosil qiling
+#    va elementlarini chiqaring.   A(i) = A(i-1) * D
+
+n = int(input('n = '))
+A = int(input('A = '))
+D = int(input('D = '))
+massiv = []
+for i in range(n):
+    massiv.append(A)
+    A = A * D
+print(massiv)
+
+
+
+# 5) n natural soni berilgan. Dastlabki n ta Fibonachchi sonlaridan tashkil topgan massivni 
+#    hosil qiling va elementlarini chiqaring.
+#    F0 = 1;  F1 = 1;  F[k] = F[k-1] + F[k-2];  k = 2,3,4,...
+
+n = int(input('n = '))
+massiv = [1,1]
+F0 = 1;  F1 = 1
+for i in range(n-2):
+    Fn = F1 + F0
+    massiv.append(Fn)
+    F0 = F1
+    F1 = Fn
+print(massiv)
+
+
+
+# 6) n natural soni va A, B butun sonlari berilgan (n>2). a[0] = A; a[1] = B; boshqa elementlari
+#    o'zidan oldingi barcha elementlari yig'indisiga teng bo'lgan massivni hosil qiling
+#    va elementlarini chiqaring.
+
+n = int(input('n = '))
+A = int(input('A = '))
+B = int(input('B = '))
+massiv = [A,B]
+for i in range(n-2):
+    s = 0
+    for i in massiv:
+        s += i
+    massiv.append(s)
+print(massiv)
+
+
+
+# 7) n ta elementdan tashkil topgan massiv berilgan. Uning elementlarini teskari tartibda
+#    chiqaruvchi programma tuzilsin.
+
+n = int(input('n = '))
+massiv = []
+i = 0
+while n != 0:
+    i += 1
+    n -= 1
+    massiv.append(int(input(str(i)+') ')))
+print(massiv[::-1])
+
+
+
+# 8) n ta elementdan tashkil topgan massiv berilgan. Massiv elementlari orasidan toqlarini
+#    indekslarini o'sish tartibida chiqaruvchi va ularning sonini chiqaruvchi programma tuzilsin.
+#    Massiv elementlari: 4 5 7 8 6 9
+#    Natija: 5 7 9 toqlar soni = 3
+
+n = int(input('n = '))
+massiv = []
+i = 0
+a = 0
+while n != 0:
+    i += 1
+    n -= 1
+    massiv.append(int(input(str(i)+') ')))
+print(massiv)
+for i in massiv:
+    if i % 2 == 1:
+        print(i,end=" ")
+        a += 1
+print("  toqlar soni =",a)
+        
+
+
+# 9) n ta elementdan tashkil topgan massiv berilgan. Massiv elementlari orasidan juftlarini
+#    indekslarini kamayish tartibida chiqaruvchi va ularning sonini chiqaruvchi programma tuzilsin.
+#    Massiv elementlari: 4 5 7 8 6 9
+#    Natija: 6 8 4 toqlar soni = 3
+
+n = int(input('n = '))
+massiv = []
+i = 0
+a = 0
+while n != 0:
+    i += 1
+    n -= 1
+    massiv.append(int(input(str(i)+') ')))
+print(massiv)
+for i in massiv[::-1]:
+    if i % 2 == 0:
+        print(i,end=" ")
+        a += 1
+print("  juftlar soni =",a)
+
+
+
+# 10) n ta elementdan tashkil topgan massiv berilgan. Dastlab massiv elementlari orasidan juftlarini
+#     indekslari o'sish tartibida chiqaruvchi, keyin massiv elementlari orasidan toqlari indekslari
+#     kamayish tartibida chiqaruvchi programma tuzilsin.
+#     Massiv elementlari: 4 5 7 8 6 9
+#     Natija: 4 8 6 9 7 5
+
+n = int(input('n = '))
+massiv = []
+a = 0;  i = 0
+while n != 0:
+    n -= 1
+    i += 1
+    massiv.append(int(input(str(i)+') ')))
+print(massiv)
+for i in massiv:
+    if i % 2 == 0:
+        print(i,end=' ')
+for i in massiv[::-1]:
+    if i % 2 == 1:
+        print(i,end=' ')
+
+
+
+# 11) n ta elementdan tashkil topgan massiv va K butun soni berilgan (1<=K<n). Massiv elementlari
+#     orasidan indeksi K ga karralilarini chiqaruvchi programma tuzilsin. A[k], A[2k], A[3k],...
+#     Shart operatori ishlatilmasin.
+
+n = int(input('n = '))
+k = int(input('(1<=k<n)  k = '))
+i = 0
+massiv = []
+while n != 0:
+    n -= 1
+    i += 1
+    massiv.append(int(input(str(i)+') ')))
+print(massiv[k-1::k])
+
+
+
+# 12) n ta elementdan tashkil topgan massiv berilgan (n juft son). Massiv elementlari orasidan
+#     quydagilarni chiqaruvchi programma tuzilsin. A[0], A[2], A[4],... 
+#     Shart operatori ishlatilmasin.
+
+n = int(input('n = '))
+massiv = []
+i = 0
+while n != 0:
+    n -= 1
+    massiv.append(int(input(str(i)+') ')))
+    i += 1
+print(massiv[::2])
+
+
+
+# 13) n ta elementdan tashkil topgan massiv berilgan (n toq son). Massiv elementlari orasidan
+#     quydagilarni chiqaruvchi programma tuzilsin. A[n-1], A[n-3],... A[1]
+#     Shart operatori ishlatilmasin.
+
+n = int(input('n = '))
+massiv = []
+i = 0
+while n != 0:
+    n -= 1
+    
+    massiv.append(int(input(str(i)+') ')))
+    i += 1
+print(massiv[n-2:0:-2])
+
+
+
+# 14) n ta elementdan tashkil topgan massiv berilgan. Dastlab massiv elementlari orasidan juft
+#     indekslarini keyin toq indekslarini chiqaruvchi programma tuzilsin.
+#     A[0], A[2], A[4],...A[1], A[3], A[5],...  Shart operatori ishlatilmasin.
+
+n = int(input('n = '))
+massiv = []
+i = 0
+while n != 0:
+    n -= 1
+    massiv.append(int(input(str(i)+') ')))
+    i += 1
+for i in massiv[::2]:
+    print(i,end=' ')
+for i in massiv[1::2]:
+    print(i,end=' ')
+
+
+
+# 15) n ta elementdan tashkil topgan massiv berilgan (n juft son). Dastlab massiv elementlari 
+#     orasidan toq indekslarini o'sish tartibida keyin juft indekslarini kamayish tartibida 
+#     chiqaruvchi programma tuzilsin. A[1], A[3], A[5],... A[4], A[2], A[0],...
+#     Shart operatori ishlatilmasin.
+
+n = int(input('(n juft son)  n = '))
+massiv = []
+i = 0
+while n != 0:
+    n -= 1
+    massiv.append(int(input(str(i)+') ')))
+    i += 1
+for i in massiv[1::2]:
+    print(i,end=' ')
+for i in massiv[n-2::-2]:
+    print(i,end=' ')
+
+
+
+# 16) n ta elementdan tashkil topgan massiv berilgan. Massiv elementlarini quydagicha chiqaruvchi
+#     programma tuzilsin.  A[0], A[n-1], A[1], A[n-2], A[2], A[n-3],...
+
+n = int(input('n = '))
+massiv = []
+i = 0
+while n != 0:
+    n -= 1
+    massiv.append(int(input(str(i)+') ')))
+    i += 1
+for j in massiv:
+    print(j,end=' ')
+    for k in massiv[i-1::-1]:
+        print(k,end=' ')
+        i -= 1
+        break
+        
+
+
+# 17) n ta elementdan tashkil topgan massiv berilgan. Massiv elementlarini quydagicha chiqaruvchi
+#     programma tuzilsin.  A[0], A[1], A[n-1], A[n-2], A[2], A[3], A[n-3], A[n-4],...
+
+n = int(input('n = '))
+massiv = []
+i = 0
+while n != 0:
+    n -= 1
+    massiv.append(int(input(str(i)+') ')))
+    i += 1
+a = 0
+for j in massiv:
+    print(j,end=' ')
+    a += 1
+    if a % 2 == 0:
+        if i % 2 == 1:
+            for k in massiv[i-1::-1]:
+                print(k,end=' ')
+                i -= 1
+                if i % 2 == 1:
+                    break
+        else:
+            if i % 2 == 0:
+                for k in massiv[i-1::-1]:
+                    print(k,end=' ')
+                    i -= 1
+                    if i % 2 == 0:
+                        break
+                
+
+
+# 18) n ta elementdan tashkil topgan massiv berilgan. Massiv oxirgi elementidan kichkina bo'lgan
+#     birinchi elementni chiqaruvchi programma tuzilsin. Agar bunday element bo'lmasa, nol chiqarilsin.
+
+n = int(input('n = '))
+massiv = []
+i = 0
+while n != 0:
+    n -= 1
+    a = int(input(str(i)+') '))
+    massiv.append(a)
+    i += 1
+for j in massiv:
+    if a > j:
+        print(j)
+        i = 0
+        break
+if i != 0:
+    print('nol')
+
+
+
+# 19) n ta elementdan tashkil topgan massiv berilgan. Massiv oxirgi elementidan kichkina va dastlabki
+#     elementidan katta bo'lgan oxirgi element indeksini chiqaruvchi programma tuzilsin. Agar
+#     bunday element bo'lmasa, nol chiqarilsin. (a[0] < a[k] < a[n-1])
+
+n = int(input('n = '))
+massiv = []
+i = 0
+while n > i:
+    massiv.append(int(input(str(i)+') ')))
+    i += 1
+for j in massiv[::-1]:
+    if massiv[0] < massiv[i-1] < massiv[-1]:
+        print("indeks =",i-1)
+        i = True
+        break
+    i -= 1
+if i != True:
+    print("nol")
+
+
+
+# 20) N ta elementdan tashkil topgan massiv va K, L butun sonlari berilgan. (0 <= K <= L < N).
+#     Massivning K va L indekslari orasidagi elementlari yig'indisini chiqaruvchi programma tuzilsin.
+
+print("K, L, N ni kiriting  (0 <= K <= L < N)")
+K = int(input('K = '))
+L = int(input('L = '))
+N = int(input('N = '))
+s = 0
+i = 0
+massiv = []
+while i < N:
+    massiv.append(int(input(str(i)+') ')))
+    i += 1
+for j in massiv[K+1:L]:
+    s += j
+print("S =",s)
+
+
+
+# 21) N ta elementdan tashkil topgan massiv va K, L butun sonlari berilgan. (0 <= K <= L < N).
+#     Massivning K va L indekslari orasidagi elementlarining o'rta arifmetigini chiqaruvchi programma tuzilsin.
+
+print("K, L, N ni kiriting  (0 <= K <= L < N)")
+K = int(input('K = '))
+L = int(input('L = '))
+N = int(input('N = '))
+s = 0
+i = 0
+massiv = []
+while i < N:
+    massiv.append(int(input(str(i)+') ')))
+    i += 1
+for j in massiv[K+1:L]:
+    s += j
+print("O'rta arifmetigi: ",s / (L-K-1))
+
+
+
+# 22) N ta elementdan tashkil topgan massiv va K, L butun sonlari berilgan. (0 <= K <= L < N).
+#     Massivning K va L indekslari orasidagi elementlaridan tashqari elementlari yig'indisini 
+#     chiqaruvchi programma tuzilsin.
+
+print("K, L, N ni kiriting  (0 <= K <= L < N)")
+K = int(input('K = '))
+L = int(input('L = '))
+N = int(input('N = '))
+s = 0
+i = 0
+massiv = []
+while i < N:
+    massiv.append(int(input(str(i)+') ')))
+    i += 1
+for j in massiv[:K+1]:
+    s += j
+for j in massiv[L:]:
+    s += j
+print("S =",s)
+
+
+
+# 23) N ta elementdan tashkil topgan massiv va K, L butun sonlari berilgan. (0 <= K <= L < N).
+#     Massivning K va L indekslari orasidagi elementlaridan tashqari elementlarining o'rta arifmetigini
+#     chiqaruvchi programma tuzilsin.
+
+print("K, L, N ni kiriting  (0 <= K <= L < N)")
+K = int(input('K = '))
+L = int(input('L = '))
+N = int(input('N = '))
+s = 0
+i = 0
+massiv = []
+while i < N:
+    massiv.append(int(input(str(i)+') ')))
+    i += 1
+for j in massiv[:K+1]:
+    s += j
+for j in massiv[L:]:
+    s += j
+print("O'rta arifmetigi: ",s / (N-(L-K-1)))
+
+
+
+# 24) n ta elementdan tashkil topgan massiv berilgan. Massiv elementlari arifmetik progressiyani
+#     tashkil qilsa, ayirmani aks holda nolni chiqaruvchi programma tuzilsin.
+
+n = int(input('n = '))
+massiv = []
+i = 0
+
+while n > i:
+    massiv.append(int(input(str(i)+') ')))
+    i += 1
+    
+d = massiv[1] - massiv[0]
+
+for j in range(n):
+    if massiv[j]-massiv[j-1] == d:
+        i -= 1
+        
+if i == 1:
+    print("d =",d)
+else:
+    print("nol")
+
+
+
+# 25) n ta elementdan tashkil topgan massiv berilgan. Massiv elementlari geometrik progressiyani
+#     tashkil qilsa, maxrajni aks holda nolni chiqaruvchi programma tuzilsin.
+
+n = int(input('n = '))
+massiv = []
+i = 0
+
+while n > i:
+    massiv.append(int(input(str(i)+') ')))
+    i += 1
+    
+q = massiv[1] / massiv[0]
+
+for j in range(n):
+    if massiv[j]/massiv[j-1] == q:
+        i -= 1
+        
+if i == 1:
+    print("q =",q)
+else:
+    print("nol")
+
+
+
+# 26) n ta elementdan tashkil topgan massiv berilgan. Massivda juft va toq elementlar ketma-ket
+#     kelishini tekshiruvchi programma tuzilsin. Ketma-ketlik bajarilsa nol chiqarilsin.
+#     Aks holda ketma-ketlikni buzgan birinchi element indeksi chiqarilsin.
+
+n = int(input('n = '))
+massiv = []
+a = True
+i = 0
+while n > i:
+    massiv.append(int(input(str(i)+') ')))
+    i += 1
+if massiv[0] % 2 == 0:
+    i = -1
+    for j in massiv:
+        i += 1
+        if i % 2 == 0:
+            if j % 2 == 0:
+                continue
+            else:
+                a = False
+                break
+        else:
+            if j % 2 == 1:
+                continue
+            else:
+                a = False
+                break
+            
+else:
+    i = -1
+    for j in massiv:
+        i += 1
+        if i % 2 == 0:
+            if j % 2 == 1:
+                continue
+            else:
+                a = False
+                break
+        else:
+            if j % 2 == 0:
+                continue
+            else:
+                a = False
+                break
+            
+if a == True:
+    print('nol')
+else:
+    print("Indeks:",i)
+        
+
+
+# 27) n ta elementdan tashkil topgan massiv berilgan. Massivda musbat va manfiy qiymatlar ketma-ket
+#     kelishini tekshiruvchi programma tuzilsin. Ketma-ketlik bajarilsa nol chiqarilsin. Aks holda
+#     ketma-ketlikni buzgan birinchi element indeksi chiqarilsin.
+
+n = int(input('n = '))
+massiv = []
+a = True
+i = 0
+while n > i:
+    massiv.append(int(input(str(i)+') ')))
+    i += 1
+if massiv[0] > 0:
+    i = -1
+    for j in massiv:
+        i += 1
+        if i % 2 == 0:
+            if j > 0:
+                continue
+            else:
+                a = False
+                break
+        else:
+            if j < 0:
+                continue
+            else:
+                a = False
+                break
+            
+else:
+    i = -1
+    for j in massiv:
+        i += 1
+        if i % 2 == 0:
+            if j < 0:
+                continue
+            else:
+                a = False
+                break
+        else:
+            if j > 0:
+                continue
+            else:
+                a = False
+                break
+            
+if a == True:
+    print('nol')
+else:
+    print("Indeks:",i)
+
+
+
+# 28) n ta elementdan tashkil topgan massiv berilgan. Massiv juft indeksli elementlari orasidan
+#     kichigini topuvchi programma tuzilsin. min(a0, a2, a4,..)
+
+n = int(input('n = '))
+a = []
+i = 0
+while i<n:
+    a.append(int(input(str(i)+') ')))
+    i += 1
+b = []
+for j in range(0,len(a),2):
+    b.append(a[j])
+print(min(b))
+
+
+
+# 29) n ta elementdan tashkil topgan massiv berilgan. Massiv toq indeksli elementlari orasidan
+#     kattasini topuvchi programma tuzilsin. max(a1, a3, a5,..)
+
+n = int(input('n = '))
+a = []
+i = 0
+while i<n:
+    a.append(int(input(str(i)+') ')))
+    i += 1
+b = []
+for j in range(1,len(a),2):
+    b.append(a[j])
+print(max(b),b)
+
+
+
+# 30) n ta elementdan tashkil topgan massiv berilgan. Massiv elementlari orasida, o'ng qo'shnisidan
+#     katta bo'lgan elementlarinining indeksini o'sish tartibida chiqaruvchi va ularning sonini
+#     chiqaruvchi programma tuzilsin.
+
+n = int(input('n = '))
+a = []
+i = 0
+while i < n:
+    a.append(int(input(str(i)+') ')))
+    i += 1
+i = 0
+b = []
+for j in a:
+    i += 1
+    if i < len(a):
+        if j > a[i]:
+            b.append(i-1)
+print(b," Soni =",len(b))
+
+
+
+# 31) n ta elementdan tashkil topgan massiv berilgan. Massiv elementlari orasida, chap qo'shnisidan
+#     katta bo'lgan elementlarinining indeksini kamayish tartibida chiqaruvchi va ularning sonini
+#     chiqaruvchi programma tuzilsin.
+
+n = int(input('n = '))
+a = []
+i = 0
+while i < n:
+    a.append(int(input(str(i)+') ')))
+    i += 1
+i -= 1
+b = []
+for j in a[::-1]:
+    i -= 1
+    if i >= 0:
+        if j > a[i]:
+            b.append(i+1)
+print(b," Soni =",len(b))
+
+
+
+# 32) n ta elementdan tashkil topgan massiv berilgan. Massiv elementlari orasidan birinchi uchragan lokal
+#     minimum elementni indeksini chiqaruvchi programma tuzilsin. Lokal minimum - o'ng va chap
+#     qo'shnisidan kichik bo'lgan element.
+
+n = int(input('n = '))
+a = []
+i = 0
+while i < n:
+    a.append(int(input(str(i)+') ')))
+    i += 1
+i = 0
+while i < n-2:
+    i += 1
+    if a[i] < a[i-1] and a[i] < a[i+1]:
+        print("Indeks =",i)
+        break
+    
+
+
+# 33) n ta elementdan tashkil topgan massiv berilgan. Massiv elementlari orasidan oxirgi lokal maksimum
+#     elementi indeksini chiqaruvchi programma tuzilsin. Lokal maksimum - o'ng va chap qo'shnisidan
+#     katta bo'lgan element.
+
+n = int(input('n = '))
+a = []
+i = 0
+while i < n:
+    a.append(int(input(str(i)+') ')))
+    i += 1
+i -= 1
+while i > 1:
+    i -= 1
+    if a[i] > a[i-1] and a[i] > a[i+1]:
+        print("Indeks =",i)
+        break
+    
+
+
+# 34) n ta elementdan tashkil topgan massiv berilgan. Massiv lokal minimumlari orasidan kattasini
+#     chiqaruvchi programma tuzilsin.
+
+n = int(input('n = '))
+a = []
+b = []
+i = 0
+while i < n:
+    a.append(int(input(str(i)+') ')))
+    i += 1
+i = 0
+while i < n-2:
+    i += 1
+    if a[i] < a[i-1] and a[i] < a[i+1]:
+        b.append(a[i])
+    
+print(max(b))
+
+
+
+# 35) n ta elementdan tashkil topgan massiv berilgan. Massiv lokal maksimumlari orasidan kichigini
+#     chiqaruvchi programma tuzilsin.
+
+n = int(input('n = '))
+a = []
+b = []
+i = 0
+while i < n:
+    a.append(int(input(str(i)+') ')))
+    i += 1
+i = 0
+while i < n-2:
+    i += 1
+    if a[i] > a[i-1] and a[i] > a[i+1]:
+        b.append(a[i])
+    
+print(min(b))
+
+
+
+# 36) n ta elementdan tashkil topgan massiv berilgan. Massivning lokal minimum yoki lokal maksimum
+#     bo'lmagan elementlari orasidan kattasini chiqaruvchi programma tuzilsin. Agar bunday element
+#     bo'lmasa nol chiqarilsin.
+
+from random import randint
+
+n = int(input('n = '))
+a = []
+b = []
+i = 0
+c = True
+while i < n:
+    a.append(randint(0,10))
+    i += 1
+i = 0
+print(a)
+while i < n-2:
+    i += 1
+    if not (a[i] > a[i-1] and a[i] > a[i+1] or a[i] < a[i-1] and a[i] < a[i+1]):
+        b.append(a[i])
+        c = False
+
+if c == True:
+    print("nol")
+else:
+    print(max(b),b)
+
+
+
+# 37) n ta elementdan tashkil topgan massiv berilgan. Massiv elementlari orasidan monoton o'suvchi
+#     oraliqlar sonini chiqaruvchi programma tuzilsin.
+
+from random import randint
+
+n = int(input('n = '))
+a = []
+i = 0
+while i < n:
+    a.append(randint(0,10))
+    i += 1
+s = 0
+x = True
+for j in range(len(a)-1):
+    if a[j] < a[j+1]  and  x == True:
+        s += 1
+        x = False
+    elif a[j] > a[j+1]:
+        x = True
+print(a)
+print("Monoton o'suvchilar:",s) 
+
+
+
+# 38) n ta elementdan tashkil topgan massiv berilgan. Massiv elementlari orasidan monoton 
+#     kamayuvchi oraliqlar sonini chiqaruvchi programma tuzilsin.
+
+from random import randint
+
+n = int(input('n = '))
+a = []
+i = 0
+while i < n:
+    a.append(randint(0,10))
+    i += 1
+s = 0
+x = True
+for j in range(len(a)-1):
+    if a[j] > a[j+1]  and  x == True:
+        s += 1
+        x = False
+    elif a[j] < a[j+1]:
+        x = True
+print(a)
+print("Monoton kamayuvchilar:",s) 
+
+
+
+# 39) n ta elementdan tashkil topgan massiv berilgan. Massiv elementlari orasidan monoton oraliqlar
+#     sonini chiqaruvchi programma tuzilsin.
+
+from random import randint
+
+n = int(input('n = '))
+a = []
+i = 0
+while i < n:
+    a.append(randint(0,10))
+    i += 1
+s = 0
+x = True
+for j in range(len(a)-1):
+    if a[j] > a[j+1]  and  x == True:
+        s += 1
+        x = False
+    elif a[j] < a[j+1]:
+        x = True
+        
+x = True        
+for j in range(len(a)-1):
+    if a[j] < a[j+1]  and  x == True:
+        s += 1
+        x = False
+    elif a[j] > a[j+1]:
+        x = True
+        
+print(a)
+print("Monoton oraliqlar:",s) 
+
+
+
+# 40) n ta elementdan tashkil topgan massiv va R butun soni berilgan. Massiv elementlari orasidan
+#     R soniga eng yaqin sonni topuvchi programma tuzilsin.
+
+from random import randint
+
+n = int(input('n = '))
+R = int(input('R = '))
+a = []
+i = 0
+while i < n:
+    a.append(randint(0,20))
+    i += 1
+x = True
+for i in a:
+    if x == True:
+        s = abs(R-i)
+        x = False
+        son = i
+    if s > abs(R-i):
+        s = abs(R-i)
+        son = i
+print(son)   
+    
+
+
+# 41) n ta elementdan tashkil topgan massiv berilgan. Massiv elementlari orasidan yig'indisi
+#     eng katta bo'ladigan 2 ta qo'shni elementni chiqaruvchi programma tuzilsin.
+
+from random import randint
+
+n = int(input('n = '))
+a = []
+i = 0
+while i < n:
+    a.append(randint(0,20))
+    i += 1
+x = True
+for i in range(len(a)-1):
+    if x == True:
+        d = a[i] + a[i+1]
+        son1 = a[i]
+        son2 = a[i+1]
+        x = False
+    if d < a[i] + a[i+1]:
+        d = a[i] + a[i+1]
+        son1 = a[i]
+        son2 = a[i+1]
+print(a)
+print(son1,"va",son2)
+    
+
+
+# 42) n ta elementdan tashkil topgan massiv va R butun soni berilgan. Massiv elementlari orasidan R soniga
+#     yig'indisi eng yaqin 2 ta qo'shni elementni chiqaruvchi programma tuzilsin.
+
+from random import randint
+
+n = int(input('n = '))
+R = int(input('R = '))
+a = []
+j = 0
+while j < n:
+    a.append(randint(0,20))
+    j += 1
+x = True
+for i in range(len(a)-1):
+    if x == True:
+        d = abs(a[i] + a[i+1] - R)
+        son1 = a[i]
+        son2 = a[i+1]
+        x = False
+    if abs(a[i] + a[i+1] - R) < d:
+        d = abs(a[i] + a[i+1] - R)
+        son1 = a[i]
+        son2 = a[i+1]
+print(a)
+print(son1,"va",son2)
+
+
+
+# 43) n ta elementdan tashkil topgan massiv elementlari tartiblangan holda (o'sish yoki kamayish)
+#     berilgan. Massivning har hil qiymatli elementlari sonini chiqaruvchi programma tuzilsin.
+
+n = int(input('n = '))
+a = []
+i = 0
+while i < n:
+    a.append(int(input(str(i)+') ')))
+    i += 1
+s = 0
+x = True
+for i in a:
+    if x == True:
+        son = i
+        s += 1
+        x = False
+    if son > i or son < i:
+        s += 1
+        son = i
+print(s,"ta")
+    
+
+
+# 44) n ta elementdan tashkil topgan massiv berilgan. Massiv elementlari orasida aniq 2 ta bir hil
+#     qiymatli element bor. Shu bir hil qiymatli elementlar indeksini chiqaruvchi programma tuzilsin.
+
+n = int(input('n = '))
+a = []
+i = 0
+while i < n:
+    a.append(int(input(str(i)+') ')))
+    i += 1
+for i in range(len(a)-1):
+    for j in range(i+1,len(a)-1):
+        if a[i] == a[j]:
+            print(i,j)
+            break
+
+
+
+# 45) n ta elementdan tashkil topgan massiv berilgan. Massiv elementlari orasidan bir-biriga eng yaqin
+#     qo'shnilar indeksini chiqaruvchi programma tuzilsin. 
+
+n = int(input('n = '))
+a = []
+i = 0
+while i < n:
+    a.append(int(input(str(i)+') ')))
+    i += 1
+x = True
+for i in range(len(a)-1):
+    if x == True:
+        d = abs(a[i] - a[i+1])
+        son1 = i
+        son2 = i+1
+        x = False
+    if d > abs(a[i] - a[i+1]):
+        d = abs(a[i] - a[i+1])
+        son1 = i
+        son2 = i+1
+print(son1,son2)
+
+
+
+# 46) n ta elementdan tashkil topgan massiv va R butun soni berilgan. Massiv elementlari orasidan
+#     R soniga yig'indisi eng yaqin 2 ta elementni chiqaruvchi programma tuzilsin.
+
+from random import randint
+
+n = int(input('n = '))
+R = int(input('R = '))
+a = [randint(1,9) for i in range(n)]
+
+x = True
+for i in range(n-1):
+    if x == True:
+        d = abs(a[i] + a[i+1] - R)
+        son1 = a[i]
+        son2 = a[i+1]
+        x = False
+    if d > abs(a[i] + a[i+1] - R):
+        d = abs(a[i] + a[i+1] - R)
+        son1 = a[i]
+        son2 = a[i+1]
+print(a)
+print(son1,son2)
+
+
+
+# 47) n ta elementdan tashkil topgan massiv berilgan. Massivda qatnashgan sonlardan faqat bittadan
+#     chiqaruvchi programma tuzilsin.
+
+from random import randint
+
+n = int(input('n = '))
+a = [randint(1,9) for i in range(n)]
+print(a)
+while len(a) != 0:
+    s = a[0]
+    print(s,end=', ')
+    for j in range(a.count(s)):
+        a.remove(s)
+    
+
+
+# 48) n ta elementdan tashkil topgan massiv berilgan. Massivda eng ko'p qatnashgan bir hil
+#     qiymatli element sonini chiqaruvchi programma tuzilsin.
+
+from random import randint
+
+n = int(input('n = '))
+a = [randint(1,9) for i in range(n)]
+s = 0
+x = True
+for i in a:
+    if x == True:
+        s = a.count(i)
+        b = i
+        x = False
+    if s < a.count(i):
+        s = a.count(i)
+        b = i
+print(a)
+print(b,"-",s,"ta")
+    
+
+
+# 49) n ta elementdan tashkil topgan massiv berilgan. Agar massiv 1 dan n gacha bo'lgan sonlarning
+#     o'rin almashtirilishidan hosil bo'lgan bo'lsa, nol chiqarilsin. Aks holda birinchi uchragan
+#     nojoiz kiritilgan element indeksini chiqaruvchi programma tuzilsin.
+
+from random import randint
+
+n = int(input('n = '))
+a = []
+i = 0
+while i < n:
+    a.append(randint(1,20))
+    i += 1
+print(a)
+for i in range(len(a)-1):
+    if a[i] > n or a[i] < 0:
+        print(i)
+        break
+else:
+    print("nol")
+
+
+
+# 50) n ta elementdan tashkil topgan massiv berilgan. Massiv elementlari orasidan o'ng
+#     qo'shnisidan katta bo'lganlar sonini chiqaruvchi programma tuzilsin.
+
+from random import randint
+
+n = int(input('n = '))
+a = [randint(1,20) for i in range(n)]
+s = 0
+for i in range(len(a)-1):
+    if a[i] > a[i+1]:
+        s += 1
+print(a)
+print(s,"ta")
+
+
+
+# 51) n ta elementdan tashkil topgan a va b massiv berilgan. a va b massiv qiymatlarini almashtiruvchi 
+#     va ekranga oldin a massivni keyin b massivni chiqaruvchi programma tuzilsin.
+
+from random import randint
+
+n = int(input('n = '))
+b = []
+a = []
+j = 0
+while j < n:
+    a.append(randint(0,20))
+    b.append(randint(0,20))
+    j += 1
+print(a,b)
+a,b = b,a
+print(a,b)
+
+
+
+# 52) n ta elementdan tashkil topgan a massiv berilgan. b massivni hosil qiling. Agar a[i] < 5 bo'lsa,
+#     b[i] = 2 * a[i]; aks holda  b[i] = a[i] / 2
+
+from random import randint
+
+n = int(input('n = '))
+a = [randint(1,10) for i in range(n)]
+b = []
+for i in a:
+    if i < 5:
+        b.append(2*i)
+    else:
+        b.append(i/2)
+print(a)
+print(b)
+
+
+
+# 53) n ta elementdan tashkil topgan a va b massiv berilgan. c massivni hosil qiling. 
+#     c[i] = max(a[i],b[i]), ya'ni c massiv elementi a va b massiv elementlaridan kattasini qabul qilsin.
+
+from random import randint
+
+n = int(input('n = '))
+a = [randint(1,10) for i in range(n)]
+b = [randint(1,10) for i in range(n)]
+c = []
+for i in range(len(a)):
+    c.append(max(a[i],b[i]))
+print(a)
+print(b)
+print(c)
+
+
+
+# 54) n ta elementdan iborat butun sonlardan tashkil topgan a massiv berilgan. a massivning juft
+#     elementlaridan tashkil topgan b massivini hosil qiling. b massiv elementlari soni
+#     va elementlari chiqarilsin.
+
+from random import randint
+
+n = int(input('n = '))
+a = [randint(1,9) for i in range(n)]
+b = []
+for i in a:
+    if i % 2 == 0:
+        b.append(i)
+print("a =",a)
+print("b =",b)
+print("b massivning elementlari soni:",len(b))
+
+
+
+# 55) n ta butun sonlardan tashkil topgan a massiv berilgan. (n <= 15) a massivning toq indeksdagi
+#     elementlaridan b massivni hosil qiling (a1, a3, ...). b massiv elementlari soni va
+#     elementlarini chiqaruvchi programma tuzilsin. Shart operatori ishlatilmasin.
+
+from random import randint
+
+n = int(input('n = '))
+a = [randint(1,9) for i in range(n)]
+b = []
+for i in range(1,n,2):
+    b.append(a[i])
+print("a =",a)
+print("b =",b)
+print("b massivning elementlari soni:",len(b))
+
+
+
+# 56) n ta butun sonlardan iborat a massiv berilgan (n <= 15). a massivning 3 ga karrali indeksdagi
+#     elementlaridan b massivni hosil qiling (a3, a6, ...). b massiv elementlari soni
+#     va elementlarini chiqaruvchi programma tuzilsin. Shart operatori ishlatilmasin.
+
+from random import randint
+
+n = int(input('n = '))
+a = [randint(1,9) for i in range(n)]
+b = []
+for i in range(3,n,3):
+    b.append(a[i])
+print("a =",a)
+print("b =",b)
+print("b massivning elementlari soni:",len(b))
+
+
+
+# 57) n ta butun sonlardan iborat a massiv berilgan b massivni hosil qiling. b massiv oldin a 
+#     massivning juft indeksdagi elementlarini, keyin toq indeksdagi elementlarini o'zlashtirsin.
+#     b massiv elementlarini chiqaruvchi programma tuzilsin. Shart operatori ishlatilmasin.
+
+from random import randint
+
+n = int(input('n = '))
+b = []
+a = []
+j = 0
+while j < n:
+    a.append(randint(0,20))
+    j += 1
+for i in range(0,len(a),2):
+    b.append(a[i])
+    
+for i in range(1,len(a),2):
+    b.append(a[i])
+
+print(a)
+print(b)
+
+
+
+# 58) n ta butun sonlardan iborat a massiv berilgan. n ta elementdan tashkil topgan b massivni
+#     hosil qiling. b massiv elementlari quydagicha hosil qilinadi: b[k] = a[0] + ... + a[k]
+
+from random import randint
+
+n = int(input('n = '))
+a = [randint(1,9) for i in range(n)]
+b = []
+print(a)
+for i in range(1,n+1):
+    b.append(sum(a[:i]))
+print(b)
+
+
+
+# 59) n ta butun sonlardan iborat a massiv berilgan. n ta elementdan tashkil topgan b massivni
+#     hosil qiling. b massiv elementlari quydagicha hosil qilinadi: b[k] = (a[0] + ... + a[k]) / k
+
+from random import randint
+
+n = int(input('n = '))
+a = [randint(1,9) for i in range(n)]
+b = []
+print(a)
+for i in range(1,n+1):
+    b.append(sum(a[:i])/i)
+print(b)
+
+
+
+# 60) n ta butun sonlardan iborat a massiv berilgan. n ta elementdan tashkil topgan b massivni hosil 
+#     qiling. b massiv elementlari quydagicha hosil qilinadi: b[k] = a[k] + ... + a[n-1], ya'ni
+#     a massivning k - elementidan boshlab massiv oxirigacha bo'lgan elementlari yig'indisiga teng.
+
+from random import randint
+
+n = int(input('n = '))
+b = []
+a = []
+j = 0
+s = 0
+while j < n:
+    a.append(randint(0,20))
+    j += 1
+for i in range(n):
+    s = 0
+    for j in range(i,n):
+        s += a[j]
+    b.append(s)
+print(a)
+print(b)
+
+
+
+# 61) n ta butun sonlardan iborat a massiv berilgan. n ta elementdan tashkil topgan b massivni hosil 
+#     qiling. b massiv elementlari quydagicha hosil qilinadi: b[k] a massivning k - elementidan boshlab 
+#     massiv oxirigacha bo'lgan elementlari yig'indisining o'rta arifmetigiga teng.
+
+from random import randint
+
+n = int(input('n = '))
+b = []
+a = []
+j = 0
+s = 0
+while j < n:
+    a.append(randint(0,20))
+    j += 1
+for i in range(n):
+    s = 0
+    for j in range(i,n):
+        s += a[j]
+    b.append(s/(n-i))
+print(a)
+print(b)
+
+
+
+# 62) n ta butun sonlardan iborat a massiv berilgan. a massivning musbat elementlaridan tashkil topgan
+#     b va manfiy elementlaridan tashkil topgan c massivni hosil qiling. Oldin b massiv elementlari
+#     soni va elementlarini, keyin c massiv elementlari soni va elementlari chiqaruvchi programma tuzilsin.
+
+from random import randint
+
+n = int(input('n = '))
+a = [randint(-10,10) for i in range(n)]
+b = []
+c = []
+for i in a:
+    if i > 0:
+        b.append(i)
+    else:
+        c.append(i)
+print("a =",a)
+print("b =",b,len(b),"ta")
+print("c =",c,len(c),"ta")
+
+
+
+# 63) 5 ta elementdan tashkil topgan a va b massivlar berilgan. Har bir massiv elementlari o'sish
+#     tartibida kiritiladi. 10 ta elementdan tashkil topgan c massivini hosil qilingki, c massiv 
+#     elementlari o'sish tartibida joylashtirilgan bo'lsin. 
+
+from random import randint
+
+n = int(input('n = '))
+a = [randint(1,9) for i in range(n)]
+b = [randint(1,9) for i in range(n)]
+c = a + b
+print("a =",a,"  b =",b)
+c.sort()
+print("c =",c)
+
+
+
+# 64) n ta elementdan tashkil topgan a, b, c massivlari berilgan. Har bir massiv elementlari mos ravishda
+#     o'sish tartibida kiritiladi. 3*n ta elementdan tashkil topgan d massivni hosil qilingki,
+#     d massiv elementlari o'sish tartibida joylashtirilgan bo'lsin. sort() funksiyasini ishlatmang.
+
+from random import randint
+
+n = int(input('n = '))
+b = []
+a = []
+c = []
+d = []
+D = []
+j = 0
+while j < n:
+    a.append(randint(0,20))
+    b.append(randint(0,20))
+    c.append(randint(0,20))
+    j += 1
+d = a+b+c
+
+for i in range(len(d)):
+    D.append(min(d))
+    d.remove(min(d))
+
+print(a,b,c)
+print(D)
+
+
+
+# 65) n ta butun sonlardan iborat a massiv va k butun soni berilgan (1 <= k <= n). Massivning
+#     har bir elementini a[k] ga ortiruvchi programma tuzilsin.
+
+from random import randint
+
+n = int(input('n = '))
+k = int(input("(1 <= k <= n)  k = "))
+a = [randint(1,20) for i in range(n)]
+print(a)
+for i in range(n):
+    print(a[i]+a[k],end=', ')
+
+
+
+# 66) n ta butun sonlardan iborat massiv berilgan. Massivdagi har bir juft sonni birinchi uchragan juft 
+#     songa ortiruvchi programma tuzilsin. Agar juft sonlar bo'lmasa, massiv o'zgarishsiz qoldirilsin.
+
+from random import randint
+
+n = int(input('n = '))
+a = [randint(1,20) for i in range(n)]
+b = []
+x = True
+for i in range(n):
+    if x == True and a[i] % 2 == 0:
+        son = a[i]
+        x = False
+    if x == False and a[i] % 2 == 0:
+        b.append(a[i] + son)
+    else:
+        b.append(a[i])
+print("a =",a)
+if x == True:
+    print(a)
+else:
+    print(b)
+
+
+
+# 67) n ta butun sonlardan iborat massiv berilgan. Massivdagi har bir toq sonni oxirgi toq songa
+#     ortiruvchi programma tuzilsin. Agar toq sonlar bo'lmasa, massiv o'zgarishsiz qoldirilsin.
+
+from random import randint
+
+n = int(input('n = '))
+a = [randint(1,20) for i in range(n)]
+b = [];  son = 0
+print(a)
+for i in a[::-1]:
+    if i % 2 == 1:
+        son = i
+        break
+
+for i in a:
+    if i % 2 == 1:
+        b.append(i+son)
+    else:
+        b.append(i)
+
+if son == 0:
+    print(a)
+else:
+    print(b)
+
+
+
+# 68) n ta elementdan iborat massiv berilgan. Massivning eng kichik va eng katta elementlari 
+#     o'rni almashtirilsin.
+
+from random import randint
+
+n = int(input('n = '))
+a = [randint(1,20) for i in range(n)]
+b = []
+for i in a:
+    if i == max(a):
+        b.append(min(a))
+    elif i == min(a):
+        b.append(max(a))
+    else:
+        b.append(i)
+print(a)
+print(b)
+        
+
+
+# 69) n ta elementdan iborat massiv berilgan (n juft son). Massivning nolinchi bilan birinchi,
+#     ikkinchi bilan uchinchi, ..., elementlari o'rni almashtirilsin.
+
+from random import randint
+
+n = int(input('n = '))
+a = [randint(1,20) for i in range(n)]
+b = []
+for i in range(0,n-1,2):
+    b.append(a[i+1])
+    b.append(a[i])
+print(a)
+print(b)
+        
+
+
+# 70) n ta elementdan tashkil topgan massiv berilgan (n juft son). Massivning birinchi yarmi 
+#     va ikkinchi yarmi qiymatlari almashtirilsin.
+
+from random import randint
+
+n = int(input('n = '))
+a = [randint(1,20) for i in range(n)]
+b = []
+for i in range(int(n/2),n):
+    b.append(a[i])
+for i in range(int(n/2)):
+    b.append(a[i])
+print(a)
+print(b)
+
+
+
+# 71) n ta elementdan iborat massiv berilgan. Massivning elementlari teskari tartibda joylashtirilsin.
+
+from random import randint
+
+n = int(input('n = '))
+a = [randint(1,20) for i in range(n)]
+b = []
+print(a)
+print(list(reversed(a)))
+
+
+
+# 72) n ta butun sonlardan iborat a massiv va k, h butun soni berilgan (1 <= k < h <= n). Massivning
+#     a[k] va a[h] elementlari orasidagi qiymatlarni almashtiruvchi programma tuzilsin. a[k] va 
+#     a[h] elementlari bilan birgalikda.
+
+from random import randint
+
+n = int(input('n = '))
+k = int(input('k = '))
+h = int(input('h = '))
+a = [randint(1,20) for i in range(n)]
+b = []
+c = []
+for i in range(n):
+    if i >= k and i <= h:
+        b.append(a[i])
+b.reverse()
+for i in range(k):
+    c.append(a[i])
+for i in b:
+    c.append(i)
+for i in range(h+1,n):
+    c.append(a[i])
+print(a)
+print(c)
+
+
+
+# 73) n ta butun sonlardan iborat a massiv va k, h butun soni berilgan (1 <= k < h <= n).
+#     Massivning a[k] va a[h] elementlari orasidagi qiymatlarni almashtiruvchi programma tuzilsin.
+#     a[k] va a[h] elementlarisiz.
+
+from random import randint
+
+n = int(input('n = '))
+k = int(input('k = '))
+h = int(input('h = '))
+a = [randint(1,20) for i in range(n)]
+b = []
+c = []
+for i in range(n):
+    if i > k and i < h:
+        b.append(a[i])
+b.reverse()
+for i in range(k+1):
+    c.append(a[i])
+for i in b:
+    c.append(i)
+for i in range(h,n):
+    c.append(a[i])
+print(a)
+print(c)
+
+
+
+# 74) n ta butun sonlardan iborat a massiv berilgan. Massivning eng kichik va eng katta elementlari
+#     orasidagilarini nolga almashtiruvchi programma tuzilsin. Eng katta va eng kichik
+#     qiymatlari o'zgarishsiz qoldirilsin.
+
+from random import randint
+
+n = int(input('n = '))
+a = [randint(1,20) for i in range(n)]
+b = []
+mini = a.index(min(a))
+maxi = a.index(max(a))
+for i in range(n):
+    if mini < i and maxi > i or mini > i and maxi < i:
+        b.append(0)
+    else:
+        b.append(a[i])
+print(a)
+print(b)
+
+
+
+# 75) n ta butun sonlardan iborat a massiv berilgan. Massivning eng kichik va eng katta elementlari
+#     orasidagi elementlarini teskari tartibda joylashtiruvchi programma tuzilsin. Eng kichik
+#     va eng katta elementlari bilan birgalikda.
+
+from random import randint
+
+n = int(input('n = '))
+a = [randint(1,20) for i in range(n)]
+print(a)
+
+min_ind = a.index(min(a))
+max_ind = a.index(max(a))
+
+if min_ind > max_ind:
+    for i in range(max_ind):
+        print(a[i],end=' ')
+    
+    for i in range(min_ind, max_ind-1, -1):
+        print(a[i],end=' ')
+    
+    for i in range(min_ind+1,n):
+        print(a[i],end=' ')
+else:
+    for i in range(min_ind):
+        print(a[i],end=' ')
+    
+    for i in range(max_ind, min_ind-1, -1):
+        print(a[i],end=' ')
+    
+    for i in range(max_ind+1,n):
+        print(a[i],end=' ')
+
+
+
+# 76) n ta butun sonlardan iborat a massiv berilgan. Massivning barcha lokal maksimumlarini nolga
+#     aylantiruvchi programma tuzilsin. (o'ng va chap qo'shnilaridan katta bo'lgan element - lokal
+#     maksimum deyiladi)
+
+from random import randint
+
+n = int(input('n = '))
+a = [randint(1,20) for i in range(n)]
+b = []
+for i in range(1,n-1):
+    if a[i] > a[i-1] and a[i] > a[i+1]:
+        b.append(0)
+    else:
+        b.append(a[i])
+b.insert(0,a[0])
+b.insert(n-1,a[n-1])
+print(a)
+print(b)
+
+
+
+# 77) n ta butun sonlardan iborat a massiv berilgan. Massivning barcha lokal minimumlarini kvadratga
+#     oshiruvchi programma tuzilsin. (o'ng va chap qo'shnilaridan kichik bo'lgan element
+#     lokal minimum deyiladi)
+
+from random import randint
+
+n = int(input('n = '))
+a = [randint(1,20) for i in range(n)]
+b = []
+for i in range(1,n-1):
+    if a[i] < a[i-1] and a[i] < a[i+1]:
+        b.append(a[i]**2)
+    else:
+        b.append(a[i])
+b.insert(0,a[0])
+b.insert(n-1,a[n-1])
+print(a)
+print(b)
+
+
+
+# 78) n ta sonlardan iborat a massiv berilgan. Massivning har bir elementini, uning o'ng
+#     qo'shnisi bilan o'rta arifmetigiga almashtiruvchi programma tuzilsin.
+
+from random import randint
+
+n = int(input('n = '))
+a = [randint(1,20) for i in range(n)]
+b = []
+for i in range(n-1):
+    b.append((a[i] + a[i+1]) / 2)
+print(a)
+print(b)
+
+
+
+# 79) n ta elementdan tashkil topgan massiv berilgan. Massiv elementlarini bir qadam o'nga siljituvchi
+#     programma tuzilsin. a[0] element qiymati a[1] ga o'tadi, a[1] esa a[2] ga, ... massivning
+#     oxirgi elementi tashlab yuboriladi. Hosil bo'lgan massivda a[0] = 0 bo'lsin.
+
+from random import randint
+
+n = int(input('n = '))
+a = [randint(1,20) for i in range(n)]
+b = [0]
+for i in range(n-1):
+    b.append(a[i])
+print(a)
+print(b)
+
+
+
+# 80) n ta elementdan tashkil topgan massiv berilgan. Massiv elementlarini bir qadam chapga siljituvchi
+#     programma tuzilsin. a[n-1] element qiymati a[n-2] ga o'tadi, a[n-2] esa a[n-3] ga, ... massivning
+#     0 elementi tashlab yuboriladi. Hosil bo'lgan massivda oxirgi element qiymati 0 ga teng bo'lsin.
+
+from random import randint
+
+n = int(input('n = '))
+a = [randint(1,20) for i in range(n)]
+b = []
+for i in range(1,n):
+    b.append(a[i])
+b.append(0)
+print(a)
+print(b)
+
+
+
+# 81) n ta elementdan tashkil topgan massiv va k butun soni berilgan (1 <= k < n). Massiv elementlarini
+#     k ta o'rin o'nga siljituvchi programma tuzilsin. a[0] element qiymati a[k] ga o'tadi, a[1] ese
+#     a[k+1] ga,... massivning oxirgi k ta elementi tashlab yuboriladi. Hosil bo'lgan massivning
+#     dastlabki k ta elementi qiymati nolga teng bo'lsin.
+
+from random import randint
+
+n = int(input('n = '))
+a = [randint(1,20) for i in range(n)]
+k = int(input('k = '))
+b = []
+for i in range(k):
+    b.append(0)
+for i in range(n-k):
+    b.append(a[i])
+print(a)
+print(b)
+
+
+
+# 82) n ta elementdan tashkil topgan massiv va k butun soni berilgan (1 <= k < n). Massiv elementlarini
+#     k ta o'rin chapga siljituvchi programma tuzilsin. a[n-1] element qiymati a[n-1-k] ga o'tadi, a[n-2] ese
+#     a[n-2-k] ga,... massivning dastlabki k ta elementi tashlab yuboriladi. Hosil bo'lgan massivning
+#     oxirgi k ta elementi qiymati nolga teng bo'lsin.
+
+from random import randint
+
+n = int(input('n = '))
+a = [randint(1,20) for i in range(n)]
+k = int(input('k = '))
+b = []
+
+for i in range(k,n):
+    b.append(a[i])
+for i in range(k):
+    b.append(0)
+print(a)
+print(b)
+
+
+
+# 83) n ta elementdan tashkil topgan massiv berilgan. Massiv elementlarini 1 ta o'rin o'nga siklik
+#     siljituvchi programma tuzilsin. a[0] element qiymati a[1] ga o'tadi; a[1] esa a[2] ga; ... a[n-1] 
+#     qiymati a[0] ga o'tadi.
+
+from random import randint
+
+n = int(input('n = '))
+a = [randint(1,20) for i in range(n)]
+b = [a[n-1]]
+for i in range(n-1):
+    b.append(a[i])
+print(a)
+print(b)
+
+
+
+# 84) n ta elementdan tashkil topgan massiv berilgan. Massiv elementlarini bir qadam chapga siklik
+#     siljituvchi programma tuzilsin. a[n-1] element qiymati a[n-2] ga o'tadi; a[n-2] esa a[n-3] ga, ...
+#     a[0] esa a[n-1] ga o'tadi
+
+from random import randint
+
+n = int(input('n = '))
+a = [randint(1,20) for i in range(n)]
+print(a)
+k = a[0]
+for i in range(n-1):
+    a[i] = a[i+1]
+a.pop()
+a.append(k)
+print(a)
+
+
+
+# 85) n ta elementdan tashkil topgan a massiv va k butun soni berilgan. (1 <= k <= 4; k < n). Massiv
+#     elementlarini k ta o'rin o'nga siklik siljituvchi pogramma tuzilsin. a[0] element qiymati
+#     a[k] ga o'tadi, a[1] esa a[k+1] ga, ... a[n-1] esa a[n-1-k] ga o'tadi. 4 ta elementdan tashkil
+#     topgan yordamchi massivdan foydalanish mumkin.
+
+from random import randint
+
+n = int(input('n = '))
+k = int(input('k = '))
+a = [randint(1,20) for i in range(n)]
+b = []
+for i in range(n-k,n):
+    b.append(a[i])
+for i in range(n-k):
+    b.append(a[i])
+print(a)
+print(b)
+
+
+
+# 86) n ta elementdan tashkil topgan a massiv va k butun soni berilgan (1 <= k <= 4; k < n). Massiv
+#     elementlarini k ta o'rin chapga siklik siljituvchi programma tuzilsin. a[n-1] element qiymati
+#     a[n-1-k] ga o'tadi, a[n-2] esa a[n-2-k] ga,... a[0] esa a[n-k] ga o'tadi.
+
+from random import randint
+
+n = int(input('n = '))
+k = int(input('k = '))
+a = [randint(1,20) for i in range(n)]
+b = []
+for i in range(k,n):
+    b.append(a[i])
+for i in range(k):
+    b.append(a[i])
+print(a)
+print(b)
+
+
+
+# 87) n ta elementdan tashkil topgan massiv berilgan. Massivning dastlabki elementidan boshqalari
+#     o'sish tartibida joylashtirilgan. Massivning dastlabki elementini shunday joylashtiringki,
+#     natijada massiv o'sish tartibida joylashib qolsin.
+
+n = int(input('n = '))
+a = []
+for i in range(n):
+    a.append(int(input(str(i)+') ')))
+print(a)
+for i in range(1,n):
+    if a[i] > a[0]:
+        a.insert(i,a[0])
+        a.remove(a[0])
+        break
+else:
+    a.append(a[0])
+    a.remove(a[0])
+print(a)
+
+
+
+# 88) n ta elementdan tashkil topgan massiv berilgan. Massivning oxirgi elementidan boshqalari o'sish tartibida
+#     joylashtirilgan. Massivning oxirgi elementini shunday joylashtiringki, natijada massiv o'sish
+#     tartibida joylashib qolsin.
+
+n = int(input('n = '))
+a = []
+for i in range(n):
+    a.append(int(input(str(i)+') ')))
+print(a)
+for i in range(0,n):
+    if a[i] > a[n-1]:
+        a.insert(i,a[n-1])
+        a.pop()
+        break
+print(a)
+
+
+
+# 89) n ta elementdan tashkil topgan massiv berilgan. Massivning bitta elementidan boshqalari o'sish tartibida 
+#     joylashtirilgan. Massivning qonuniyatni buzib turganelementini shunday joylashtiringki, natijada
+#     massiv o'sish tartibida joylashib qolsin.
+
+n = int(input('n = '))
+a = []
+b = []
+for i in range(n):
+    a.append(int(input(str(i)+') ')))
+print(a)
+
+for i in range(n-1):
+    if a[i] > a[i+1]:
+        k = a[i+1]
+        index = i+1
+        break
+a.pop(index)
+
+for i in range(n-1):
+    if k < a[i]:
+        a.insert(i,k)
+        break
+print(a)
+
+
+
+# 90) n ta elementdan tashkil topgan massiv va k butun soni berilgan. (0 <= k < n) Indeksi k ga
+#     teng bo'lgan elementni o'chiruvchi programma tuzilsin.
+
+from random import randint
+
+n = int(input('n = '))
+k = int(input('k = '))
+a = [randint(1,20) for i in range(n)]
+print(a)
+a.pop(k)
+print(a)
+
+
+
+# 91) n ta elementdan tashkil topgan massiv va k, m butun sonlari berilgan (0 <= k < m < n). Indeksi k dan 
+#     m gacha bo'lgan elementlarni o'chiruvchi programma tuzilsin. Hosil bo'lgan massiv elementlar soni
+#     va elementlari chiqarilsin.
+
+from random import randint
+
+n = int(input('n = '))
+k = int(input('k = '))
+m = int(input('m = '))
+a = [randint(1,20) for i in range(n)]
+print(a)
+for _ in range(k,m+1):
+    a.pop(k)
+print(a,"Elementlari soni",len(a))
+
+
+
+# 92) n ta elementdan tashkil topgan massiv berilgan. Massiv elementlari orasidan toqlarini o'chiruvchi
+#     programma tuzilsin. Hosil bo'lgan massiv elementlar soni va elementlari chiqarilsin.
+
+from random import randint
+
+n = int(input('n = '))
+a = [randint(1,20) for i in range(n)]
+b = []
+print(a)
+for i in a:
+    if i % 2 == 0:
+        b.append(i)
+print(b,"Elementlari soni",len(b))
+
+
+
+# 93) n ta elementdan tashkil topgan massiv berilgan. Massiv elementlari orasidan juft indekslarini
+#     o'chiruvchi programma tuzilsin. Hosil bo'lgan massiv elementlari soni va elementlari chiqarilsin.
+#     Shart operatori ishlatilmasin.
+
+from random import randint
+
+n = int(input('n = '))
+a = [randint(1,20) for i in range(n)]
+b = []
+print(a)
+for i in range(1,n,2):
+    b.append(a[i])
+print(b,"Elementlari soni",len(b))
+
+
+
+# 94) n ta elementdan tashkil topgan massiv berilgan. Massiv elementlari orasidan toq indekslarini
+#     o'chiruvchi programma tuzilsin. Hosil bo'lgan massiv elementlari soni va elementlari chiqarilsin.
+#     Shart operatori ishlatilmasin.
+
+from random import randint
+
+n = int(input('n = '))
+a = [randint(1,20) for i in range(n)]
+b = []
+print(a)
+for i in range(0,n,2):
+    b.append(a[i])
+print(b,"Elementlari soni",len(b))
+
+
+
+# 95) n ta elementdan tashkil topgan massiv berilgan. Massiv elementlari orasidan bir xil
+#     qo'shnilarning birini o'chiruvchi programma tuzilsin.
+
+
+from random import randint
+
+n = int(input('n = '))
+a = [randint(1,10) for i in range(n)]
+print(a)
+i = 0
+for __ in range(n-1):
+    if a[i] == a[i+1]:
+        a.pop(i)
+    else:
+        i += 1
+print(a)
+
+
+
+# 96) n ta elementdan tashkil topgan massiv berilgan. Massiv elementlari orasidan bir xil qiymatga
+#     ega bo'lganlarini o'chiruvchi programma tuzilsin. Faqat birinchi uchragani qoldirilsin.
+
+from random import randint
+
+n = int(input('n = '))
+a = [randint(1,20) for i in range(n)]
+print(a)
+i = 0
+while i < len(a):
+    k = a[i]
+    if a.count(k) > 1:
+        for _ in range(a.count(k)):
+            a.remove(k)
+        a.insert(i,k)
+    i += 1
+print(a)
+
+
+
+# 97) n ta elementdan tashkil topgan massiv berilgan. Massiv elementlari orasidan bir xil qiymatga
+#     ega bo'lganlarini o'chiruvchi programma tuzilsin. Faqat oxirgi uchragani qoldirilsin.
+
+from random import randint
+
+n = int(input('n = '))
+a = [randint(1,5) for i in range(n)]
+print(a)
+i = 0
+while i < len(a):
+    k = a[i]
+    if a.count(k) > 1:
+        for _ in range(a.count(k)-1):
+            a.remove(k)
+    i += 1
+print(a)
+
+
+
+# 98) n ta elementdan tashkil topgan massiv berilgan. Massiv elementlari orasidan 3 martadan kam
+#     uchraganlarini o'chiruvchi programma tuzilsin. Hosil bo'lgan massiv elementlari soni va
+#     elementlari chiqarilsin.
+
+from random import randint
+
+n = int(input('n = '))
+a = [randint(1,5) for i in range(n)]
+print(a)
+i = 0
+while i < len(a):
+    k = a[i]
+    if a.count(k) < 3:
+        for _ in range(a.count(k)):
+            a.remove(k)
+    else:
+        i += 1
+print(a,"Elementlari soni",len(a))
+
+
+
+# 99) n ta elementdan tashkil topgan massiv berilgan. Massiv elementlari orasidan 2 martadan ko'p
+#     uchraganlarini o'chiruvchi programma tuzilsin. Hosil bo'lgan massiv elementlar soni va
+#     elementlari chiqarilsin.
+
+from random import randint
+
+n = int(input('n = '))
+a = [randint(1,5) for i in range(n)]
+print(a)
+i = 0
+while i < len(a):
+    k = a[i]
+    if a.count(k) > 2:
+        for _ in range(a.count(k)):
+            a.remove(k)
+    else:
+        i += 1
+print(a,"Elementlari soni",len(a))
+
+
+
+# 100) n ta elementdan tashkil topgan massiv berilgan. Massiv elementlari orasidan faqat 2 marta
+#      uchraganlarini o'chiruvchi programma tuzilsin. Hosil bo'lgan massiv elementlari soni va
+#      elementlari chiqarilsin.
+
+from random import randint
+
+n = int(input('n = '))
+a = [randint(1,5) for i in range(n)]
+print(a)
+i = 0
+while i < len(a):
+    k = a[i]
+    if a.count(k) == 2:
+        for _ in range(a.count(k)):
+            a.remove(k)
+    else:
+        i += 1
+print(a,"Elementlari soni",len(a))
+
+
+
+# 101) n ta elementdan tashkil topgan massiv va k butun soni berilgan (0 <= k < n). Indeksi k ga 
+#      teng bo'lgan element oldidan qiymati 0 ga teng bo'lgan element qo'shuvchi programma tuzilsin.
+
+from random import randint
+
+n = int(input('n = '))
+k = int(input('k = '))
+a = [randint(1,20) for i in range(n)]
+print(a)
+a.insert(k,0)
+print(a)
+
+
+
+# 102) n ta elementdan tashkil topgan massiv va k butun soni berilgan (0 <= k < n). Indeksi k ga 
+#      teng bo'lgan elementdan keyin qiymati 0 ga teng bo'lgan element qo'shuvchi programma tuzilsin.
+
+from random import randint
+
+n = int(input('n = '))
+k = int(input('k = '))
+a = [randint(1,20) for i in range(n)]
+print(a)
+a.insert(k+1,0)
+print(a)
+
+
+
+# 103) n ta elementdan tashkil topgan massiv berilgan. Eng kichik element oldidan va eng katta 
+#      elementdan keyin, qiymati nolga teng bo'lgan element qo'shuvchi programma tuzilsin.
+
+from random import randint
+
+n = int(input('n = '))
+a = [randint(1,20) for i in range(n)]
+print(a)
+a.insert(a.index(min(a)),0)
+a.insert(a.index(max(a))+1,0)
+print(a)
+
+
+
+# 104) n ta elementdan tashkil topgan massiv va k, m butun soni berilgan (0 <= k < n; 1 <= m <= 10).
+#      Indeksi k ga teng bo'lgan element oldidan, qiymati nolga teng bo'lgan m ta element 
+#      qo'shuvchi programma tuzilsin.
+
+from random import randint
+
+n = int(input('n = '))
+k = int(input('k = '))
+m = int(input('m = '))
+a = [randint(1,20) for i in range(n)]
+print(a)
+for ___ in range(m):
+    a.insert(k,0)
+print(a)
+
+
+
+# 105) n ta elementdan tashkil topgan massiv va k, m butun soni berilgan (0 <= k < n; 1 <= m <= 10).
+#      Indeksi k ga teng bo'lgan elementdan keyin, qiymati nolga teng bo'lgan m ta element 
+#      qo'shuvchi programma tuzilsin.
+
+from random import randint
+
+n = int(input('n = '))
+k = int(input('k = '))
+m = int(input('m = '))
+a = [randint(1,20) for i in range(n)]
+print(a)
+for ___ in range(m):
+    a.insert(k+1,0)
+print(a)
+
+
+
+# 106) n ta elementdan tashkil topgan massiv berilgan. Massivga, massivning juft indeksli
+#      elementlarini qo'shuvchi programma tuzilsin. Shart operatori ishlatilmasin.
+
+from random import randint
+
+n = int(input('n = '))
+a = [randint(1,20) for i in range(n)]
+print(a)
+for i in range(0,n,2):
+    a.append(a[i])
+print(a)
+
+
+
+# 107) n ta elementdan tashkil topgan massiv berilgan. Massivga, massivning toq indeksli
+#      elementlarini 2 marta qo'shuvchi programma tuzilsin. Shart operatori ishlatilmasin.
+
+from random import randint
+
+n = int(input('n = '))
+a = [randint(1,20) for i in range(n)]
+print(a)
+for i in range(1,n,2):
+    a.append(a[i])
+for i in range(1,n,2):
+    a.append(a[i])
+print(a)
+
+
+
+# 108) n ta elementdan tashkil topgan massiv berilgan. Massivning har bir musbat elementi oldidan,
+#      qiymati nolga teng element qo'shuvchi programma tuzilsin.
+
+from random import randint
+
+n = int(input('n = '))
+a = [randint(-20,20) for i in range(n)]
+print(a)
+i = 0
+while i < len(a):
+    if a[i] > 0:
+        a.insert(i,0)
+        i += 2
+    else:
+        i += 1
+print(a)
+
+
+
+# 109) n ta elementdan tashkil topgan massiv berilgan. Massivning har bir manfiy elementidan keyin,
+#      qiymati nolga teng element qo'shuvchi programma tuzilsin.
+
+from random import randint
+
+n = int(input('n = '))
+a = [randint(-20,20) for i in range(n)]
+print(a)
+i = 0
+while i < len(a):
+    if a[i] < 0:
+        a.insert(i+1,0)
+        i += 2
+    else:
+        i += 1
+print(a)
+
+
+
+# 110) n ta elementdan tashkil topgan massiv berilgan. Massivga, massivning juft elementlarini 
+#      qo'shuvchi programma tuzilsin.
+
+from random import randint
+
+n = int(input('n = '))
+a = [randint(0,20) for i in range(n)]
+print(a)
+for i in range(n):
+    if a[i] % 2 == 0:
+        a.append(a[i])
+print(a)
+
+
+
+# 111) n ta elementdan tashkil topgan massiv berilgan. Massivga, massivning toq elementlarini 
+#      2 marta qo'shuvchi programma tuzilsin.
+
+from random import randint
+
+n = int(input('n = '))
+a = [randint(0,20) for i in range(n)]
+print(a)
+for i in range(n):
+    if a[i] % 2 == 1:
+        a.append(a[i])
+for i in range(n):
+    if a[i] % 2 == 1:
+        a.append(a[i])
+print(a)
+
+
+
+# 112) n ta elementdan tashkil topgan massiv berilgan. Oddiy o'rin almashtirish (pufaksimon saralash)
+#      algaritmi orqali massivni o'sish tartibida chiqaruvchi programma tuzilsin. 
+#      Algaritm quydagicha: Har bir element o'zidan keyin turgan elementlar bilan solishtiriladi.
+#      Agar o'zidan keyin turgan element undan kichik bo'lsa ularni qiymati almashtiriladi.
+
+from random import randint
+
+n = int(input('n = '))
+a = [randint(0,20) for i in range(n)]
+print(a)
+for i in range(n):
+    for j in range(i,n):
+        if a[i] > a[j]:
+            a[i], a[j] = a[j], a[i]
+print(a)
+            
+
+
+# 113) n ta elementdan tashkil topgan massiv berilgan. Oddiy tanlash (selektion sort) algaritmi orqali
+#      massivni o'sish tartibida chiqaruvchi programma tuzilsin.
+#      Algoritmi quydagicha: Har bir element o'zidan keyin turgan elementlarning eng kichigi bilan almashtiriladi.
+
+from random import randint
+
+n = int(input('n = '))
+a = [randint(0,20) for i in range(n)]
+print(a)
+for i in range(n):
+    for j in range(i,n):
+        if a[i] > a[j]:
+            a[i], a[j] = a[j], a[i]
+print(a)
+
+
+
+# 114) n ta elementdan tashkil topgan massiv berilgan. Oddiy qo'shish (inertsion sort) algaritmi 
+#      orqali massivni o'sish tartibida chiqaruvchi programma tuzilsin.
+#      Algoritmi quydagicha: a[0] va a[1] elementlar o'sish tartibida joylashtiriladi. Ya'ni zarurat
+#      bo'lsa qiymatlari almashtiriladi. Keyin a[2] element saralangan elementlar (a[0], a[1]) orasiga
+#      shunday joylashtiriladiki, natijada a[0], a[1], a[2] tartiblangan holatda bo'ladi. Shu tartibda
+#      har bir element tartiblangan elementlar orasiga qo'shib boriladi.
+
+def massiv_yasa(n):
+    from random import randint
+    a = [randint(-n,n) for i in range(n)]
+    return a
+
+def sarala(a):
+    s=0
+    for i in range(n):
+        for j in range(i):
+            if a[i]<a[j]:
+                a.insert(j,a.pop(i))
+                break
+    return a
+
+n = int(input('n = '))
+a = massiv_yasa(n)
+print(a)
+print(sarala(a))
+
+
+
+# 116) n ta elementdan tashkil topgan a massiv berilgan. Seriya deb, ketma-ket kelgan bir hil elementlar
+#      guruxiga aytiladi. Seriya uzunligi esa, bu elementlar soni. (seriya uzunligi 1 bo'lishi mumkin).
+#      Butun sonlardan iborat bo'lgan, elementlar soni bir hil bo'lgan B va C massivni hosil qiling. B massivga
+#      A massivdagi seriyalar uzunligi, C massivga esa seriyani tashkil qilgan element qiymatini yozing.
+
+from random import randint
+
+n = int(input('n = '))
+a = [randint(1,3) for i in range(n)]
+b = []
+c = [a[0]]
+s = 1; i = 1
+while i < len(a):
+    if a[i] == a[i-1]:
+        s += 1
+    if a[i] != a[i-1]:
+        b.append(s)
+        c.append(a[i])
+        s = 1
+    i += 1
+b.append(s)
+print(a)
+print(b)
+print(c)
+
+
+
+# 117) n ta elementdan tashkil topgan a massiv berilgan. Massivning har bir seriyasi oldidan
+#      qiymati 0 ga teng bo'lgan element qo'shing.
+
+from random import randint
+
+n = int(input('n = '))
+a = [randint(1,3) for i in range(n)]
+b = [0]
+i = 0
+while i < n-1:
+    b.append(a[i])
+    if a[i] != a[i+1]:
+        b.append(0)
+    i += 1
+b.append(a[n-1])
+print(a)
+print(b)
+
+
+
+# 118) n ta elementdan tashkil topgan massiv berilgan. Massivning har bir seriyasidan keyin
+#      qiymati 0 ga teng bo'lgan element qo'shing.
+
+from random import randint
+
+n = int(input('n = '))
+a = [randint(1,3) for i in range(n)]
+b = []
+i = 0
+while i < n-1:
+    b.append(a[i])
+    if a[i] != a[i+1]:
+        b.append(0)
+    i += 1
+b.append(a[n-1])
+b.append(0)
+print(a)
+print(b)
+
+
+
+# 119) n ta elementdan tashkil topgan massiv berilgan. Massivning har bir seriyasiga bir
+#      element qo'shuvchi programma tuzilsin.
+
+from random import randint
+
+n = int(input('n = '))
+a = [randint(1,3) for i in range(n)]
+b = []
+i = 0
+while i < n-1:
+    b.append(a[i])
+    if a[i] != a[i+1]:
+        b.append(a[i])
+    i += 1
+b.append(a[n-1])
+b.append(a[n-1])
+print(a)
+print(b)
+
+
+
+# 120) n ta elementdan tashkil topgan massiv berilgan. Massivning kamida bitta seriyasi uzunligi
+#      birdan katta. Massivning har bir seriyasini bir elementga kamaytiruvchi programma tuzilsin.
+
+n = int(input('n = '))
+a = []
+b = []
+for i in range(n):
+    a.append(int(input(str(i)+') ')))
+i = 0
+while i < n-1:
+    if a[i] != a[i+1]:
+        i += 1
+    else:
+        b.append(a[i])
+        i += 1
+print(a)
+print(b)
+
+
+
+# 121) n ta elementdan tashkil topgan massiv va k butun soni berilgan. (k>0) Massivning k-seriyasi
+#      uzunligini 2 marta oshiruvchi programma tuzilsin. Agar massivdagi seriyalar soni k dan
+#      kam bo'lsa, massiv o'zgarishsiz qolsin.
+
+from random import randint
+
+n = int(input('n = '))
+k = int(input('k = '))
+a = [randint(1,3) for i in range(n)]
+b = []
+i = 0;  s = 1
+while i < n-1:
+    b.append(a[i])
+    if a[i] != a[i+1]:
+        s += 1
+    if s == k:
+        b.append(a[i+1])
+    i += 1
+b.append(a[n-1])
+print(a)
+print(b)
+
+
+
+# 122) n ta elementdan tashkil topgan massiv va k butun soni berilgan. (k>0) Massivning k-seriyasini o'chiruvchi
+#      programma tuzilsin. Agar massivdagi seriyalar soni k dan kam bo'lsa, massiv o'zgarishsiz qolsin.
+
+from random import randint
+
+n = int(input('n = '))
+k = int(input('k = '))
+a = [randint(1,2) for i in range(n)]
+if k != 1:
+    b = [a[0]]
+else:
+    b = []
+i = 1;  s = 1
+while i < n:
+    if a[i] != a[i-1]:
+        s += 1
+    if s != k:
+        b.append(a[i])
+    i += 1
+print(a)
+print(b)
+
+
+
+# 123) n ta elementdan tashkil topgan massiv va k butun soni berilgan. (k>0) Massivning k-seriyasini bilan
+#      1-seriyasini o'rnini almashtiruvchi programma tuzilsin. Agar massivdagi seriyalar soni k dan kam bo'lsa, 
+#      massiv o'zgarishsiz qolsin.
+
+from random import randint
+
+n = int(input('n = '))
+k = int(input('k = '))
+
+massiv = [randint(1,3) for i in range(n)]
+
+print(massiv)
+
+x = True
+a = 1;  b = 0
+for i in range(1,n):
+    if massiv[i-1] == massiv[i]:
+        a += 1
+    else:
+        b += 1
+        if x == True:
+            x = False
+            seriya_1_qiymat = massiv[i-1]
+            seriya_1_soni = a
+            indeks_1 = i-1
+            
+        if b == k:
+            seriya_k_qiymat = massiv[i-1]
+            seriya_k_soni = a
+            indeks_k = i-1
+        
+        a = 1
+        
+massiv2 = []
+if b+1 < k:
+    print(massiv)
+else:
+    for i in range(indeks_k - seriya_k_soni+1, indeks_k+1):
+        massiv2.append(seriya_k_qiymat)
+
+    for i in range(indeks_1+1, indeks_k - seriya_k_soni+1):
+        massiv2.append(massiv[i])
+
+    for i in range(indeks_1+1):
+        massiv2.append(seriya_1_qiymat)
+
+    for i in range(indeks_k+1, n):
+        massiv2.append(massiv[i])
+    
+    print(massiv2)
+
+
+
+# 124) n ta elementdan tashkil topgan massiv va k butun soni berilgan. (k>0) Massivning k-seriyasini bilan
+#      oxirgi seriyasini o'rnini almashtiruvchi programma tuzilsin. Agar massivdagi seriyalar soni k dan 
+#      kam bo'lsa, massiv o'zgarishsiz qolsin.
+
+from random import randint
+
+n = int(input('n = '))
+k = int(input('k = '))
+
+massiv = [randint(1,3) for i in range(n)]
+
+print(massiv)
+
+x = True
+a = 1;  b = 0
+for i in range(1,n):
+    if massiv[i-1] == massiv[i]:
+        a += 1
+    else:
+        b += 1
+        if b == k:
+            seriya_k_qiymat = massiv[i-1]
+            seriya_k_soni = a
+            indeks_k = i-1
+        
+        a = 1
+        
+massiv2 = []
+if b+1 < k:
+    print(massiv)
+else:
+    for i in range(indeks_k - seriya_k_soni+1):
+        massiv2.append(massiv[i])
+
+    for _ in range(a):
+        massiv2.append(massiv[n-1])
+
+    for i in range(indeks_k+1, n-a):
+        massiv2.append(massiv[i])
+
+    for _ in range(indeks_k - seriya_k_soni+1, indeks_k+1):
+        massiv2.append(seriya_k_qiymat)
+    
+    print(massiv2)
+
+
+
+# 125) n ta elementdan tashkil topgan massiv va k butun soni berilgan (k>1). Uzunligi k dan kichik
+#      bo'lgan seriyalarni qiymati nol bo'lgan bitta elementga almashtiruvchi programma tuzilsin.
+
+from random import randint
+
+n = int(input('n = '))
+k = int(input('k = '))
+a = [randint(1,2) for i in range(n)]
+b = []
+i = 1;  s = 1
+while i < n:
+    if a[i] != a[i-1]:
+        if s < k:
+            b.append(0)
+            s = 1
+        else:
+            for _ in range(s):
+                b.append(a[i-1])
+            s = 1
+    else:
+        s += 1
+    i += 1
+
+if s < k:
+    b.append(0)
+    s = 1
+else:
+    for _ in range(s):
+        b.append(a[i-1])
+    s = 1
+
+print(a)
+print(b)
+
+
+
+# 126) n ta elementdan tashkil topgan massiv va k butun soni berilgan (k>1). Uzunligi k ga teng
+#      bo'lgan seriyalarni qiymati nol bo'lgan bitta elementga almashtiruvchi programma tuzilsin.
+
+from random import randint
+
+n = int(input('n = '))
+k = int(input('k = '))
+a = [randint(1,2) for i in range(n)]
+b = []
+i = 1;  s = 1
+while i < n:
+    if a[i] != a[i-1]:
+        if s == k:
+            b.append(0)
+            s = 1
+        else:
+            for _ in range(s):
+                b.append(a[i-1])
+            s = 1
+    else:
+        s += 1
+    i += 1
+
+if s == k:
+    b.append(0)
+    s = 1
+else:
+    for _ in range(s):
+        b.append(a[i-1])
+    s = 1
+
+print(a)
+print(b)
+
+
+
+# 127) n ta elementdan tashkil topgan massiv va k butun soni berilgan (k>1). Uzunligi k dan katta
+#      bo'lgan seriyalarni qiymati nol bo'lgan bitta elementga almashtiruvchi programma tuzilsin.
+
+from random import randint
+
+n = int(input('n = '))
+k = int(input('k = '))
+a = [randint(1,2) for i in range(n)]
+b = []
+i = 1;  s = 1
+while i < n:
+    if a[i] != a[i-1]:
+        if s > k:
+            b.append(0)
+            s = 1
+        else:
+            for _ in range(s):
+                b.append(a[i-1])
+            s = 1
+    else:
+        s += 1
+    i += 1
+
+if s > k:
+    b.append(0)
+    s = 1
+else:
+    for _ in range(s):
+        b.append(a[i-1])
+    s = 1
+
+print(a)
+print(b)
+
+
+
+# 128) n ta elementdan tashkil topgan massiv berilgan. Uzunligi eng katta bo'lgan, birinchi uchragan
+#      seriyaga yangi element qo'shuvchi programma tuzilsin.
+
+from random import randint
+
+n = int(input('n = '))
+a = [randint(1,2) for i in range(n)]
+b = [a[0]]
+i = 1;  s = 1;  c = 0
+indeks = 0
+while i < n:
+    b.append(a[i])
+    if a[i] != a[i-1]:
+        if s > c:
+            c = s
+            s = 1
+            indeks = i
+            son = a[i-1]
+        else:
+            s = 1
+    else:
+        s += 1
+    i += 1
+    
+if s > c:
+    c = s
+    s = 1
+    indeks = i-1
+    son = a[i-1]
+
+b.insert(indeks,son)
+print(a)
+print(b)
+
+
+
+# 129) n ta elementdan tashkil topgan massiv berilgan. Uzunligi eng katta bo'lgan, oxirgi uchragan
+#      seriyaga yangi element qo'shuvchi programma tuzilsin.
+
+from random import randint
+
+n = int(input('n = '))
+a = [randint(1,2) for i in range(n)]
+b = [a[0]]
+i = 1;  s = 1;  c = 0
+indeks = 0
+while i < n:
+    b.append(a[i])
+    if a[i] != a[i-1]:
+        if s >= c:
+            c = s
+            s = 1
+            indeks = i
+            son = a[i-1]
+        else:
+            s = 1
+    else:
+        s += 1
+    i += 1
+    
+if s >= c:
+    c = s
+    s = 1
+    indeks = i-1
+    son = a[i-1]
+
+b.insert(indeks,son)
+print(a)
+print(b)
+
+
+
+# 130) n ta elementdan tashkil topgan massiv berilgan. Massivning barcha seriyalariga
+#      yangi element qo'shuvchi programma tuzilsin.
+
+from random import randint
+
+n = int(input('n = '))
+a = [randint(1,3) for i in range(n)]
+b = [a[0]]
+i = 1
+while i < n:
+    if a[i] != a[i-1]:
+        b.append(a[i-1])
+    b.append(a[i])
+    i += 1
+b.append(a[n-1])
+print(a)
+print(b)
+
+
+
+# 131) Tekislikdagi n ta nuqta koordinatalari va B nuqta koordinatasi (x,y) berilgan. 
+#      B nuqtaga eng yaqin nuqtani aniqlovchi programma tuzilsin.
+
+from random import randint
+
+n = int(input('n = '))
+print("B nuqtaning koordinatalarini kiriting:")
+x = int(input('x = '))
+y = int(input('y = '))
+a = []
+i = 1
+while i <= n:
+    x1 = randint(-10,10)
+    y1 = randint(-10,10)
+    
+    print("x"+str(i)+" =",x1)
+    print("y"+str(i)+" =",y1)
+    print()
+    
+    a.append(x1)
+    a.append(y1)
+
+    i += 1
+
+mini = ((x - a[i])**2 + (y - a[i+1])**2) ** 0.5
+nuqta_x = a[i]
+nuqta_y = a[i+1]
+i = 2
+while i < len(a):
+    masofa = ((x - a[i])**2 + (y - a[i+1])**2) ** 0.5
+    if mini > masofa:
+        mini = masofa 
+        nuqta_x = a[i]
+        nuqta_y = a[i+1]
+    i += 2
+
+print("(",nuqta_x,",",nuqta_y,")",sep='')
+
+
+
+# 132) Tekislikdagi N ta nuqta koordinatalari (x,y) berilgan. Shu nuqtalar orasidan 2 chorakda
+#      yotuvchi va koordinata boshidan eng uzoq nuqtani aniqlovchi programma tuzilsin. Agar
+#      bunday nuqta topilmasa, koordinatalari 0 ga teng bo'lgan nuqta chiqarilsin.
+
+from random import randint
+
+n = int(input('n = '))
+a = []
+i = 1
+while i <= n:
+    x1 = randint(-10,10)
+    y1 = randint(-10,10)
+    
+    print("x"+str(i)+" =",x1)
+    print("y"+str(i)+" =",y1)
+    print()
+    
+    a.append(x1)
+    a.append(y1)
+
+    i += 1
+
+s = True
+i = 0
+while i < len(a):
+    if s == True and a[i] < 0 and a[i+1] > 0:
+        masofa = ((a[i])**2 + (a[i+1])**2) ** 0.5
+        maxi = masofa 
+        nuqta_x = a[i]
+        nuqta_y = a[i+1]
+        s = False
+    
+    masofa = ((a[i])**2 + (a[i+1])**2) ** 0.5
+    
+    if s == False and a[i] < 0 and a[i+1] > 0 and maxi < masofa:
+        maxi = masofa 
+        nuqta_x = a[i]
+        nuqta_y = a[i+1]
+        
+    i += 2
+    
+if s == True:
+    print("(",0,",",0,")",sep='')
+else:
+    print("(",nuqta_x,",",nuqta_y,")",sep='')
+
+
+
+# 133) Tekislikdagi N ta nuqta koordinatalari (x,y) berilgan. Shu nuqtalar orasidan 1-yoki
+#      3-chorakda yotuvchi va koordinata boshidan eng uzoq nuqtani aniqlovchi programma tuzilsin.
+#      Agar bunday nuqta topilmasa, koordinatalari 0 ga teng bo'lgan nuqta chiqarilsin.
+
+from random import randint
+
+n = int(input('n = '))
+a = []
+i = 1
+while i <= n:
+    x1 = randint(-10,10)
+    y1 = randint(-10,10)
+    
+    print("x"+str(i)+" =",x1)
+    print("y"+str(i)+" =",y1)
+    print()
+    
+    a.append(x1)
+    a.append(y1)
+
+    i += 1
+
+s = True
+i = 0
+while i < len(a):
+    if s == True and (a[i] < 0 and a[i+1] > 0  or  a[i] < 0 and a[i+1] < 0):
+        masofa = ((a[i])**2 + (a[i+1])**2) ** 0.5
+        maxi = masofa 
+        nuqta_x = a[i]
+        nuqta_y = a[i+1]
+        s = False
+    
+    masofa = ((a[i])**2 + (a[i+1])**2) ** 0.5
+    
+    if s == False and (a[i] < 0 and a[i+1] > 0  or  a[i] < 0 and a[i+1] < 0) and maxi < masofa:
+        maxi = masofa 
+        nuqta_x = a[i]
+        nuqta_y = a[i+1]
+        
+    i += 2
+    
+if s == True:
+    print("(",0,",",0,")",sep='')
+else:
+    print("(",nuqta_x,",",nuqta_y,")",sep='')
+
+
+
+# 134) Tekislikdagi n ta nuqta koordinatalari (x,y) berilgan. Shu nuqtalar orasidan bir-biridan 
+#      eng uzoq nuqtalarni aniqlovchi programma tuzilsin. Ular orasidagi masofa ham chiqarilsin.
+
+from random import randint
+
+n = int(input('n = '))
+a = []
+i = 1
+while i <= n:
+    x1 = randint(-10,10)
+    y1 = randint(-10,10)
+    
+    print("x"+str(i)+" =",x1)
+    print("y"+str(i)+" =",y1)
+    print()
+    
+    a.append(x1)
+    a.append(y1)
+
+    i += 1
+    
+x1 = a[0]
+y1 = a[1]
+x = True
+i = 2
+while i < len(a):
+    if x == True:
+        x2 = a[i]
+        y2 = a[i+1]
+        masofa = ((x1 - x2)**2 + (y1 - y2)**2) ** 0.5
+        x = False
+    
+    for j in range(i,len(a),2):
+        if masofa < ((x1 - a[j])**2 + (y1 - a[j+1])**2) ** 0.5:
+            x1 = a[i-2]
+            y1 = a[i-1]
+            x2 = a[j]
+            y2 = a[j+1]
+            masofa = ((x1 - x2)**2 + (y1 - y2)**2) ** 0.5
+    i += 2
+    
+print("(",x1,",",y1,")",sep='',end=' va ')
+print("(",x2,",",y2,")",sep='')
+print("s =",round(masofa,2))   
+    
+
+
+# 135) Tekislikda A va B to'plam koordinatalari (x,y) berilgan. N1 - A to'plamdagi nuqtalar soni
+#      N2 - B to'plamdagi nuqtalar soni. Shu to'plamlar orasidan bir-biriga eng yaqin nuqtalarni 
+#      aniqlovchi programma tuzilsin. Ular orasidagi masofa ham chiqarilsin.
+
+from random import randint
+
+N1 = int(input('N1 = '))
+N2 = int(input('N2 = '))
+
+print("A nuqtaning koordinatalari")
+a = []
+i = 1
+while i <= N1:
+    x1 = randint(-10,10)
+    y1 = randint(-10,10)
+    
+    print("x"+str(i)+" =",x1)
+    print("y"+str(i)+" =",y1)
+    print()
+    
+    a.append(x1)
+    a.append(y1)
+
+    i += 1
+    
+print("B nuqtaning koordinatalari")
+b = []
+i = 1
+while i <= N2:
+    x1 = randint(-10,10)
+    y1 = randint(-10,10)
+    
+    print("x"+str(i)+" =",x1)
+    print("y"+str(i)+" =",y1)
+    print()
+    
+    b.append(x1)
+    b.append(y1)
+
+    i += 1
+
+x1 = a[0]
+y1 = a[1]
+x2 = b[0]
+y2 = b[1]
+
+masofa = ((x1 - x2)**2 + (y1 - y2)**2) ** 0.5
+
+i = 0
+while i < len(a):
+    for j in range(0,len(b),2):
+        if masofa > ((a[i] - b[j])**2 + (a[i+1] - b[j+1])**2) ** 0.5:
+            x1 = a[i]
+            y1 = a[i+1]
+            x2 = b[j]
+            y2 = b[j+1]
+            masofa = ((a[i] - b[j])**2 + (a[i+1] - b[j+1])**2) ** 0.5
+    i += 2
+
+print("(",x1,",",y1,")",sep='',end=' va ')
+print("(",x2,",",y2,")",sep='')
+print("s =",round(masofa,2))   
+
+
+
+# 136) Tekislikdagi N ta nuqta koordinatalari (x,y) berilgan. Shu nuqtalar orasidan shunday
+#      nuqtani topingki, undan boshqa nuqtalargacha bo'lgan masofalar yig'indisi eng kichik bo'lsin.
+
+from random import randint
+
+n = int(input('n = '))
+a = []
+i = 1
+while i <= n:
+    x1 = randint(-10,10)
+    y1 = randint(-10,10)
+    
+    print("x"+str(i)+" =",x1)
+    print("y"+str(i)+" =",y1)
+    print()
+    
+    a.append(x1)
+    a.append(y1)
+
+    i += 1
+    
+s = 0
+i = 2
+while i < len(a):
+    s += ((a[0] - a[i])**2 + (a[1] - a[i+1])**2) ** 0.5
+    i += 2
+
+i = 2
+while i < len(a):
+    w = 0
+    for j in range(0,len(a),2):
+        if i == j:
+            continue
+        else:
+            w += ((a[i] - a[j])**2 + (a[i+1] - a[j+1])**2) ** 0.5
+    
+    if s > w:
+        s = w
+        x = a[i]
+        y = a[i+1]
+    
+    i += 2
+    
+print("(",x,",",y,")",sep='')
+print("s =",round(s,2))       
+    
+
+
+# 137) Tekislikda n ta nuqta koordinatalari (x,y) berilgan (n>2). Shu nuqtalar orasidan perimetri
+#      eng katta bo'ladigan uchburchak uchlari koordinatalarini aniqlovchi programma tuzilsin.
+
+from random import randint
+
+n = int(input('n = '))
+a = []
+i = 1
+while i <= n:
+    x1 = randint(-10,10)
+    y1 = randint(-10,10)
+    
+    print("x"+str(i)+" =",x1)
+    print("y"+str(i)+" =",y1)
+    print()
+    
+    a.append(x1)
+    a.append(y1)
+
+    i += 1
+x = True
+i = 0
+while i < len(a):
+    for j in range(i+2,len(a),2):
+        for t in range(j+2,len(a),2):
+            A = ((a[i] - a[j])**2 + (a[i+1] - a[j+1])**2) ** 0.5
+            B = ((a[i] - a[t])**2 + (a[i+1] - a[t+1])**2) ** 0.5
+            C = ((a[j] - a[t])**2 + (a[j+1] - a[t+1])**2) ** 0.5
+            S = A + B + C
+            if x == True and (A+B>C and A+C>B and B+C>A):
+                P = S
+                x1 = a[i];  y1 = a[i+1]
+                x2 = a[j];  y2 = a[j+1]
+                x3 = a[t];  y3 = a[t+1]
+                x = False
+            
+            if x == False and S > P and (A+B>C and A+C>B and B+C>A):
+                P = S
+                x1 = a[i];  y1 = a[i+1]
+                x2 = a[j];  y2 = a[j+1]
+                x3 = a[t];  y3 = a[t+1]
+    i += 2
+
+print("(",x1,",",y1,")",sep='',end=' va ')
+print("(",x2,",",y2,")",sep='',end=' va ')
+print("(",x3,",",y3,")",sep='')
+print("Perimetr =",round(P,3))
+
+
+
+# 138) Tekislikdagi N ta nuqta koordinatalari (x,y) berilgan (N>2). Shu nuqtalar orasidan perimetri
+#      eng kichik bo'ladigan uchburchak uchlari koordinatalarini aniqlovchi programma tuzilsin.
+
+from random import randint
+
+n = int(input('n = '))
+a = []
+i = 1
+while i <= n:
+    x1 = randint(-10,10)
+    y1 = randint(-10,10)
+    
+    print("x"+str(i)+" =",x1)
+    print("y"+str(i)+" =",y1)
+    print()
+    
+    a.append(x1)
+    a.append(y1)
+
+    i += 1
+
+x = True
+i = 0
+while i < len(a):
+    for j in range(i+2,len(a),2):
+        for t in range(j+2,len(a),2):
+            A = ((a[i] - a[j])**2 + (a[i+1] - a[j+1])**2) ** 0.5
+            B = ((a[i] - a[t])**2 + (a[i+1] - a[t+1])**2) ** 0.5
+            C = ((a[j] - a[t])**2 + (a[j+1] - a[t+1])**2) ** 0.5
+            S = A + B + C
+            if x == True and (A+B>C and A+C>B and B+C>A):
+                P = S
+                x1 = a[i];  y1 = a[i+1]
+                x2 = a[j];  y2 = a[j+1]
+                x3 = a[t];  y3 = a[t+1]
+                x = False
+            
+            if x == False and S < P and (A+B>C and A+C>B and B+C>A):
+                P = S
+                x1 = a[i];  y1 = a[i+1]
+                x2 = a[j];  y2 = a[j+1]
+                x3 = a[t];  y3 = a[t+1]
+    i += 2
+
+print("(",x1,",",y1,")",sep='',end=' va ')
+print("(",x2,",",y2,")",sep='',end=' va ')
+print("(",x3,",",y3,")",sep='')
+print("Perimetr =",round(P,3))
+
+
+
