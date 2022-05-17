@@ -41,11 +41,9 @@ PowerA234(C)
 
 
 
-# 3) 2 ta sonning o'rta arifmetigi va geometrigini hisoblovchi MEAN nomli funksiya hosil qiling. MEAN
-#    funksiyasi orqali A, B, C, D sonlaridan (A,B),(A,C),(A,D) juftliklarning o'rta arifmetigi va 
-#    geometrigini hisoblovchi programma tuzilsin. 
-#    Funksiya prototipi quydagicha bo'lishi mumkin:
-#    void MEAN(float, float, float*, float*)
+# 3) 2 ta sonning o'rta arifmetigi va geometrigini hisoblovchi MEAN nomli funksiya hosil qiling. MEAN funksiyasi orqali A, B, C, D sonlaridan (A,B),(A,C),(A,D) 
+#    juftliklarning o'rta arifmetigi va geometrigini hisoblovchi programma tuzilsin. Funksiya prototipi quydagicha bo'lishi mumkin:
+#   void MEAN(float, float, float*, float*)
 
 A = float(input('A = '))
 B = float(input('B = '))
