@@ -185,9 +185,8 @@ print("max =",a,"min =",d)
 
 
 
-# 12) A, B, C sonlarni o'sish tartibida joylashtiruvchi Sortlnk3(A,B,C) funksiyasini hosil qiling.
-#     Ya'ni A, B, C sonlari qiymatlartini shunday almashtiringki, natijada A ning qiymati eng kichik
-#     va C ning qiymati eng katta bo'lsin. Bu funksiya orqali (A1,B1,C1) va (A2,B2,C2) sonlarini tartiblang.
+# 12) A, B, C sonlarni o'sish tartibida joylashtiruvchi Sortlnk3(A,B,C) funksiyasini hosil qiling. Ya'ni A, B, C sonlari qiymatlartini shunday almashtiringki, 
+#     natijada A ning qiymati eng kichik va C ning qiymati eng katta bo'lsin. Bu funksiya orqali (A1,B1,C1) va (A2,B2,C2) sonlarini tartiblang.
 
 A1 = int(input("A1 = "))
 B1 = int(input("B1 = "))
