@@ -162,9 +162,8 @@ print(a,b)
 
 
 
-# 11) x va y sonlaridan kichigini x ga kattasini y ga yozuvchi Minmax(x,y) funksiyasini hosil qiling.
-#     Minmax funksiyasiga 4 marta chiqish orqali a, b, c, d butun sonlaridan kattasini va kichigini
-#     aniqlovchi programma tuzilsin.
+# 11) x va y sonlaridan kichigini x ga kattasini y ga yozuvchi Minmax(x,y) funksiyasini hosil qiling. Minmax funksiyasiga 4 marta chiqish orqali a, b, c, d butun 
+#     sonlaridan kattasini va kichigini aniqlovchi programma tuzilsin.
 
 a = int(input('a = '))
 b = int(input('b = '))
