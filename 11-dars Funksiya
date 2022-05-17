@@ -1,6 +1,6 @@
 
-# 1) Ihtiyoriy sonning 3-darajasini hisoblovchi PowerA3 nomli funksiya hosil qiling. PowerA3 funksiyasi
-#    orqali A, B, C haqiqiy sonlarning va D, E butun sonlarning 3-darajasini hisoblovchi programma tuzilsin.
+# 1) Ihtiyoriy sonning 3-darajasini hisoblovchi PowerA3 nomli funksiya hosil qiling. PowerA3 funksiyasi orqali A, B, C haqiqiy sonlarning va D, E butun
+#    sonlarning 3-darajasini hisoblovchi programma tuzilsin.
 
 A = float(input('A = '))
 B = float(input('B = '))
@@ -22,10 +22,8 @@ print(PowerA3(E))
 
 
 
-# 2) Ixtiyoriy sonning 2, 3, 4 - darajasini hisoblovchi PowerA234 nomli funksiya hosil qiling. PowerA234
-#    funksiyasi orqali A, B, C haqiqiy sonlarining 2, 3, 4 - darajasini hisoblovchi programma tuzilsin.
-#    Funksiya prototipi quydagicha bo'lishi mumkin:
-#    void PowerA234(float,float*,float*,float*);
+# 2) Ixtiyoriy sonning 2, 3, 4 - darajasini hisoblovchi PowerA234 nomli funksiya hosil qiling. PowerA234 funksiyasi orqali A, B, C haqiqiy sonlarining 
+#    2, 3, 4 - darajasini hisoblovchi programma tuzilsin. Funksiya prototipi quydagicha bo'lishi mumkin:  void PowerA234(float,float*,float*,float*); 
 
 A = float(input("A = "))
 B = float(input("B = "))
