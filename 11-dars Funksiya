@@ -239,9 +239,8 @@ print("A2 =",A2," B2 =",B2," C2 =",C2)
 
 
 
-# 14) O'nga siklik siljishni amalga oshiruvchi ShiftRight3(A,B,C) funksiyani hosil qiling. Ya'ni
-#     A ning qiymati B ga, B ning qiymati C ga, C ning qiymati A ga o'tib qolsin. Bu funksiya orqali
-#     (A1,B1,C1) va (A2,B2,C2) sonlarni siljiting.
+# 14) O'nga siklik siljishni amalga oshiruvchi ShiftRight3(A,B,C) funksiyani hosil qiling. Ya'ni A ning qiymati B ga, B ning qiymati C ga, C ning qiymati 
+#     A ga o'tib qolsin. Bu funksiya orqali (A1,B1,C1) va (A2,B2,C2) sonlarni siljiting.
 
 A1 = int(input("A1 = "))
 B1 = int(input("B1 = "))
