@@ -1,0 +1,909 @@
+
+# 1) n va k butun musbat sonlari va fayl nomi berilgan. Yangi matnli fayl hosil qilinsin va unga
+#    n ta satr va har bir satr k ta "*" belgisidan iborat bo'lsin.
+
+n = int(input('n = '))
+k = int(input('k = '))
+fayl_nomi = "fayl_uchun.py"
+fayl = open(fayl_nomi,'w')
+
+for i in range(n):
+    fayl.write('*'*k)
+    fayl.write('\n')
+fayl.close()
+
+
+
+# 2) n (0 < n < 27) butun son va fayl nomi berilgan. Berilgan nomdagi matnli fayl hosil qilinsin
+#    va unga: birinchi satri "a" kichik lotin harfi, ikkinchisiga "ab", uchinchisiga "abc" va h.k
+#    satrlarni saqlovchi n ta satr yozilsin.
+
+n = int(input("(0 < n < 27)  n = "))
+fayl_nomi = "fayl_uchun.py"
+fayl = open(fayl_nomi,'w')
+
+for i in range(n):
+    for j in range(97,98+i):
+        fayl.write(chr(j))
+    fayl.write('\n')
+fayl.close()
+    
+
+
+# 3) n (0 < n < 27) butun son va fayl nomi berilgan. Berilgan nomdagi matnli fayl hosil qilinsin
+#    va unga uzunligi n ga teng bo'lgan n ta satr quydagicha yozilsin. k-nomerdagi satr (k=1,..,n)
+#    katta lotin harflarining boshlang'ich k ta harfini va undan o'ngda "*" belgisidan iborat 
+#    bo'lsin. Masalan n = 4 uchun fayl quydagi satrlardan iborat bo'lishi kerak. 
+#    "A***", "AB**", "ABC*", "ABCD".
+
+n = int(input("(0 < n < 27)  n = "))
+fayl_nomi = "fayl_uchun.py"
+fayl = open(fayl_nomi,'w')
+
+for i in range(n):
+    for j in range(65,66+i):
+        fayl.write(chr(j))
+        
+    for _ in range(n-1-i):
+        fayl.write('*')
+    fayl.write('\n')
+fayl.close()
+    
+
+
+# 5) Satr va matnli fayl berilgan. S satr fayl oxiriga qo'shilsin.
+
+satr = input('satr = ')
+matnli_fayl = input("matnli fayl: ")
+
+fayl = open("fayl_uchun.py",'w')
+fayl.write(matnli_fayl)
+fayl.close()
+
+fayl = open("fayl_uchun.py","a")
+fayl.write(satr)
+fayl.close()
+
+
+
+# 6) Ikkita matnli fayl berilgan. Birinchi fayl oxiriga ikkinchi fayl qo'shilsin.
+
+fayl_1 = input('fayl 1: ')
+fayl_2 = input('fayl 2: ')
+
+fayl = open("fayl_uchun.py",'w')
+fayl.write(fayl_1)
+
+fayl = open("fayl_uchun.py",'a')
+fayl.write(fayl_2)
+fayl.close()
+
+
+
+# 7) S satr va matnli fayl berilgan. S satr fayl boshiga qo'shilsin.
+
+S = input('satr: ')
+matnli_fayl = input('matnli_fayl: ')
+
+fayl = open("fayl_uchun.py",'w')
+fayl.write(S+matnli_fayl)
+fayl.close()
+
+
+
+# 8) Ikkita matnli fayl berilgan. Birinchi fayl boshiga Ikkinchi fayl qo'shilsin.
+
+fayl1 = open("Fayllar/fayl_1.txt",'x')
+fayl2 = open("Fayllar/fayl_2.txt",'x')  
+
+fayl1 = open("Fayllar/fayl_1.txt",'w')
+fayl1.write("Aleykum")
+fayl1.close()
+
+fayl2 = open("Fayllar/fayl_2.txt",'w')
+fayl2.write("Assalomu")
+fayl2.close()
+
+fayl1 = open("Fayllar/fayl_1.txt",'w')
+fayl1.write("Assalomu"+"Aleykum")
+fayl1.close()
+
+
+
+# 9) K butun soni va matnli fayl berilgan. K-nomerdagi satrdan oldin bo'sh satr qo'yilsin.
+#    Agar bunday nomerli satr mavjud bo'lmasa, u holda fayl o'zgartirishsiz qoldirilsin.
+
+k = int(input('k = '))
+# f = open("Fayllar/fayl.txt",'x')
+
+f = open("fayllar/fayl.txt",'r')
+a = f.readlines()
+f.close()
+
+if len(a) >= k:
+    a.insert(k,'\n')
+
+f = open("Fayllar/fayl.txt",'w')
+f.writelines(a)
+f.close()
+
+
+
+# 10) K butun soni va matnli fayl berilgan. K-nomerdagi satrdan keyin bo'sh satr qo'yilsin.
+#     Agar bunday nomerli satr mavjud bo'lmasa, u holda fayl o'zgartirishsiz qoldirilsin.
+
+k = int(input('k = '))
+
+f = open("fayllar/fayl.txt",'r')
+a = f.readlines()
+f.close()
+
+if len(a) >= k:
+    a.insert(k+1,'\n')
+
+f = open("Fayllar/fayl.txt",'w')
+f.writelines(a)
+f.close()
+
+
+
+# 11) Matnli fayl berilgan. Undagi barcha bo'sh satrlar ikkilantirilsin.
+
+f = open("Fayllar/fayl.txt",'r')
+a = f.readlines()
+f.close()
+b = []
+
+for i in range(len(a)):
+    if a[i] == '\n':
+        b.append('\n')
+    b.append(a[i])
+
+f = open("Fayllar/fayl.txt",'w')
+f.writelines(b)
+f.close()
+
+
+
+# 12) S satr va matnli fayl berilgan. Fayldagi barcha bo'sh satrlar S satrga o'zgartirilsin.
+
+S = input("S = ")
+f = open("Fayllar/fayl.txt",'r')
+a = f.readlines()
+f.close()
+b = []
+
+for i in range(len(a)):
+    if a[i] == '\n':
+        b.append(S)
+    b.append(a[i])
+        
+f = open("Fayllar/fayl.txt",'w')
+f.writelines(b)
+f.close()
+
+
+
+# 13) Bo'sh bo'lmagan matnli fayl berilgan. Undagi birinchi satr o'chirilsin.
+
+f = open("Fayllar/fayl.txt",'r')
+a = f.readlines()
+f.close()
+
+a.pop(0)
+
+f = open("Fayllar/fayl.txt",'w')
+f.writelines(a)
+f.close()
+
+
+
+# 14) Bo'sh bo'lmagan matnli fayl berilgan. Undagi oxirgi satr o'chirilsin.
+
+f = open("Fayllar/fayl.txt",'r')
+a = f.readlines()
+f.close()
+
+a.pop()
+
+f = open("Fayllar/fayl.txt",'w')
+f.writelines(a)
+f.close()
+
+
+
+# 15) K butun soni va matnli fayl berilgan. Undagi k-nomerdagi satr o'chirilsin. Agar satrda
+#     bunday nomerdagi satr mavjud bo'lmasa, u holda fayl o'zgartirishsiz qoldirilsin.
+
+k = int(input("k = "))
+f = open("Fayllar/fayl.txt",'r')
+a = f.readlines()
+f.close()
+
+if len(a) >= k:
+    a.pop(k-1)
+
+f = open("Fayllar/fayl.txt",'w')
+f.writelines(a)
+f.close()
+
+
+
+# 16) Matnli fayl berilgan. Undagi barcha bo'sh satrlar o'chirilsin.
+
+f = open("Fayllar/fayl.txt",'r')
+a = f.readlines()
+f.close()
+
+for i in range(a.count('\n')):
+    a.remove('\n')
+
+f = open("Fayllar/fayl.txt",'w')
+f.writelines(a)
+f.close()
+
+
+
+# 17) Ikkita matnli fayl berilgan. Birinchi faylning har bir satridan so'ng ikkinchi fayldagi 
+#     mos satrlar qo'shilsin. Agar ikkinchi fayl birinchi fayldan kalta bo'lsa, u holda qolgan
+#     satrlar o'zgartirishsiz qoldirilsin.
+
+f = open("Fayllar/fayl_1.txt",'r')
+a = f.readlines()
+f.close()
+
+f = open("Fayllar/fayl_2.txt",'r')
+b = f.readlines()
+f.close()
+
+if len(a) >= len(b):
+    s = len(b)
+else:
+    s = len(a)
+
+t = 1
+for i in range(s):
+    a.insert(t,b[i])
+    t += 2
+
+f = open("Fayllar/fayl_1.txt",'w')
+f.writelines(a)
+f.close()
+
+
+
+# 18) K butun soni va matnli fayl berilgan. Faylning har bir satridan birinchi k ta belgi o'chirilsin.
+#     (agar satr uzunligi k dan kichik bo'lsa, u holda satrning hamma belgilari o'chirilsin)
+
+k = int(input('k = '))
+f = open("Fayllar/fayl.txt",'r')
+a = f.readlines()
+f.close()
+
+for i in range(len(a)):
+    if len(a[i]) > k:
+        a[i] = a[i][k::]
+    else:
+        a[i] = '\n'
+
+fay = open("Fayllar/fayl.txt",'w')
+fay.writelines(a)
+fay.close()
+
+
+
+# 19) Matnli fayl berilgan. Matndagi hamma katta lotin harflari kichik lotin harflariga
+#     va aksincha, barcha kichik lotin harflari katta lotin harflariga almashtirilsin.
+
+f = open("Fayllar/fayl.txt",'r')
+a = f.readlines()
+f.close()
+
+c = []
+for i in range(len(a)):
+    b = ''
+    for j in range(len(a[i])):
+        if 65 <= ord(a[i][j]) <= 90:
+            b += chr(ord(a[i][j])+32)
+        elif 97 <= ord(a[i][j]) <= 122:
+            b += chr(ord(a[i][j])-32)
+        else:
+            b += a[i][j]
+    c.append(b)
+
+f = open("Fayllar/fayl.txt",'w')
+f.writelines(c)
+f.close()
+
+
+
+# 20) Matnli fayl berilgan. Undagi barcha ketma-ket kelgan probellar bitta probelga almashtirilsin.
+
+f = open("Fayllar/fayl.txt",'r')
+a = f.readlines()
+f.close()
+
+for i in range(len(a)):
+    a[i] = " ".join(a[i].split()) + '\n'
+
+f = open("Fayllar/fayl.txt","w")
+f.writelines(a)
+f.close()
+
+
+
+# 21) Uchtadan ko'p satrga ega bo'lgan matnli fayl berilgan. Shu fayldan oxirgi uchta satr o'chirilsin.
+
+f = open("Fayllar/fayl.txt","r")
+a = f.readlines()
+f.close()
+
+b = []
+for i in range(len(a)-3):
+    b.append(a[i])
+
+f = open("Fayllar/fayl.txt","w")
+f.writelines(b)
+f.close()
+
+
+
+# 22) k (0 < k < 10) butun son va k tadan ko'p bo'lgan satrga ega matnli fayl berilgan.
+#     Shu satrning oxirgi k ta satri o'chirilsin.
+
+from random import randint
+
+k = randint(1,9)
+print("K =",k)
+
+f = open("Fayllar/fayl.txt",'r')
+a = f.readlines()
+f.close()
+
+for i in range(len(a)-1, len(a)-k-1, -1):
+    a.pop(i)
+
+f = open("Fayllar/fayl.txt",'w')
+f.writelines(a)
+f.close()
+    
+
+
+# 23) k (0 < k < 10) butun son va k tadan ko'p bo'lgan satrga ega matnli fayl berilgan.
+#     Boshlang'ich faylning oxirgi k ta elementidan iborat bo'lgan yangi matnli fayl hosil qilinsin.
+
+from random import randint
+
+k = randint(1,9)
+print("K =",k)
+
+f = open("Fayllar/fayl.txt",'r')
+a = f.readlines()
+f.close()
+
+b = []
+for i in range(len(a)-k, len(a)):
+    b.append(a[i])
+
+f = open("Fayllar/fayl_1.txt",'w')
+f.writelines(b)
+f.close()
+
+
+
+# 24) Matnli fayl berilgan. Agar abzas bitta yoki bir nechta bo'sh satrlar bilan ajratilgan bo'lsa
+#     u holda matndagi abzaslar soni aniqlansin.
+
+f = open("Fayllar/fayl.txt","r")
+a = f.read()
+f.close()
+
+a = a.split('\n     ')
+
+print("Abzaslar soni =",len(a))
+
+
+
+# 25) K butun soni va matnli fayl berilgan. Fayldan k-nomerdagi abzas o'chirilsin (abzas bir biridan
+#     bitta yoki bir nechta bo'sh satrlar bilan ajratiladi). O'chirilgan abzasdan oldin va keyin
+#     keluvchi bo'sh satrlar o'chirilmasin. Agar berilgan nomerdagi abzas mavjud bo'lmasa u holda
+#     fayl o'zgartirishsiz qoldirilsin.
+
+k = int(input('k = '))
+
+f = open("Fayllar/fayl.txt","r")
+a = f.read()
+f.close()
+
+a = a.split('\n     ')
+
+if k < len(a):
+    a.pop(k)
+
+a = '\n     '.join(a)
+
+f = open("Fayllar/fayl.txt","w")
+f.write(a)
+f.close()
+
+
+
+# 26) Matnli fayl berilgan. Agar fayl matndagi har bir abzasning birinchi satri beshta probeldan
+#     boshlansa ("qizil satr"), u holda shu matndagi abzaslar soni aniqlansin. Abzaslar orasidagi
+#     bo'sh satrlar hisobga olinmasin.
+
+f = open("Fayllar/fayl.txt","r")
+a = f.read()
+f.close()
+
+a = a.split('\n     ')
+
+print("Abzaslar soni =",len(a))
+
+
+
+# 27) k ta butun soni va matnli fayl berilgan. Fayldan k-nomerdagi abzas o'chirilsin.
+#     Abzas qizil satr orqali ajratiladi.
+
+k = int(input('k = '))
+
+f = open("Fayllar/fayl.txt","r")
+a = f.read()
+f.close()
+
+a = a.split('\n     ')
+
+if k < len(a):
+    a.pop(k)
+
+a = '\n     '.join(a)
+
+f = open("Fayllar/fayl.txt","w")
+f.write(a)
+f.close()
+
+
+
+# 28) Matnli fayl berilgan. Abzas qizil satr orqali ajratiladi. Faylda bo'sh satrlar mavjud emas.
+#     Har bir qo'shni abzaslar orasiga bittadan bo'sh satr joylashtirilsin. (faylning boshiga
+#     va oxiriga bo'sh satr qo'shilmasin)
+
+f = open("Fayllar/fayl.txt","r")
+a = f.read()
+f.close()
+
+a = a.split('\n     ')
+
+b = []
+for i in range(len(a)-1):
+    b.append(a[i]+"\n\n")
+  
+b.append(a[len(a)-1])
+
+f = open("Fayllar/fayl.txt","w")
+f.write('     '.join(b))
+f.close()
+
+
+
+# 29) Matnli fayl berilgan. Matnning eng uzun bo'lgan birinchi so'zi chop qilinsin. So'z deb
+#     probellar bilan chegaralangan yoki satrning boshi/oxiri bo'lgan belgilar to'plamiga aytiladi.
+
+f = open("Fayllar/fayl.txt","r")
+a = f.read()
+f.close()
+
+a = a.split()
+
+maxi_soz = a[0]
+uzunligi = len(a[0])
+for i in a:
+    if len(i) > uzunligi:
+        maxi_soz = i
+        uzunligi = len(i)
+
+print("Fayldagi eng uzun birinchi so'z:   ",maxi_soz)
+
+
+
+# 30) Matnli fayl berilgan. Matnning eng qisqa bo'lgan oxirgi so'zi chop qilinsin. So'z deb
+#     probellar bilan chegaralangan yoki satrning boshi/oxiri bo'lgan belgilar to'plamiga aytiladi.
+
+f = open("Fayllar/fayl.txt","r")
+a = f.read()
+f.close()
+
+a = a.split()
+
+mini_soz = a[0]
+uzunligi = len(a[0])
+for i in a:
+    if len(i) <= uzunligi:
+        mini_soz = i
+        uzunligi = len(i)
+
+print("Fayldagi eng qisqa oxirgi so'z:   ",mini_soz)
+
+
+
+# 31) K butun soni va matnli fayl berilgan. Yangi satrli fayl hosil qilinsin va unga boshlang'ich
+#     fayldagi uzunligi k ga teng bo'lgan barcha so'zlar yozilsin. Agar boshlang'ich faylda
+#     k uzunlikdagi so'z topilmasa, u holda natijaviy fayl bo'sh qoldirilsin.
+
+k = int(input("k = "))
+
+f = open("Fayllar/fayl.txt","r")
+a = f.read()
+f.close()
+
+a = a.split()
+
+b = []
+for i in a:
+    sana = 0
+    for j in i:
+        if 65 <= ord(j) <= 90  or  97 <= ord(j) <= 122:
+            sana += 1
+    if sana == k:
+        b.append(i)
+
+f = open("Fayllar/fayl_1.txt","w")
+f.write(', '.join(b))
+f.close()
+
+
+
+# 32) Matnli fayl va lotin harflarining bosh harflaridan C belgi berilgan. Yangi fayl hosil
+#     qilinsin va unga boshlang'ich fayldagi barcha shu C harfidan boshlanuvchi so'zlar yozilsin
+#     Agar boshlang'zich fayl tarkibida mos so'zlar mavjud bo'lmasa, u holda natijaviy
+#     fayl bo'sh qoldirilsin.
+
+f = open("Fayllar/fayl.txt","r")
+a = f.read()
+f.close()
+
+a = a.split()
+
+b = []
+for i in a:
+    if i[0] == 'C'  or  i[0] == 'c':
+        b.append(i)
+
+f = open("Fayllar/fayl_1.txt","w")
+f.write(', '.join(b))
+f.close()
+
+
+
+# 34) Chap tomonidan tekislangan matnga ega bo'lgan matnli fayl berilgan. Har bir bo'sh
+#     bo'lmagan satr boshiga kerakli miqdorda probel qo'shish orqali matnni o'ng tomonidan
+#     tekislanilsin. 
+
+f = open("Fayllar/fayl.txt","r")
+a = f.readlines()
+f.close()
+
+maxi = len(a[0])
+
+for i in a:
+    if len(i) > maxi:
+        maxi = len(i)
+
+for i in range(len(a)):
+    son = maxi - len(a[i])
+    a[i] = ' ' * son + a[i]
+
+f = open("Fayllar/fayl.txt","w")
+f.writelines(a)
+f.close()
+    
+
+
+# 35) Chap tomondan tekislangan matnga ega bo'lgan matnli fayl berilgan. Har bir bo'sh bo'lmagan 
+#     satr boshiga kerakli miqdorda probell qo'shish orqali matn markazga tekislanilsin. Toq 
+#     uzunlikka ega bo'lgan satrlarga markazlashtirishdan oldin chap tomondan probel qo'yilsin.
+
+f = open("Fayllar/fayl.txt","r")
+a = f.readlines()
+f.close()
+
+maxi = len(a[0])
+
+for i in a:
+    if len(i) > maxi:
+        maxi = len(i)
+
+for i in range(len(a)):
+    if len(a[i]) % 2 == 1:
+        son = maxi - len(a[i])
+        son = son//2+1
+    else:
+        son = maxi - len(a[i])
+        son = son//2
+    
+    a[i] = ' ' * son + a[i]
+    
+f = open("Fayllar/fayl.txt","w")
+f.writelines(a)
+f.close()
+
+
+
+# 36) O'ng tomondan tekislangan matnga ega bo'lgan matnli fayl berilgan. Har bir bo'sh bo'lmagan 
+#     satrning boshlang'ich probellarining yarmini o'chirish orqali matn markazga tekislashtirilsin.
+#     Toq uzunlikka ega bo'lgan satrlarga markazlashtirishdan oldin chap tomondan bitta probel o'chirilsin.
+
+f = open("Fayllar/fayl3.txt","r")
+a = f.readlines()
+f.close()
+
+
+for i in range(len(a)):                     # chap tomonga tekislab olish
+    a[i] = " ".join(a[i].split()) + '\n'
+
+
+maxi = len(a[0])
+
+for i in a:                                 # eng uzun qatorni aniqlash
+    if len(i) > maxi:
+        maxi = len(i)
+
+for i in range(len(a)):                     # o'rtaga tekislash
+    if len(a[i]) % 2 == 1:
+        son = maxi - len(a[i])
+        son = son//2+1
+    else:
+        son = maxi - len(a[i])
+        son = son//2
+    
+    a[i] = ' ' * son + a[i]
+
+f = open("Fayllar/fayl3.txt","w")
+f.writelines(a)
+f.close()
+
+
+
+# 37) Chap tomondan tekislangan matnga ega bo'lgan matnli fayl berilgan. Abzaslar bitta bo'sh satr
+#     orqali ajratiladi. Har bir bo'sh bo'lmagan satrdagi eng oxirgi probeldan boshlab satr so'zlari 
+#     orasidagi probellarni qo'shish orqali matn kenglik boyicha tekislansin. (xam chap, xam o'ng
+#     tomondan tekislansin). 
+
+with open("Fayllar/fayl.txt","r") as f:
+    a = f.readlines()
+
+maxi = len(a[0])
+
+for i in a:                                 # eng uzun qatorni aniqlash
+    if len(i) > maxi:
+        maxi = len(i)
+
+for i in range(len(a)):
+    b = a[i].split()
+    
+    if len(a[i]) <= maxi:                   # qo'shiladigan probellar soni
+        probellar_soni = maxi - len(a[i])
+    
+    
+    if probellar_soni < len(b):             # qo'shiladigan probellar soni satrdagi so'zlar 
+        for j in range(probellar_soni):     # sonidan kam bo'lganida
+            b[j] = b[j] + ' '
+            
+    else:
+        for _ in range(probellar_soni // len(b)):     # qo'shiladigan probellar soni satrdagi so'zlar 
+            for j in range(len(b)-1):                 # sonidan ko'p bo'lganida
+                b[j] = b[j] + ' '
+        
+        for j in range(probellar_soni % len(b)):
+            b[j] = b[j] + ' '
+    
+    
+    a[i] = " ".join(b) + '\n'
+    
+with open("Fayllar/fayl.txt","w") as f:
+    f.writelines(a)
+    
+
+
+# 38) K > 25 butun soni va chap tarafdan tekislangan matnli fayl berilgan. Matn abzasi bitta bo'sh
+#     satr orqali ajratiladi. Matnni shunday formatlangki, uning kengligi k ta belgidan oshmasin va
+#     abzaslarga bo'linganligini saqlagan holda chap tarafga tekislansin.
+
+k = int(input("k = "))
+
+with open("Fayllar/fayl.txt","r") as f:
+    a = f.readlines()
+    
+son = 0
+massiv = []
+for i in range(len(a)):
+    b = []
+    
+    if a[i] == '\n':
+        b.append('\n\n')
+        
+    else:
+        c = a[i].split()
+        for j in range(len(c)):
+            son += len(c[j]+' ')
+
+            if son <= k:
+                b.append(c[j]+' ')
+            else:
+                son = len(c[j]+' ')
+                b.append('\n')
+                b.append(c[j]+' ')
+
+    for j in b:
+        massiv.append(j)
+
+d = ''.join(massiv)
+
+with open("Fayllar/fayl.txt","w") as f:
+    f.writelines(d)
+    
+
+
+# 39) K > 25 butun soni va chap tarafdan tekislangan matnli fayl berilgan. Abzas qizil satr 
+#     orqali ajratiladi, bo'sh satrlar esa mavjud emas. Matnni shunday formatlangki, uning
+#     kengligi k ta belgidan oshmasin va abzaslarga bo'linganligini saqlagan holda chap 
+#     tarafga tekislansin. Satrning oxiridagi probellar o'chirilsin. Formatlangan satr
+#     yangi faylga saqlansin.
+
+k = int(input('k = '))
+
+with open("Fayllar/fayl.txt","r") as f:
+    a = f.read()
+    a = a.split('\n     ')
+
+massiv = []
+for i in range(len(a)):
+    b = a[i].split()
+    c = [];  son = 0
+    
+    for j in range(len(b)):
+        son += len(b[j]+' ')
+        
+        if j == 0:
+            son += 5
+            
+        if son <= k:
+            c.append(b[j]+' ')
+        else:
+            son = len(b[j]+' ')
+            c.append('\n')
+            c.append(b[j]+' ')
+    
+    for j in range(len(c)):
+        if j == 0:
+            massiv.append('     '+c[0])
+        else:
+            massiv.append(c[j])
+    
+    massiv.append('\n')
+            
+d = ''.join(massiv)
+
+with open('Fayllar/fayl_2.txt','w') as f:
+    f.writelines(d)
+    
+
+
+# 40) Bir hil o'lchamdagi butun sonlardan iborat ikkita fayl berilgan. Shu sonlardan, kengligi
+#     30 ta belgidan iborat bo'lgan ikkita ustunga ajratilgan matnli fayl hosil qilinsin. Birinchi
+#     ustunga birinchi boshlang'ich fayl sonlari, ikkinchisida esa ikkinchi boshlang'ich fayl
+#     sonlari joylashadi. Matnli fayldagi har bir satrning boshi va oxiriga "|" ajratuvchi
+#     (kod 124) qo'shilsin. Sonlar o'ng tarafga tekislanadi.
+
+with open("Fayllar/fayl_1.txt","r") as f1:
+    a = f1.read()
+    a = a.split()
+
+with open("Fayllar/fayl_2.txt","r") as f2:
+    b = f2.read()
+    b = b.split()
+
+c = []
+for i in range(len(a)):
+    c.append(90*' '+'|' + str(a[i]) + (120-len(b[i])-90-len(a[i]))*' ' + str(b[i])+'|' + '\n')
+
+with open("Fayllar/fayl.txt",'w') as f:
+    f.writelines(c)
+    
+
+
+# 41) Bir hil o'lchamdagi butun sonlardan iborat ikkita fayl berilgan. Shu sonlardan, kengligi
+#     30 ta belgidan iborat bo'lgan ikkita ustunga ajratilgan matnli fayl hosil qilinsin. Birinchi
+#     ustunda birinchi boshlang'ich fayl sonlari, ikkinchisida esa ikkinchi boshlang'ich fayl
+#     sonlari joylashadi. Matnli fayldagi har bir satrning boshi va oxiriga "|" ajratuvchi
+#     (kod 124) qo'shilsin. Sonlar chap tarafga tekislansin.
+
+with open("Fayllar/fayl_1.txt","r") as f1:
+    a = f1.read()
+    a = a.split()
+
+with open("Fayllar/fayl_2.txt","r") as f2:
+    b = f2.read()
+    b = b.split()
+
+c = []
+for i in range(len(a)):
+    c.append('|' + str(a[i]) + (30-len(b[i])-len(a[i]))*' ' + str(b[i])+'|' + '\n')
+
+with open("Fayllar/fayl.txt",'w') as f:
+    f.writelines(c)
+
+
+
+# 42) N butun soni va A, B haqiqiy sonlar berilgan. sqrt(x) funksiyasining [A,B] oraliqdagi (B-A)/N
+#     qadam bilan hosil bo'luvchi qiymatlar jadvalini saqlovchi matnli fayl hosil qilinsin. Jadval
+#     ikkita ustundan iborat x argumentli (10 ta pozitsiya va uning 4 tasi kasr qismi) va sqrt(x) ning
+#     qiymatlari (15 ta pozitsiya va ulardan 8 tasi kasr qismi). Ustunlar o'ng tarafdan tekislanadi.
+
+from math import sqrt
+
+n = int(input('n = '))
+A = float(input('A = '))
+B = float(input('B = '))
+
+qadam = (B-A)/n
+qadamlar = []
+
+for i in range(n+1):
+    qadamlar.append(round(A+i*qadam,2))
+
+natija = []
+for i in range(len(qadamlar)):
+    natija.append(round(sqrt(qadamlar[i]),4))
+    
+with open("Fayllar/fayl.txt","w+") as f:
+    f.write(' '*90 + '|' + 'x'.center(10) + '|' + 'sqrt(x)'.center(15) + '|' + '\n')
+    for i in range(len(qadamlar)):
+        f.write(' '*90 + '|' + str(qadamlar[i]).center(10) + '|' + str(natija[i]).center(15) + '|' + '\n')
+
+
+
+# 43) N butun soni va A, B haqiqiy sonlar berilgan. sin(x) va cos(x) funksiyasining [A,B] oraliqdagi (B-A)/N
+#     qadam bilan hosil bo'luvchi qiymatlar jadvalini saqlovchi matnli fayl hosil qilinsin. Jadval
+#     uchta ustundan iborat x argumentli (8 ta pozitsiya va uning 4 tasi kasr qismi) va sin(x) hamda 
+#     cos(x) ning qiymatlari (12 ta pozitsiya va ulardan 8 tasi kasr qismi). Ustunlar o'ng tarafdan tekislanadi.
+
+from math import *
+
+n = int(input('n = '))
+A = float(input('A = '))
+B = float(input('B = '))
+
+qadam = (B-A)/n
+qadamlar = []
+
+for i in range(n+1):
+    qadamlar.append(round(A+i*qadam,2))
+
+natija_sin = []
+natija_cos = []
+for i in range(len(qadamlar)):
+    natija_sin.append(round(sin(qadamlar[i]),4))
+    natija_cos.append(round(cos(qadamlar[i]),4))
+
+with open("Fayllar/fayl.txt","w+") as f:
+    f.write(' '*80+'|'+'x'.center(8)+'|'+'sin(x)'.center(12)+'|'+'cos(x)'.center(12)+'|'+'\n')
+    for i in range(len(qadamlar)):
+        f.write(' '*80+'|'+str(qadamlar[i]).center(8)+'|'+str(natija_sin[i]).center(12)+'|'+str(natija_cos[i]).center(12)+'|'+'\n')
+
+
+
+# 44) Har bir satrida bittadan butun son berilgan matnli fayl berilgan. Butun sonlar o'ng 
+#     va chap tomanidan bir nechta probellar bilan to'ldirilgan. Shu sonlar miqdori va
+#     ularning yig'indisi chop qilinsin.
+
+with open("Fayllar/fayl.txt","r") as f:
+    a = f.read()
+    a = a.split()
+
+s = 0
+for i in a:
+    s += int(i)
+
+print(s)
+
