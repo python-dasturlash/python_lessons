@@ -1,0 +1,1099 @@
+
+# 1) Kiritilgan belgining kodini (ASCII nomerini) chiqaruvchi programma tuzilsin.
+
+print(ord(input("Belgini kiriting: ")))
+
+
+
+# 2) n butun soni berilgan (32 < n <= 126). Kodi n ga teng bo'lgan belgini chiqaruvchi programma tuzilsin.
+
+n = int(input("(32 < n <= 126)  n = "))
+print(chr(n))
+
+
+
+# 3) Kodlar jadvalida kiritilgan belgidan oldin va keyin turuvchi belgilarni chiqaruvchi programma tuzilsin.
+
+kod = ord(input("Belgini kiriting: "))
+print("Oldin ==>",chr(kod-1),
+      "\nKeyin ==>",chr(kod+1))
+
+
+
+# 4) n butun soni berilgan (1 <= n <= 26). lotin alfavitidagi dastlabki n ta katta harflarni
+#    chiqaruvchi programma tuzilsin.
+
+n = int(input('(1 <= n <= 26)  n = '))
+for i in range(65,65+n):
+    print(chr(i),end=' ')
+
+
+
+# 5) n butun soni berilgan (1 <= n <= 26). Lotin alfavitidagi n ta kichik harflarni teskari
+#    tartibda chiqaruvchi programma tuzilsin. Ya`ni z dan a gacha chiqarilsin.
+
+n = int(input('(1 <= n <= 26)  n = '))
+for i in range(122,122-n,-1):
+    print(chr(i),end=' ')
+
+
+
+# 6) Kiritilgan belgining nimaligini aniqlovchi programma tuzilsin. Agar kiritilgan belgi
+#    raqam bo'lsa - "digit", lotincha harf bo'lsa - "lotin" yozuvi chiqarilsin.
+#    Boshqa holatlar uchun nol chiqarilsin.
+
+n = input("Belgini kiriting: ")
+if 48 <= ord(n) <= 57:
+    print("digit")
+elif 65 <= ord(n) <= 90  or  97 <= ord(n) <= 122:
+    print("lotin")
+else:
+    print("nol")
+
+
+
+# 7) Satr berilgan. Satrning birinchi va oxirgi belgisi kodini chiqaruvchi programma tuzilsin.
+
+satr = str(input("Satr kiriting: "))
+print(ord(satr[0]))
+print(ord(satr[-1]))
+
+
+
+# 8) n natural soni va belgi berilgan. n ta kiritilgan belgidan iborat satr hosil qiling
+#    va ekranga chiqaring. M: n = 5; Belgi = A; Natija = AAAAA
+
+n = int(input('n = '))
+belgi = str(input("Belgi: "))
+natija = str()
+for i in range(n):
+    natija += belgi
+print(natija)
+
+
+
+# 9) Ikkita satr berilgan. Shu satrlar ketma-ketligidan iborat yangi satr hosil qiling
+#    va ekranga chiqaring.
+
+satr_1 = str(input('satr1 = '))
+satr_2 = str(input('satr2 = '))
+print(satr_1 + satr_2)
+    
+  
+
+# 10) Kiritilgan satrni teskari tartibda chiqaruvchi programma tuzilsin.
+
+satr = str(input("satr = "))
+for i in range(len(satr)-1, -1, -1):
+    print(satr[i],end='')
+    
+
+
+# 11) Satr berilgan. Shu satr belgilari orasiga bittadan probel qoyilgan satr hosil qiluvchi
+#     va ekranga chiqaruvchi programma tuzilsin. Kiritilgan satrda probel yo'q deb qabul qilinsin.
+
+satr = str(input("satr = "))
+satr1 = str()
+for i in range(len(satr)):
+    satr1 += satr[i]
+    satr1 += ' '
+print(satr1)
+    
+  
+
+# 12) Satr va n natural soni berilgan. Shu satr belgilari orasiga n tadan '*' belgisi qo'yilgan
+#     satr hosil qiluvchi va ekranga chiqaruvchi programma tuzilsin.
+
+n = int(input('n = '))
+satr = str(input('satr = '))
+satr1 = str()
+for i in range(len(satr)):
+    satr1 += satr[i]
+    if i != len(satr)-1:
+        for _ in range(n):
+            satr1 += '*'
+print(satr1)
+    
+
+
+# 13) Satr berilgan. Satrdagi raqamlar sonini aniqlovchi programma tuzilsin.
+
+satr = str(input('satr = '))
+a = 0
+for i in range(len(satr)):
+    if 48 <= ord(satr[i]) <= 57:
+        a += 1
+print(a)
+    
+ 
+
+# 14) Satr berilgan. Satrdagi katta lotin harflari sonini aniqlovchi programma tuzilsin.
+
+satr = str(input('satr = '))
+a = 0
+for i in range(len(satr)):
+    if 65 <= ord(satr[i]) <= 90:
+        a += 1
+print(a)
+
+
+
+# 15) Satr berilgan. Satrdagi kichik lotin va kiril harflarining umumiy sonini 
+#     aniqlovchi programma tuzilsin.
+
+satr = str(input('satr = '))
+a = 0
+for i in range(len(satr)):
+    if 97 <= ord(satr[i]) <= 122  or  1072 <= ord(satr[i]) <= 1104:
+        a += 1
+print(a)
+    
+
+
+# 16) Satr berilgan. Satrdagi hamma katta lotin harflarini kichigiga
+#     almashtiruvchi programma tuzilsin.
+
+satr = str(input('satr = '))
+satr1 = str()
+for i in range(len(satr)):
+    if 65 <= ord(satr[i]) <= 90:
+        satr1 += chr(ord(satr[i]) + 32)
+    else:
+        satr1 += satr[i]
+print(satr1)
+
+
+
+# 17) Satr berilgan. Satrdagi hamma katta harflarni kichigiga almashtiruvchi
+#     programma tuzilsin.
+
+satr = str(input('satr = '))
+print(satr.lower())
+
+
+
+# 18) Satr berilgan. Satrdagi hamma katta harflarini kichigiga, kichiklarini kattasiga
+#     almashtiruvchi programma tuzilsin.
+
+satr = str(input('satr = '))
+satr1 = str()
+for i in range(len(satr)):
+    if satr[i] == satr[i].upper():
+        satr1 += satr[i].lower()
+    elif satr[i] == satr[i].lower():
+        satr1 += satr[i].upper()
+    else:
+        satr1 += satr[i]
+print(satr1)
+
+
+
+# 19) Satr berilgan. Agar satrda butun son ifodalangan bo'lsa 1 chiqarilsin, agar 
+#     haqiqiy son bo'lsa 2 chiqarilsin. Agar satrni songa aylantirish imkoni bo'lmasa
+#     0 chiqarilsin. Haqiqiy sonning kasr qismi nuqta "." bilan ajratilgan 
+#     deb qabul qilinsin.
+
+satr1 = input("Satr = ")
+
+butun,haqiqiy = False,False
+
+x=True
+for i in satr1:
+    if x and i=="-":
+        x = False
+        continue
+    x = False
+    
+    if "0" <= i <="9" or i==".":
+        if satr1.count(".")==0:
+            butun = True
+        if satr1.count(".")==1:
+            haqiqiy = True
+    else:
+        butun, haqiqiy = False,False
+        break
+        
+if butun:
+    print("Butun son")
+elif haqiqiy:
+    print("Haqiqiy son")
+else:
+    print("Oddiy satr")
+
+
+
+# 20) Butun musbat sonni ifodalovchi satr berilgan. Uning belgilarini (raqamlarini)
+#     chapdan o'ngga qarab chiqaruvchi programma tuzilsin.
+
+satr = input("Satr = ")
+print(satr)
+
+
+
+# 21) Butun musbat sonni ifodalovchi satr berilgan. Uning belgilarini (raqamlarini)
+#     o'ngdan chapga qarab chiqaruvchi programma tuzilsin.
+
+satr = input("Satr = ")
+for i in satr[::-1]:
+    print(i,end='')
+
+
+
+# 22) Butun musbat sonni ifodalovchi satr berilgan. Shu son raqamlari yig'indisini
+#     chiqaruvchi programma tuzilsin.
+
+satr = input("Satr = ")
+s = int()
+for i in satr:
+    s += int(i)
+print(s)
+
+
+
+# 23) "son +- son +- ... +- son" ko'rinishidagi arifmetik ifodani bildiruvchi satr berilgan.
+#     "+-" belgisi o'rnida yoki "+" yoki "-" bo'ladi. (Masalan: 7+3-2) ifodaning qiymatini
+#     aniqlovchi programma tuzilsin. (son o'rnida butun son kiritiladi)
+
+satr = input("satr = ")
+x = True
+s = 0
+for i in satr:
+    if i == '+':
+        x = True
+        continue
+    
+    if i == '-':
+        x = False
+        continue
+    
+    if x == True:
+        s += int(i)
+    else:
+        s -= int(i)
+print(s)
+    
+
+
+# 24) Butun musbat sonni ifodalovchi ikkilik sanoq sistemasidagi son satrda berilgan.
+#     Bu sonning o'nlik sanoq sistemasidagi qiymatini o'zida saqlovchi satrni
+#     chiqaruvchi programma tuzilsin.
+
+satr = input('satr = ')
+j = 0
+s = 0
+x = True
+for i in satr[::-1]:
+    if int(i) == 0  or  int(i) == 1:
+        s += (int(i) * 2**j)
+    else:
+        x = False
+        break
+    j += 1
+if x == True:
+    print(s)
+else:
+    print("Ikkilik sanoq sistemasidagi sonni kiriting.")
+
+
+
+# 25) Butun musbat sonni ifodalovchi o'nlik sanoq sistemasidagi son satrda berilgan.
+#     Bu sonning ikkilik sanoq sistemasidagi qiymatini o'zida saqlovchi satrni
+#     chiqaruvchi programma tuzilsin.
+
+satr = input('satr = ')
+satr1 = int(satr)
+satr2 = []
+while satr1 != 0:
+    satr2.append(satr1 % 2)
+    satr1 = satr1 // 2
+s = ''
+for i in satr2[::-1]:
+    s += str(i)
+print(s)
+
+
+
+# 26) n natural soni va satr berilgan. Uzunligi n ga teng bo'lgan satr shunday hosil 
+#     qilingki, agar kiritilgan satrning uzunligi n dan katta bo'lsa, satrning dastlabki
+#     belgilarini tashlab yuboring. Agar kiritilgan satrning uzunligi n dan kichik 
+#     bo'lsa, yangi satr boshiga nuqtalarni "." qo'shing.
+
+n = int(input('n = '))
+satr = input('satr = ')
+if len(satr) > n:
+    for i in range(len(satr)-n,len(satr)):
+        print(satr[i],end='')
+elif len(satr) < n:
+    for i in range(n-len(satr)):
+        print(end='.')
+    print(satr)
+else:
+    print(satr)
+
+
+
+# 27) n1, n2 natural sonlari va s1, s2 satr berilgan. s1 satrning dastlabki n1 ta
+#     belgisidan va s2 satrning oxirgi n2 ta belgisidan iborat yangi satr hosil qiling.
+
+n1 = int(input('n1 = '))
+n2 = int(input('n2 = '))
+s1 = input('s1 = ')
+s2 = input('s2 = ')
+satr = ''
+if len(s1) - n1 >= 0:
+    for i in range(n1):
+        satr += s1[i]
+else:
+    satr += s1
+    
+if len(s2) - n2 >= 0:
+    for i in range(len(s2)-n2, len(s2)):
+        satr += s2[i]
+else:
+    satr += s2
+
+print(satr)
+
+
+
+# 28) C belgisi va S satri berilgan. S satrida uchragan har bir C belgisini 2 marta 
+#     orttiruvchi programma tuzilsin.
+
+C = input('C = ')
+S = input('S = ')
+s1 = ''
+for i in S:
+    if C == i:
+        s1 += C
+    s1 += i
+print(s1)
+
+
+
+# 29) C belgisi va S1, S2 satrlari berilgan. S1 satriga shu satrda uchragan har bir
+#     C belgisidan oldin S2 satrini qo'shuvchi programma tuzilsin.
+
+C = input('C = ')
+S1 = input('S1 = ')
+S2 = input('S2 = ')
+s = ''
+for i in S1:
+    if i == C:
+        s += S2
+    s += i
+print(s)
+
+
+
+# 30) C belgisi va S1, S2 satrlar berilgan. S1 satriga shu satrda uchragan har bir
+#     C belgisidan keyin S2 satrini qo'shuvchi programma tuzilsin.
+
+C = input('C = ')
+S1 = input('S1 = ')
+S2 = input('S2 = ')
+s = ''
+for i in S1:
+    s += i
+    if i == C:
+        s += S2
+print(s)
+
+
+
+# 31) S1 va S2 satrlar berilgan. Agar S2 satr S1 satrida bor bo'lsa true, aks 
+#     holda false chiqaruvchi programma tuzilsin.
+
+S1 = input('S1 = ')
+S2 = input('S2 = ')
+
+for i in range(len(S1)):
+    x = True
+    if S1[i] == S2[0]:
+        for j in range(len(S2)):
+            if S2[j] == S1[i]:
+                i += 1
+                continue
+            else:
+                x = False
+                break
+        if x == True:
+            print(True)
+            break
+else:
+    print(False)
+
+
+
+# 32) S1 va S2 satrlar berilgan. S2 satrni S1 satrda takrorlanishlar sonini
+#     chiqaruvchi programma tuzilsin.
+
+S1 = input('S1 = ')
+S2 = input('S2 = ')
+a = 0
+for i in range(len(S1)):
+    x = True
+    if S1[i] == S2[0]:
+        for j in range(len(S2)):
+            if S2[j] == S1[i]:
+                i += 1
+                continue
+            else:
+                x = False
+                break
+        if x == True:
+            a += 1
+print(a)
+
+
+
+# 33) S1 va S2 satrlar berilgan. S1 satrda birinchi uchragan S2 satrni o'chirib tashlovchi
+#     programma tuzilsin. Agar S1 satrda S2 satr uchramasa S1 satr o'zgarishsiz qoldirilsin.
+
+S1 = input('S1 = ')
+S2 = input('S2 = ')
+
+s = ''
+x = True
+i = 0
+while i < len(S1):
+    a = i
+    if x == True  and  S1[i] == S2[0]:
+        for j in range(len(S2)):
+            if S2[j] == S1[a]:
+                a += 1
+                continue
+            else:
+                x = False
+                break
+            
+        if x == False:
+            s += S1[i]
+            x = True
+            continue
+        else:
+            i += len(S2)
+            x = False
+    s += S1[i]
+    i += 1
+print(s)
+
+
+
+# 34) S1 va S2 satrlar berilgan. S1 satrda oxirgi uchragan S2 satrni o'chirib tashlovchi
+#     programma tuzilsin. Agar S1 satrda S2 satr uchramasa S1 satr o'zgarishsiz qoldirilsin.
+
+S1 = input('S1 = ')
+S2 = input('S2 = ')
+
+s = ''
+x = True
+i = len(S1)-1
+while i != -1:
+    a = i
+    if x == True  and  S1[i] == S2[len(S2)-1]:
+        for j in range(len(S2)-1, -1, -1):
+            if S2[j] == S1[a]:
+                a -= 1
+                continue
+            else:
+                x = False
+                break
+            
+        if x == False:
+            s += S1[i]
+            x = True
+            continue
+        else:
+            i -= len(S2)
+            x = False
+    s += S1[i]
+    i -= 1
+print(s[::-1])
+
+
+
+# 35) S1 va S2 satrlar berilgan. S1 satrida uchragan barcha S2 satrlarni ochirib tashlovchi
+#     programma tuzilsin. Agar S1 satrida S2 satri uchramasa S1 satr o'zgarishsiz qoldirilsin.
+
+S1 = input('S1 = ')
+S2 = input('S2 = ')
+
+s = ''
+i = 0
+while i < len(S1):
+    x = True
+    a = i
+    if S1[i] == S2[0]:
+        for j in range(len(S2)):
+            if S2[j] == S1[a]:
+                a += 1
+                continue
+            else:
+                x = False
+                break
+            
+        if x == False:
+            s += S1[i]
+            continue
+        else:
+            i += len(S2)
+            
+    s += S1[i]
+    i += 1
+print(s)
+
+
+
+# 36) S1, S2 va S3 satrlari berilgan. S1 satrida birinchi uchragan S2 satrini
+#     S3 satriga o'zgartiruvchi programma tuzilsin.
+
+S1 = input('S1 = ')
+S2 = input('S2 = ')
+S3 = input('S3 = ')
+
+S4 = S1.replace(S2,S3,1)
+print(S4)
+
+
+
+# 37) S1, S2 va S3 satrlar berilgan. S1 satrida oxirgi uchragan S2 satrini S3 satrga 
+#     o'zgartiruvchi programma tuzilsin.
+
+S1 = input('S1 = ')
+S2 = input('S2 = ')
+S3 = input('S3 = ')
+
+S4 = S1[::-1].replace(S2[::-1],S3,1)
+print(S4[::-1])
+
+
+
+# 38) S1, S2 va S3 satrlar berilgan. S1 satrida barcha uchragan S2 satrini S3 satrga 
+#     o'zgartiruvchi programma tuzilsin.
+
+S1 = input('S1 = ')
+S2 = input('S2 = ')
+S3 = input('S3 = ')
+
+S4 = S1.replace(S2,S3)
+print(S4)
+
+
+
+# 39) Kamida bitta probeldan iborat satr berilgan. Satrdagi birinchi va ikkinchi probel
+#     orasidagi belgilarni chiqaruvchi programma tuzilsin. Agar satr faqat bitta probeldan 
+#     iborat bo'lsa, bo'sh satr chiqarilsin.
+
+satr = input('satr = ')
+satr = satr.split()
+if len(satr) <= 2:
+    print("Bo'sh satr")
+else:
+    print(satr[1])
+
+
+
+# 40) Kamida bitta probeldan iborat satr berilgan. Satrdagi birinchi va oxirgi probel
+#     orasidagi belgilarni chiqaruvchi programma tuzilsin. Agar satr faqat bitta probeldan 
+#     iborat bo'lsa, bo'sh satr chiqarilsin.
+
+satr = input('satr = ')
+satr = satr.split()
+if len(satr) <= 2:
+    print("Bo'sh satr")
+else:
+    for i in range(1,len(satr)-1):
+        print(satr[i],end=' ')
+
+
+
+# 41) Probel bilan ajratilgan o'zbekcha so'zlardan iborat satr berilgan. Satrdagi
+#     so'zlar sonini aniqlovchi programma tuzilsin.
+
+satr = input('satr = ')
+satr1 = satr.split()
+print(len(satr1))
+
+
+
+# 42) Probel bilan ajratilgan va faqat katta harflar bilan terilgan o'zbekcha so'zlardan
+#     iborat satr berilgan. Satrdagi har hil harflar bilan boshlanuvchi va tugovchi so'zlar
+#     sonini aniqlovchi programma tuzilsin.
+
+satr = input('satr = ')
+satr = satr.split()
+s = 0
+for i in satr:
+    if i[0] != i[-1]:
+        s += 1
+print(s)
+
+
+
+# 43) Probel bilan ajratilgan va faqat katta harflar bilan terilgan o'zbekcha so'zlardan
+#     iborat satr berilgan. Satrdagi kamida bitta 'A' harfi bor so'zlar sonini 
+#     aniqlovchi programma tuzilsin.
+
+satr = input('satr = ')
+satr = satr.split()
+s = 0
+for i in satr:
+    for j in i:
+        if j == 'A':
+            s += 1
+            break
+print(s)
+
+
+
+# 44) Probel bilan ajratilgan va faqat katta harflar bilan terilgan o'zbekcha so'zlardan
+#     iborat satr berilgan. Satrdagi aniq 3 ta 'A' harfi bor so'zlar sonini aniqlovchi
+#     programma tuzilsin.
+
+satr = input('satr = ')
+satr = satr.split()
+s = 0
+for i in satr:
+    a = 0
+    for j in i:
+        if j == 'A':
+            a += 1
+    if a == 3:
+        s += 1
+print(s)
+
+
+
+# 45) Probel bilan ajratilgan o'zbekcha so'zlardan iborat satr berilgan. Satrdagi eng
+#     qisqa so'z uzunligini aniqlovchi programma tuzilsin.
+
+satr = input('satr = ')
+s = satr.split()
+a = len(s[0])
+soz = s[0]
+for i in s:
+    if len(i) < a:
+        soz = i
+        a = len(i)
+print(soz,"   Uzunligi =",a)
+
+
+
+# 46) Probel bilan ajratilgan o'zbekcha so'zlardan iborat satr berilgan. Satrdagi eng
+#     uzun so'z uzunligini aniqlovchi programma tuzilsin.
+
+satr = input('satr = ')
+s = satr.split()
+a = len(s[0])
+soz = s[0]
+for i in s:
+    if len(i) > a:
+        soz = i
+        a = len(i)
+print(soz,"   Uzunligi =",a)
+
+
+
+# 47) Probel bilan ajratilgan o'zbekcha so'zlardan iborat satr berilgan. Shu satrdagi so'zlarni
+#     "." bilan ajratilgan holda chiqaruvchi programma tuzilsin. Satr oxiriga
+#     "." qo'yish shart emas.
+
+# 1-usul
+satr = input('satr = ')
+satr = satr.replace(" ",".")
+print(satr)
+
+# 2-usul
+satr = input('satr = ')
+satr = satr.split()
+satr = ".".join(satr)
+print(satr)
+
+
+
+# 48) Probel bilan ajratilgan o'zbekcha so'zlardan iborat satr berilgan. Shu satrdagi so'zlarni
+#     quydagicha o'zgartiring. Har bir so'zning birinchi harfi bilan bir hil bo'lgan harflarni
+#     "." bilan almashtiruvchi programma tuzilsin. Masalan: "minimum" so'zi "mini.u." bo'lib
+#     o'zgartiriladi. Probellar soni o'zgarishsiz qolsin.
+
+satr = input('satr = ')
+satr = satr.split()
+satr1 = []
+for i in satr:
+    satr1.append(i[0]+i[1:].replace(i[0],"."))
+satr1 = " ".join(satr1)
+print(satr1)
+        
+
+
+# 49) Probel bilan ajratilgan o'zbekcha so'zlardan iborat satr berilgan. Shu satrdagi so'zlarni
+#     quydagicha o'zgartiring. Har bir so'zning oxirgi harfi bilan bir hil bo'lgan harflarni
+#     "." bilan almashtiruvchi programma tuzilsin. Masalan: "minimum" so'zi ".ini.um" bo'lib
+#     o'zgartiriladi. Probellar soni o'zgarishsiz qolsin.
+
+satr = input('satr = ')
+satr = satr.split()
+satr1 = []
+for i in satr:
+    son = i.count(i[-1])
+    satr1.append(i.replace(i[-1],".",son-1))
+satr1 = " ".join(satr1)
+print(satr1)
+
+
+
+# 50) Probel bilan ajratilgan o'zbekcha so'zlardan iborat satr berilgan. So'zlar orasida
+#     probel bir nechta bo'lishi mumkun. Shu satrdagi ortiqcha probellarni olib tashlovchi
+#     va satrni teskari tartibda chiqaruvchi programma tuzilsin.
+
+satr = input('satr = ')
+s = satr.split()
+for i in s[::-1]:
+    print(i[::-1],end=' ')
+
+
+
+# 51) Probel bilan ajratilgan va katta harflar bilan terilgan o'zbekcha so'zlardan iborat
+#     satr berilgan. (ketma-ket bir nechta probel bo'lishi mumkin). Satrdagi so'zlarni
+#     alfavit tartibida bitta probel bilan ajratilgan holda chiqaruvchi programma tuzilsin.
+
+satr = input('satr = ')
+satr = satr.split()
+satr.sort()
+for i in satr:
+    print(i,end=' ')
+
+
+
+# 52) Probel bilan ajratilgan o'zbekcha so'zlardan iborat satr berilgan. Satrdagi har bir
+#     so'zning birinchi harfini kattasi bilan almashtiruvchi programma tuzilsin. So'z deganda 
+#     probel, satr boshi yoki satr oxiri bilan ajratilgan belgilar ketma-ketligi tushiniladi.
+
+satr = input('satr = ')
+satr = satr.title()
+print(satr)
+
+
+
+# 53) Satr berilgan. Satrdagi tinish belgilari sonini aniqlovchi programma tuzilsin.
+
+satr = input('satr = ')
+#satr = satr.split()
+tinish_belgi = ['.',  '?',  ',',  '!',  '(',  ')',  '-',  '...',  ';',  ':',  '"']
+a = 0
+for i in satr:
+    if i in tinish_belgi:
+        a += 1
+print(a)
+
+
+
+# 54) Probel bilan ajratilgan o'zbekcha so'zlardan iborat satr berilgan. Satrdagi
+#     katta harflar sonini chiqaruvchi programma tuzilsin.
+
+import string
+
+satr = input('satr = ')
+satr2 = satr.translate(satr.maketrans('','',string.punctuation))
+satr2 = satr2.split()
+
+a = 0
+for i in satr2:
+    for j in i:
+        if j.upper() == j:
+            a += 1
+print(a)
+
+
+
+# 55) Probel bilan ajratilgan o'zbekcha so'zlardan iborat satr berilgan. Satrdagi eng
+#     uzun so'zni chiqaruvchi programma tuzilsin. Agar eng uzunlari bir nechta
+#     bo'lsa birinchisi chiqarilsin.
+
+satr = input('satr = ')
+s = satr.split()
+a = len(s[0])
+soz = s[0]
+for i in s:
+    if len(i) > a:
+        soz = i
+        a = len(i)
+print(soz,"   Uzunligi =",a)
+
+
+
+# 56) Probel bilan ajratilgan o'zbekcha so'zlardan iborat satr berilgan. Satrdagi eng
+#     qisqa so'zni chiqaruvchi programma tuzilsin. Agar eng qisqalari bir nechta
+#     bo'lsa oxirgisi chiqarilsin.
+
+satr = input('satr = ')
+s = satr.split()
+a = len(s[0])
+soz = s[0]
+for i in s:
+    if len(i) <= a:
+        soz = i
+        a = len(i)
+print(soz,"   Uzunligi =",a)
+
+
+
+# 57) Satr berilgan. Satrdagi ortiqcha probellerni olib tashlovchi programma tuzilsin.
+
+satr = input('satr = ')
+satr = satr.split()
+satr = ' '.join(satr)
+print(satr)
+
+
+
+# 58) Faylning to'liq nomini o'zida akslantirgan satr berilgan. Ya'ni disk nomi, kataloglar 
+#     nomi, faylning nomi va kengaytmasi. Satrdan faylning nomini (kengaytmasiz) aniqlovchi
+#     programma tuzilsin.
+#     Masalan: D:\\Qudrat_c++\\books\\My_book.exe
+#     Javob: My_book
+
+satr = input('satr = ')
+satr = satr.split('\\')
+satr1 = satr[-1].split('.')
+print(satr1[0])
+
+
+
+# 59) Faylning to'liq nomini o'zida akslantirgan satr berilgan. Ya'ni disk nomi, kataloglar 
+#     nomi, faylning nomi va kengaytmasi. Satrdan faylning kengaytmasini aniqlovchi
+#     programma tuzilsin.
+#     Masalan: D:\\Qudrat_c++\\books\\My_book.exe
+#     Javob: exe
+
+satr = input('satr = ')
+satr = satr.split('\\')
+satr1 = satr[-1].split('.')
+print(satr1[-1])
+
+
+
+# 60) Faylning to'liq nomini o'zida akslantirgan satr berilgan. Ya'ni disk nomi, kataloglar 
+#     nomi, faylning nomi va kengaytmasi. Satrdan birinchi katalog nomini aniqlovchi programma 
+#     tuzilsin. Agar katalog tub bo'lsa "\" belgisi chiqarilsin.
+#     Masalan: D:\\Qudrat_c++\\books\\My_book.exe
+#     Javob: Qudrat_c++
+
+satr = input('satr = ')
+satr = satr.split("\\")
+print(satr[2])
+
+
+
+# 61) Faylning to'liq nomini o'zida akslantirgan satr berilgan. Ya'ni disk nomi, kataloglar 
+#     nomi, faylning nomi va kengaytmasi. Satrdan oxirgi katalog nomini aniqlovchi programma 
+#     tuzilsin. Agar katalog tub bo'lsa "\" belgisi chiqarilsin.
+#     Masalan: D:\\Qudrat_c++\\books\\My_book.exe
+#     Javob: Qudrat_c++
+
+satr = input('satr = ')
+satr = satr.split("\\")
+print(satr[-3])
+
+
+
+# 62) O'zbekcha so'zlardan iborat satr berilgan. Satrni o'ngga siklik siljitish orqali kodlovchi
+#     programma tuzilsin. Ya`ni alfavitdagi so'zlar o'zidan bitta keyin turgan harf bilan
+#     almashtiriladi. ("A" ni "B" ga, "a" ni "b" ga ...) Tinish belgilari va probel
+#     o'zgarishsiz qoldirilsin.
+
+satr = input('satr = ')
+satr1 = []
+for i in satr:
+    if 65 <= ord(i) < 90  or  97 <= ord(i) < 122:
+        satr1.append(chr(ord(i) + 1))
+    elif ord(i) == 90:
+        satr1.append(chr(65))
+    elif ord(i) == 122:
+        satr1.append(chr(97))
+    else:
+        satr1.append(i)
+for i in satr1:
+    print(i,end='')
+
+
+
+# 63) O'zbekcha so'zlardan iborat satr va k soni berilgan (0 < k < 10). Satrni o'ngga k ta 
+#     siklik siljitish orqali kodlovchi programma tuzilsin. Ya`ni alfavitdagi so'zlar o'zidan 
+#     k ta keyin turgan harf bilan almashtiriladi. Tinish belgilari va probel
+#     o'zgarishsiz qoldirilsin.
+#     Masalan: K = 2;  ABCD
+#     Natija:  CDEF
+
+satr = input('satr = ')
+k = int(input('(0 < k < 10)  k = '))
+satr1 = []
+
+for i in satr:
+    if 65 <= ord(i) <= 90:
+        if 65 <= ord(i) + k  <= 90:
+            satr1.append(chr(ord(i) + k))
+        else:
+            a = ord(i)+k-90
+            satr1.append(chr(64 + a))
+            
+    elif 97 <= ord(i) <= 122:
+        if 97 <= ord(i) + k  <= 122:
+            satr1.append(chr(ord(i) + k))
+        else:
+            a = ord(i)+k-122
+            satr1.append(chr(96 + a))
+    
+    else:
+        satr1.append(i)
+        
+for i in satr1:
+    print(i,end='')
+
+
+
+# 64) String 63 - masalasi bo'yicha kodlangan satr va k soni berilgan. (0 < k < 10)
+#     satrni asl holiga qaytaruvchi programma tuzilsin.
+
+satr = input('satr = ')
+k = int(input('(0 < k < 10)  k = '))
+satr1 = []
+
+for i in satr:
+    if 65 <= ord(i) <= 90:
+        if 65 <= ord(i) - k  <= 90:
+            satr1.append(chr(ord(i) - k))
+        else:
+            a = 65 - (ord(i) - k)
+            satr1.append(chr(91 - a))
+            
+    elif 97 <= ord(i) <= 122:
+        if 97 <= ord(i) - k  <= 122:
+            satr1.append(chr(ord(i) - k))
+        else:
+            a = 97 - (ord(i)-k)
+            satr1.append(chr(123 - a))
+    
+    else:
+        satr1.append(i)
+        
+for i in satr1:
+    print(i,end='')
+
+
+
+# 65) String 63 - masalasi bo'yicha kodlangan satr berilgan. Satrning birinchi belgisining
+#     asl qiymatini ('harfini') ham kiritamiz. Kodlash uchun ishlatilgan k sonini aniqlang
+#     va satrni asl holida ekranga chiqaruvchi programma tuzilsin.
+
+satr = input('satr = ')
+harf = input("Birinchi harf: ")
+k = ord(satr[0]) - ord(harf)
+satr1 = []
+print("k =",k)
+
+for i in satr:
+    if 65 <= ord(i) <= 90:
+        if 65 <= ord(i) - k  <= 90:
+            satr1.append(chr(ord(i) - k))
+        else:
+            a = 65 - (ord(i) - k)
+            satr1.append(chr(91 - a))
+            
+    elif 97 <= ord(i) <= 122:
+        if 97 <= ord(i) - k  <= 122:
+            satr1.append(chr(ord(i) - k))
+        else:
+            a = 97 - (ord(i)-k)
+            satr1.append(chr(123 - a))
+    
+    else:
+        satr1.append(i)
+        
+for i in satr1:
+    print(i,end='')
+
+
+
+# 66) Satr berilgan. Satrni quydagicha kodlang. Birinchi juft o'rinda turgan belgilarni
+#     joylashtiring. Keyinroq toq o'rinda turgan belgilarni teskari tartibda joylashtiring.
+#     Satr 0-indeksdan boshlanishini unutmang.
+#     Masalan: Programma
+#     Natija: Pormamagr
+
+satr = input('satr = ')
+satr = satr.split()
+satr1 = []
+for i in satr:
+    satr0 = []
+    
+    for j in range(0,len(i),2):
+        satr1.append(i[j])
+        
+    for j in range(1,len(i),2):
+        satr0.append(i[j])
+        
+    for j in satr0[::-1]:
+        satr1.append(j)
+    
+    satr1.append(" ")
+    
+for i in satr1:
+    print(i,end='')
+
+
+
+# 67) String 66 masalasi bo'yicha kodlangan berilgan. Satrni asl holiga
+#     qaytaruvchi programma tuzilsin.
+
+satr = input('satr = ')
+satr = satr.split()
+satr1 = []
+for i in satr:
+    son = -1
+    
+    for j in range(len(i)//2):
+        satr1.append(i[j])
+        satr1.append(i[son])
+        son -= 1
+    
+    if len(i) % 2 == 1:
+        satr1.append(i[len(i)//2])
+    
+    satr1.append(' ')
+    
+for i in satr1:
+    print(i,end='')
+
+
+
+# 68) Raqam va kichik lotin harflaridan iborat satr berilgan. Agar satrdagi harflar alfavit
+#     tartibida bo'lsa 0 chiqaruvchi, aks holda qonuniyatni buzgan 1-belgini chiqaruvchi
+#     programma tuzilsin.
+
+satr = input('satr = ')
+x = True
+a = 0
+for i in satr:
+   # print("aaaaaaa",i)
+    if x == True and 97 <= ord(i) <= 122:
+        son = ord(i)
+        x = False
+        
+    if x == False and son <= ord(i):
+        son = ord(i)
+    
+    elif x == False and (48 <= ord(i) <= 57 or ord(i) == 32):
+        a += 1
+        continue
+    
+    elif x == False:
+        print(satr[a])
+        break
+    
+    a += 1
+else:
+    print('nol')
+
+
+
